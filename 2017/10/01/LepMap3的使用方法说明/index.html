@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"biomarble.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Lepmap3 遗传图谱构建流程Lepmap3基本流程 运行前数据准备vcf文件vcf文件必须有likelihood信息，lepmap会用likelihood信息进行分析 pedigree文件pedigree文件包含了样本名及家系等相关信息，pedigree文件为tab分隔的文本文件，示例如下：               CHR POS F F F F F F   CHR POS female">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LepMap3的使用方法说明">
+<meta property="og:url" content="http://biomarble.github.io/2017/10/01/LepMap3%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E8%AF%B4%E6%98%8E/index.html">
+<meta property="og:site_name" content="BioLog">
+<meta property="og:description" content="Lepmap3 遗传图谱构建流程Lepmap3基本流程 运行前数据准备vcf文件vcf文件必须有likelihood信息，lepmap会用likelihood信息进行分析 pedigree文件pedigree文件包含了样本名及家系等相关信息，pedigree文件为tab分隔的文本文件，示例如下：               CHR POS F F F F F F   CHR POS female">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://sourceforge.net/p/lep-map3/wiki/LM3%20Home/attachment/pipeline.png">
+<meta property="article:published_time" content="2017-10-01T07:55:12.000Z">
+<meta property="article:modified_time" content="2021-04-15T16:00:04.340Z">
+<meta property="article:author" content="Marble">
+<meta property="article:tag" content="GeneticMap">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://sourceforge.net/p/lep-map3/wiki/LM3%20Home/attachment/pipeline.png">
+
+<link rel="canonical" href="http://biomarble.github.io/2017/10/01/LepMap3%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E8%AF%B4%E6%98%8E/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>LepMap3的使用方法说明 | BioLog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">BioLog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Yet Another Bioinformatics Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a>
+
+  </li>
+        <li class="menu-item menu-item-software">
+
+    <a href="/software/" rel="section"><i class="fa fa-box fa-fw"></i>软件</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://biomarble.github.io/2017/10/01/LepMap3%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E8%AF%B4%E6%98%8E/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://img.discogs.com/w9vJTN3wwe3nTq7628A9o9QFb6k=/fit-in/600x597/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1752295-1430835599-7152.jpeg.jpg">
+      <meta itemprop="name" content="Marble">
+      <meta itemprop="description" content="Quaerendo invenietis<br>觅之，自有所获">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BioLog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          LepMap3的使用方法说明
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-10-01 15:55:12" itemprop="dateCreated datePublished" datetime="2017-10-01T15:55:12+08:00">2017-10-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-16 00:00:04" itemprop="dateModified" datetime="2021-04-16T00:00:04+08:00">2021-04-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%81%97%E4%BC%A0%E5%9B%BE%E8%B0%B1/" itemprop="url" rel="index"><span itemprop="name">遗传图谱</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Lepmap3-遗传图谱构建流程"><a href="#Lepmap3-遗传图谱构建流程" class="headerlink" title="Lepmap3 遗传图谱构建流程"></a>Lepmap3 遗传图谱构建流程</h1><h2 id="Lepmap3基本流程"><a href="#Lepmap3基本流程" class="headerlink" title="Lepmap3基本流程"></a>Lepmap3基本流程</h2><p><img src="https://sourceforge.net/p/lep-map3/wiki/LM3%20Home/attachment/pipeline.png" alt="Lepmap3流程"></p>
+<h2 id="运行前数据准备"><a href="#运行前数据准备" class="headerlink" title="运行前数据准备"></a>运行前数据准备</h2><h3 id="vcf文件"><a href="#vcf文件" class="headerlink" title="vcf文件"></a>vcf文件</h3><p>vcf文件必须有likelihood信息，lepmap会用likelihood信息进行分析</p>
+<h3 id="pedigree文件"><a href="#pedigree文件" class="headerlink" title="pedigree文件"></a>pedigree文件</h3><p>pedigree文件包含了样本名及家系等相关信息，pedigree文件为tab分隔的文本文件，示例如下：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CHR</td>
+<td>POS</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr>
+<td>CHR</td>
+<td>POS</td>
+<td>female</td>
+<td>male</td>
+<td>progeny_1</td>
+<td>progeny_2</td>
+<td>progeny_3</td>
+<td>progeny_4</td>
+</tr>
+<tr>
+<td>CHR</td>
+<td>POS</td>
+<td>0</td>
+<td>0</td>
+<td>male</td>
+<td>male</td>
+<td>male</td>
+<td>male</td>
+</tr>
+<tr>
+<td>CHR</td>
+<td>POS</td>
+<td>0</td>
+<td>0</td>
+<td>female</td>
+<td>female</td>
+<td>female</td>
+<td>female</td>
+</tr>
+<tr>
+<td>CHR</td>
+<td>POS</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>CHR</td>
+<td>POS</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p>每行涵义如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">line 1：家系（Family）名称</span><br><span class="line">line 2：样本名称</span><br><span class="line">line 3：为father的名称，对应第二行第四列</span><br><span class="line">line 4：为mother的名称，对应第二行第三列</span><br><span class="line">line 5：性别，1 male, 2 female, 0 unknown</span><br><span class="line">line 6：表型，一般用不到。can be 0 for all individuals, this is not currently used</span><br></pre></td></tr></table></figure>
+
+<h3 id="其他软件输出格式转换为Lepmap3格式"><a href="#其他软件输出格式转换为Lepmap3格式" class="headerlink" title="其他软件输出格式转换为Lepmap3格式"></a>其他软件输出格式转换为Lepmap3格式</h3><p>JoinMap loc files:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk -f locsingle.awk file.loc|awk -f loc2genotypes.awk|awk -f genotypes2post.awk |java -cp Lep-MAP3/bin ... data=- ...</span><br></pre></td></tr></table></figure>
+
+<p>Genotype assay data (in tab separated affx_genotypes.txt):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SNP   IND1 IND2 IND3 IND4   ...</span><br><span class="line">AX-01 AA   AB   BB   NoCall ...</span><br><span class="line">AX-02 AB   AA   AA   BB     ...</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk -f affx2post.awk affx_genotypes.txt|java -cp Lep-MAP3/bin ParentCall2 data=pedigree.txt posteriorFile=- ...</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h2 id="运行方法"><a href="#运行方法" class="headerlink" title="运行方法"></a>运行方法</h2><h4 id="ParentCall2"><a href="#ParentCall2" class="headerlink" title="ParentCall2"></a>ParentCall2</h4><p>该步骤是为了call亲本的基因型（如果已经有，可以矫正亲本基因型，如果没有，可以补缺失亲本基因型），也就是猜测亲本的基因型，<del>并且可以查看性染色体的marker</del>。 支持Grandparents信息，以及半同胞家系。</p>
+<blockquote>
+<p>The module ParentCall2 is used to call (possible missing or erroneous) parental genotypes and markers on sex chromosomes (XY or ZW system, assumes known offspring sex). Grandparents and half-sib familes are also supported (especially the grandparents should be provided if there is data on them).</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java ParentCall2 data=pedigree.txt vcfFile=input.vcf removeNonInformative=1|gzip &gt;data.call.gz</span><br></pre></td></tr></table></figure>
+
+<p>Calling markers on autosomes and on X chromosome (X-)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java ParentCall2 data=... XLimit=2 ...</span><br></pre></td></tr></table></figure>
+
+<p>Calling markers on autosomes and on Z chromosome (Z-)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java ParentCall2 data=... ZLimit=2 ...</span><br></pre></td></tr></table></figure>
+
+<h4 id="Filtering2"><a href="#Filtering2" class="headerlink" title="Filtering2"></a>Filtering2</h4><p>该步骤可以根据偏分离（dataTolerance）和缺失率过滤标记（missingLimit）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java Filtering2 data=data1.call dataTolerance=0.001 &gt;data_f.call</span><br></pre></td></tr></table></figure>
+
+<h4 id="SeparateChromosomes2"><a href="#SeparateChromosomes2" class="headerlink" title="SeparateChromosomes2"></a>SeparateChromosomes2</h4><p>该步骤可以将标记进行分群</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java SeparateChromosomes2 data=data_f.call lodLimit=5 &gt;map5.txt</span><br><span class="line">java SeparateChromosomes2 data=data_f.call lodLimit=5 theta=0.05 &gt;map5.5.txt</span><br><span class="line">java SeparateChromosomes2 data=data.call lodLimit=5 distortionLod=1 &gt;map5.nofilt.txt</span><br></pre></td></tr></table></figure>
+
+<p>(parameter numThreads utilises multiple cores)</p>
+<p>The size distribution of linkage groups can be obtained like this:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sort map5.txt|uniq -c|sort -n</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="JoinSingles2All"><a href="#JoinSingles2All" class="headerlink" title="JoinSingles2All"></a>JoinSingles2All</h4><p>该步骤可以将上一步中未分到连锁群的标记重新插入到已有的连锁群中</p>
+<blockquote>
+<p>The JoinSingles2All module assigns singular markers to existing LGs by computing LOD scores between each single marker and markers from the existing LGs. It needs a map file as input parameter and then it outputs a new map file with possible more markers assigned to LGs.</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin/ JoinSingles2All map=map5.txt data=data_f.call lodLimit=4 &gt;map5_js.txt</span><br><span class="line">zcat data_f.call.gz|java -cp bin/ JoinSingles2All map=map5.txt data=- lodLimit=3 lodDifference=2 &gt;map5_js.txt</span><br></pre></td></tr></table></figure>
+
+<p>(parameter numThreads utilises muliple cores)</p>
+<p>(iterated joinSingles2All yields same result as iterating it until no markers can be added)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin/ JoinSingles2All map=map5.txt data=data_f.call lodLimit=4 iterate=1 &gt;map5_js_iterated.txt</span><br></pre></td></tr></table></figure>
+
+<p>The size distribution of linkage groups can be obtained like this:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cut -f 1 map5_js.txt|sort|uniq -c|sort -n</span><br></pre></td></tr></table></figure>
+
+<h4 id="OrderMarkers2"><a href="#OrderMarkers2" class="headerlink" title="OrderMarkers2"></a>OrderMarkers2</h4><p>对每个连锁群内的标记进行排序，以最大化likelihood</p>
+<blockquote>
+<p>OrderMarkers2 orders the markers within each LG by maximizing the likelihood of the data given the order. Either a map file (map=map_file) or output of previous run of OrderMarkers2 (evaluateOrder=order_file) have to be provided (only the first column (the marker name or lg name) is read from these files).</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin/ OrderMarkers2 map=map5_js.txt data=data_f.call chromosome=1 &gt;order1.txt</span><br><span class="line">java -cp bin/ OrderMarkers2 evaluateOrder=order1.txt data=data_f.call &gt;order1.2.txt</span><br></pre></td></tr></table></figure>
+
+<p>已知标记顺序，计算遗传距离</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin/ OrderMarkers2 evaluateOrder=order2.txt data=data_f.call improveOrder=0 &gt;order1.3.txt</span><br></pre></td></tr></table></figure>
+
+<p>已知标记顺序，计算中性图距离</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin/ OrderMarkers2 evaluateOrder=order1.txt data=data_f.call improveOrder=0 sexAveraged=1 &gt;order1.SA.txt</span><br></pre></td></tr></table></figure>
+
+<p>无交叉减数分裂achiasmatic meiosis (父本中无重组交换):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin/ OrderMarkers2 map=map.txt data=data_f.call recombination1=0</span><br></pre></td></tr></table></figure>
+
+<p>无交叉减数分裂achiasmatic meiosis (母本中无重组交换):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin/ OrderMarkers2 map=map.txt data=data_f.call recombination2=0</span><br></pre></td></tr></table></figure>
+
+<p>分染色体排序</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin/ OrderMarkers2 map=mapBig.txt data=dataBig.call chromosome=1 &gt;order1.1.txt</span><br><span class="line">...</span><br><span class="line">java -cp bin/ OrderMarkers2 map=mapBig.txt data=dataBig.call chromosome=N &gt;orderN.1.txt</span><br></pre></td></tr></table></figure>
+
+<h4 id="LMPlot"><a href="#LMPlot" class="headerlink" title="LMPlot"></a>LMPlot</h4><p>绘制点图<br>for every chromosome :</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin&#x2F; OrderMarkers2 map&#x3D;map.txt data&#x3D;data_f.call outputPhasedData&#x3D;1 chromosome&#x3D;1 &gt;order_wp_1.txt</span><br><span class="line">java -cp bin&#x2F; LMPlot order_wp_1.txt &gt;order_wp_1.dot</span><br><span class="line">xdot.py order_wp_1.dot</span><br></pre></td></tr></table></figure>
+
+<p>or:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin&#x2F; OrderMarkers2 evaluateOrder&#x3D;order1.txt data&#x3D;data_f.call outputPhasedData&#x3D;1 &gt;order_wp_1.txt</span><br><span class="line">java -cp bin&#x2F; LMPlot order_wp_1.txt &gt;order_wp_1.dot</span><br><span class="line">xdot.py order_wp_1.dot</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.jpg" alt="Marble 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="Marble 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/GeneticMap/" rel="tag"># GeneticMap</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2018/03/19/Ngrok-%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/" rel="next" title="Ngrok 配置方法">
+      Ngrok 配置方法 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Lepmap3-%E9%81%97%E4%BC%A0%E5%9B%BE%E8%B0%B1%E6%9E%84%E5%BB%BA%E6%B5%81%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">Lepmap3 遗传图谱构建流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Lepmap3%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B"><span class="nav-number">1.1.</span> <span class="nav-text">Lepmap3基本流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E5%89%8D%E6%95%B0%E6%8D%AE%E5%87%86%E5%A4%87"><span class="nav-number">1.2.</span> <span class="nav-text">运行前数据准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vcf%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.1.</span> <span class="nav-text">vcf文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pedigree%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.2.</span> <span class="nav-text">pedigree文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2%E4%B8%BALepmap3%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.2.3.</span> <span class="nav-text">其他软件输出格式转换为Lepmap3格式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E6%96%B9%E6%B3%95"><span class="nav-number">1.3.</span> <span class="nav-text">运行方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ParentCall2"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">ParentCall2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Filtering2"><span class="nav-number">1.3.0.2.</span> <span class="nav-text">Filtering2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SeparateChromosomes2"><span class="nav-number">1.3.0.3.</span> <span class="nav-text">SeparateChromosomes2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JoinSingles2All"><span class="nav-number">1.3.0.4.</span> <span class="nav-text">JoinSingles2All</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#OrderMarkers2"><span class="nav-number">1.3.0.5.</span> <span class="nav-text">OrderMarkers2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LMPlot"><span class="nav-number">1.3.0.6.</span> <span class="nav-text">LMPlot</span></a></li></ol></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Marble"
+      src="https://img.discogs.com/w9vJTN3wwe3nTq7628A9o9QFb6k=/fit-in/600x597/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1752295-1430835599-7152.jpeg.jpg">
+  <p class="site-author-name" itemprop="name">Marble</p>
+  <div class="site-description" itemprop="description">Quaerendo invenietis<br>觅之，自有所获</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/biomarble" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;biomarble" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:shitongwei@gmail.com" title="E-Mail → mailto:shitongwei@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/stonehawk" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;stonehawk" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://music.163.com/#/user/home?id=247828756" title="网易云音乐 → https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;247828756" rel="noopener" target="_blank"><i class="fa fa-play-circle fa-fw"></i>网易云音乐</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-dna"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Marble</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
