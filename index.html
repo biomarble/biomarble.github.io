@@ -382,7 +382,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-10 12:07:48" itemprop="dateModified" datetime="2021-05-10T12:07:48+08:00">2021-05-10</time>
+                <time title="修改时间：2021-05-10 12:10:39" itemprop="dateModified" datetime="2021-05-10T12:10:39+08:00">2021-05-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -421,25 +421,30 @@
 <ul>
 <li>需要购买阿里云/腾讯云服务器等有固定IP的服务器，作为转发服务器</li>
 <li>在转发服务器搭建ngrokd服务</li>
-<li>隧道数目理论无限制<h3 id="转发服务器搭建"><a href="#转发服务器搭建" class="headerlink" title="转发服务器搭建"></a>转发服务器搭建</h3>见往期 <a href="https://biomarble.github.io/2018/03/19/Ngrok-%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/">博客</a>，不再赘述</li>
+<li>隧道数目理论无限制</li>
 </ul>
+<h3 id="转发服务器搭建"><a href="#转发服务器搭建" class="headerlink" title="转发服务器搭建"></a>转发服务器搭建</h3><p>见往期 <a href="https://biomarble.github.io/2018/03/19/Ngrok-%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/">博客</a>，不再赘述</p>
 <h3 id="现有资源"><a href="#现有资源" class="headerlink" title="现有资源"></a>现有资源</h3><ul>
 <li>H1：安装JIRA/confluence的服务器，需要通过反向代理暴露到因特网，没有固定外网IP</li>
-<li>H2：作为ngrokd的转发服务器，已备案域名,如  abcd.efg<h3 id="期望访问JIRA-confluence效果"><a href="#期望访问JIRA-confluence效果" class="headerlink" title="期望访问JIRA/confluence效果"></a>期望访问JIRA/confluence效果</h3></li>
-<li>通过 <a target="_blank" rel="noopener" href="http://jira.abcd.efg/">http://jira.abcd.efg</a> 访问jira</li>
-<li>通过 <a target="_blank" rel="noopener" href="http://confluence.abcd.efg/">http://confluence.abcd.efg</a> 访问confluence<h3 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h3>设置多个ngrok隧道，在配置文件中添加subdomain标签即可实现</li>
+<li>H2：作为ngrokd的转发服务器，已备案域名,如  abcd.efg</li>
 </ul>
+<h3 id="期望访问JIRA-confluence效果"><a href="#期望访问JIRA-confluence效果" class="headerlink" title="期望访问JIRA/confluence效果"></a>期望访问JIRA/confluence效果</h3><ul>
+<li>通过 <a target="_blank" rel="noopener" href="http://jira.abcd.efg/">http://jira.abcd.efg</a> 访问jira</li>
+<li>通过 <a target="_blank" rel="noopener" href="http://confluence.abcd.efg/">http://confluence.abcd.efg</a> 访问confluence</li>
+</ul>
+<h3 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h3><p>设置多个ngrok隧道，在配置文件中添加subdomain标签即可实现</p>
 <h3 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h3><ol>
 <li>关闭H2服务器80端口，<em>注意如果用宝塔，则需要修改/www/server/panel/vhost/nginx/</em>.conf下所有文件*</li>
-<li>H2运行<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;usr&#x2F;sbin&#x2F;ngrokd -domain&#x3D;abcd.efg -log-level&#x3D;WARNING -httpAddr&#x3D;:80 -httpsAddr&#x3D;:443</span><br></pre></td></tr></table></figure></li>
+<li>H2运行下列命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;usr&#x2F;sbin&#x2F;ngrokd -domain&#x3D;abcd.efg -log-level&#x3D;WARNING -httpAddr&#x3D;:80 -httpsAddr&#x3D;:443</span><br></pre></td></tr></table></figure></li>
 <li>H1运行<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ngrok-work  --config&#x3D;web.cfg start  jira confluence</span><br></pre></td></tr></table></figure>
 H1的ngrok客户端配置：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">server_addr: &quot;abcd.efg:443&quot;</span><br><span class="line">trust_host_root_certs: false</span><br><span class="line">tunnels:</span><br><span class="line">      jira:</span><br><span class="line">        subdomain: jira</span><br><span class="line">        proto:</span><br><span class="line">           http: 8080</span><br><span class="line">      confluence:</span><br><span class="line">        subdomain: confluence</span><br><span class="line">        proto:</span><br><span class="line">           http: 8090</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h1 id="解决方案2"><a href="#解决方案2" class="headerlink" title="解决方案2"></a>解决方案2</h1><p>利用国内Ngrok服务提供商（<a target="_blank" rel="noopener" href="https://natapp.cn/">natapp</a>，<a target="_blank" rel="noopener" href="https://www.ngrok.cc/">sunny-ngrok</a>，等）提供的ngrok服务</p>
 <ul>
 <li>无需购买搭建ngrokd转发服务器，使用方便</li>
-<li>一般按照需要隧道数目付费<h3 id="搭建方式"><a href="#搭建方式" class="headerlink" title="搭建方式"></a>搭建方式</h3>服务商一般会提供：</li>
+<li>一般按照需要隧道数目付费</li>
 </ul>
+<h3 id="搭建方式"><a href="#搭建方式" class="headerlink" title="搭建方式"></a>搭建方式</h3><p>服务商一般会提供：</p>
 <ol>
 <li>一个已编译好的可执行程序</li>
 <li>一个token，或者其他身份识别凭据</li>
@@ -449,11 +454,14 @@ H1的ngrok客户端配置：<figure class="highlight plain"><table><tr><td class
 <p><em>注，如需作为长期服务，可以自己构建service命令，利用systemctl管理服务</em></p>
 <h3 id="现有资源-1"><a href="#现有资源-1" class="headerlink" title="现有资源"></a>现有资源</h3><ul>
 <li>H1：存放JIRA和confluence的服务器，没有固定外网IP</li>
-<li>H2：Ngrok服务商提供的域名及隧道token等，但只能绑定一个域名（如abcdefg.s1.natapp.cc)<h3 id="期望访问JIRA-confluence效果-1"><a href="#期望访问JIRA-confluence效果-1" class="headerlink" title="期望访问JIRA/confluence效果"></a>期望访问JIRA/confluence效果</h3></li>
-<li>通过 <a target="_blank" rel="noopener" href="http://abcdefg.s1.natapp.cc/jira">http://abcdefg.s1.natapp.cc/jira</a> 访问jira</li>
-<li>通过 <a target="_blank" rel="noopener" href="http://abcdefg.s1.natapp.cc/confluence">http://abcdefg.s1.natapp.cc/confluence</a> 访问confluence<h3 id="解决思路-1"><a href="#解决思路-1" class="headerlink" title="解决思路"></a>解决思路</h3>利用apache的反向代理功能，将服务器的不同端口转发到不同的url空间<h3 id="修改方法"><a href="#修改方法" class="headerlink" title="修改方法"></a>修改方法</h3></li>
+<li>H2：Ngrok服务商提供的域名及隧道token等，但只能绑定一个域名（如abcdefg.s1.natapp.cc)</li>
 </ul>
-<ol>
+<h3 id="期望访问JIRA-confluence效果-1"><a href="#期望访问JIRA-confluence效果-1" class="headerlink" title="期望访问JIRA/confluence效果"></a>期望访问JIRA/confluence效果</h3><ul>
+<li>通过 <a target="_blank" rel="noopener" href="http://abcdefg.s1.natapp.cc/jira">http://abcdefg.s1.natapp.cc/jira</a> 访问jira</li>
+<li>通过 <a target="_blank" rel="noopener" href="http://abcdefg.s1.natapp.cc/confluence">http://abcdefg.s1.natapp.cc/confluence</a> 访问confluence</li>
+</ul>
+<h3 id="解决思路-1"><a href="#解决思路-1" class="headerlink" title="解决思路"></a>解决思路</h3><p>利用apache的反向代理功能，将服务器的不同端口转发到不同的url空间</p>
+<h3 id="修改方法"><a href="#修改方法" class="headerlink" title="修改方法"></a>修改方法</h3><ol>
 <li>apache  http配置文件中添加/etc/httpd/conf.d/proxy.conf<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ProxyPass &#x2F;jira http:&#x2F;&#x2F;127.0.0.1:8080&#x2F;jira</span><br><span class="line">ProxyPassReverse &#x2F;jira http:&#x2F;&#x2F;127.0.0.1:8080&#x2F;jira</span><br><span class="line">ProxyPass &#x2F;confluence http:&#x2F;&#x2F;127.0.0.1:8090&#x2F;confluence</span><br><span class="line">ProxyPassReverse &#x2F;confluence http:&#x2F;&#x2F;127.0.0.1:8090&#x2F;confluence</span><br><span class="line">&lt;proxy *&gt;</span><br><span class="line">          AllowOverride None</span><br><span class="line">      Order Deny,Allow</span><br><span class="line">      Allow from all</span><br><span class="line">&lt;&#x2F;proxy&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 <li>在jira配置中修改：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;Service name&#x3D;&quot;Catalina&quot;&gt;</span><br><span class="line">    &lt;Connector port&#x3D;&quot;8080&quot;</span><br><span class="line">#添加如下三行代码：</span><br><span class="line">               proxyName&#x3D;&quot;abcdefg.s1.natapp.cc&quot;</span><br><span class="line">               proxyPort&#x3D;&quot;80&quot;</span><br><span class="line">               scheme&#x3D;&quot;http&quot;</span><br><span class="line"></span><br><span class="line">               bindOnInit&#x3D;&quot;false&quot;&#x2F;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#path中添加&#x2F;jira</span><br><span class="line">   &lt;Engine name&#x3D;&quot;Catalina&quot; defaultHost&#x3D;&quot;localhost&quot;&gt;</span><br><span class="line">       &lt;Host name&#x3D;&quot;localhost&quot; appBase&#x3D;&quot;webapps&quot; unpackWARs&#x3D;&quot;true&quot; autoDeploy&#x3D;&quot;true&quot;&gt;</span><br><span class="line">           &lt;Context path&#x3D;&quot;&#x2F;jira&quot; docBase&#x3D;&quot;$&#123;catalina.home&#125;&#x2F;atlassian-jira&quot; reloadable&#x3D;&quot;false&quot; useHttpOnly&#x3D;&quot;true&quot;&gt;</span><br></pre></td></tr></table></figure></li>
 </ol>
