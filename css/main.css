@@ -809,11 +809,6 @@ pre .javascript .function {
 .post-body .note.danger h6 {
   color: #d9534f;
 }
-.pdfobject-container iframe,
-.pdfobject-container embed {
-  width: 100%;
-  height: 100%;
-}
 .pagination .prev,
 .pagination .next,
 .pagination .page-number,
@@ -1183,7 +1178,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #87a886;
+  background: #06e7c9;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2190,6 +2185,13 @@ ul.breadcrumb li + li:last-child {
 }
 .tag-cloud a:hover {
   color: var(--link-hover-color) !important;
+}
+mjx-container[jax="CHTML"][display="true"],
+.has-jax {
+  overflow: auto hidden;
+}
+mjx-container + br {
+  display: none;
 }
 .header {
   margin: 0 auto;
