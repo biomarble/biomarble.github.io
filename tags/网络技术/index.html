@@ -401,17 +401,17 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
     new Valine({
       el         : '#valine-comments',
       verify     : true,
-      notify     : false,
+      notify     : true,
       appId      : 'BPJ8eE9F8hzwzNrnQC3r66tu-gzGzoHsz',
       appKey     : 'l9ka5cjgqoIiLuYHmcBPbXec',
-      placeholder: "Just go go",
+      placeholder: "如有疑问，评论一下",
       avatar     : 'mm',
       meta       : guest,
       pageSize   : '10' || 10,
       visitor    : false,
       lang       : 'zh-cn' || 'zh-cn',
       path       : location.pathname,
-      recordIP   : false,
+      recordIP   : true,
       serverURLs : ''
     });
   }, window.Valine);
