@@ -204,7 +204,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-24 11:37:22" itemprop="dateModified" datetime="2021-05-24T11:37:22+08:00">2021-05-24</time>
+                <time title="修改时间：2021-06-06 15:18:38" itemprop="dateModified" datetime="2021-06-06T15:18:38+08:00">2021-06-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -227,13 +227,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="fasta文件"><a href="#fasta文件" class="headerlink" title="fasta文件"></a>fasta文件</h2><h3 id="对应文件后缀"><a href="#对应文件后缀" class="headerlink" title="对应文件后缀"></a>对应文件后缀</h3><ul>
+          <h2 id="fasta文件"><a href="#fasta文件" class="headerlink" title="fasta文件"></a>fasta文件</h2><h5 id="对应文件后缀"><a href="#对应文件后缀" class="headerlink" title="对应文件后缀"></a>对应文件后缀</h5><ul>
 <li>fa</li>
 <li>fasta</li>
 <li>fna (NCBI)</li>
-<li>faa (NCBI)<h3 id="文件特点"><a href="#文件特点" class="headerlink" title="文件特点"></a>文件特点</h3></li>
+<li>faa (NCBI)</li>
 </ul>
-<ol>
+<h5 id="文件特点"><a href="#文件特点" class="headerlink" title="文件特点"></a>文件特点</h5><ol>
 <li>包含描述与序列两部分；</li>
 <li>描述部分：只能写一行；</li>
 <li>描述部分：均以大于号（&gt;）作为开头；</li>
@@ -241,26 +241,256 @@
 <li>序列部分：可以为一行或多行；</li>
 <li>序列部分：可以描述碱基（nucleotide）或者氨基酸（amino acid）。</li>
 </ol>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;YP_001864424.1  phycoerythrobilin:ferredoxin oxidoreductase</span><br><span class="line">MNSERSDVTLYQPFLDYAIAYMRSRLDLEPYPIPTGFESNSAVVGKGKNQEEVVTTSYAFQTAKLRQIRA</span><br><span class="line">AHVQGGNSLQVLNFVIFPHLNYDLPFFGADLVTLPGGHLIALDMQPLFRDDSAYQAKYTEPILPIFHAHQ</span><br><span class="line">QHLSWGGDFPEEAQPFFSPAFLWTRPQETAVVETQVFAAFKDYLKAYLDFVEQAEAVTDSQNLVAIKQAQ</span><br><span class="line">LRYLRYRAEKDPARGMFKRFYGAEWTEEYIHGFLFDLERKLTVVK</span><br></pre></td></tr></table></figure>
+<h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;YP_001864424.1  phycoerythrobilin:ferredoxin oxidoreductase</span><br><span class="line">MNSERSDVTLYQPFLDYAIAYMRSRLDLEPYPIPTGFESNSAVVGKGKNQEEVVTTSYAFQTAKLRQIRA</span><br><span class="line">AHVQGGNSLQVLNFVIFPHLNYDLPFFGADLVTLPGGHLIALDMQPLFRDDSAYQAKYTEPILPIFHAHQ</span><br><span class="line">QHLSWGGDFPEEAQPFFSPAFLWTRPQETAVVETQVFAAFKDYLKAYLDFVEQAEAVTDSQNLVAIKQAQ</span><br><span class="line">LRYLRYRAEKDPARGMFKRFYGAEWTEEYIHGFLFDLERKLTVVK</span><br></pre></td></tr></table></figure>
 
 <h2 id="fastq文件"><a href="#fastq文件" class="headerlink" title="fastq文件"></a>fastq文件</h2><p>fastq文件是NGS中存储测序样本序列的常用格式，其中除了包含序列信息，还有每个碱基的质量值信息，以此判断碱基是否可信。质量值相关问题，请见<a href="https://biomarble.github.io/2021/05/11/bioinfoFAQ/#%E6%B5%8B%E5%BA%8F%E8%B4%A8%E9%87%8F%E5%8F%8A%E5%85%B6%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95">相关博文</a>。</p>
-<h3 id="对应文件后缀-1"><a href="#对应文件后缀-1" class="headerlink" title="对应文件后缀"></a>对应文件后缀</h3><ul>
+<h5 id="对应文件后缀-1"><a href="#对应文件后缀-1" class="headerlink" title="对应文件后缀"></a>对应文件后缀</h5><ul>
 <li>fq</li>
-<li>fastq<blockquote>
+<li>fastq</li>
+</ul>
+<blockquote>
 <p>通常以压缩文件形式存放，一般无需解压，多数相关软件可以直接读取压缩文件。</p>
 </blockquote>
-<h3 id="文件特点-1"><a href="#文件特点-1" class="headerlink" title="文件特点"></a>文件特点</h3></li>
-</ul>
-<p><strong>每4行代表一条序列</strong></p>
+<h5 id="文件特点-1"><a href="#文件特点-1" class="headerlink" title="文件特点"></a>文件特点</h5><p><strong>每4行代表一条序列</strong></p>
 <ol>
 <li>第一行以@开头，为识别码，即read名称，是测序仪依据设定自动命名；</li>
 <li>第二行为序列；</li>
 <li>第三行以+开头，后跟注释，可为空</li>
 <li>第四行为质量值（ASCII码加Q值的值所对应的字符，具体计算方法请翻看<a href="https://biomarble.github.io/">生物信息分析中常见文件FAQ</a>）</li>
 </ol>
-<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@A00869:272:H72GWDSXY:2:1101:30960:1000 1:N:0:GATTAGG+GATTAGGA</span><br><span class="line">CTATNGCACACACGTCTCAGGCTGCTCTGGTTTCAGCATTGGTATCATCGACTCTGGCTGCATGGATATGATGAGGGACGTTCACTAGCTAGTGAGTCCATGATTGTGACCCAACATGTTACTGTATGCCCCAACTTTCTAGGTGCTGAC</span><br><span class="line">+</span><br><span class="line">FFFF#FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:FFFFFFFFFFFFFFFF</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h5><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@A00869:272:H72GWDSXY:2:1101:30960:1000 1:N:0:GATTAGG+GATTAGGA</span><br><span class="line">CTATNGCACACACGTCTCAGGCTGCTCTGGTTTCAGCATTGGTATCATCGACTCTGGCTGCATGGATATGATGAGGGACGTTCACTAGCTAGTGAGTCCATGATTGTGACCCAACATGTTACTGTATGCCCCAACTTTCTAGGTGCTGAC</span><br><span class="line">+</span><br><span class="line">FFFF#FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:FFFFFFFFFFFFFFFF</span><br></pre></td></tr></table></figure>
 
-<h2 id="SAM-BAM文件"><a href="#SAM-BAM文件" class="headerlink" title="SAM/BAM文件"></a>SAM/BAM文件</h2><h2 id="VCF文件"><a href="#VCF文件" class="headerlink" title="VCF文件"></a>VCF文件</h2><h2 id="GTF文件"><a href="#GTF文件" class="headerlink" title="GTF文件"></a>GTF文件</h2><h2 id="GFF-GFF3文件"><a href="#GFF-GFF3文件" class="headerlink" title="GFF/GFF3文件"></a>GFF/GFF3文件</h2>
+<h2 id="GTF-GFF-GFF3文件"><a href="#GTF-GFF-GFF3文件" class="headerlink" title="GTF/GFF/GFF3文件"></a>GTF/GFF/GFF3文件</h2><ul>
+<li><p>GTF/GFF文件是描述相关特征（包括基因、转录本、外显子、UTR等等）在基因组序列的位置等信息的文件。</p>
+</li>
+<li><p>GTF/GFF文件中定义了每个特征所在的染色体编号、起始位置、终止位置、所在的正负链信息、名称等等信息。</p>
+</li>
+<li><p>GTF与GFF文件可以相互转换。</p>
+</li>
+<li><p>GFF3是 GFF version 3的缩写，目前常用的GFF都是GFF3版本。</p>
+</li>
+</ul>
+<h5 id="文件后缀"><a href="#文件后缀" class="headerlink" title="文件后缀"></a>文件后缀</h5><ul>
+<li>gtf</li>
+<li>gff</li>
+<li>gff3</li>
+</ul>
+<h5 id="文件特点-2"><a href="#文件特点-2" class="headerlink" title="文件特点"></a>文件特点</h5><ol>
+<li>GTF/GFF文件是文本文件，可以用notepad++或UltraEdit，以及Excel等打开；</li>
+<li>一般只记录特征的位置信息，不包含序列信息；</li>
+<li>每个GTF/GFF文件都对应了一个版本的基因组序列；</li>
+<li>可以只包含一条染色体，也可以包含所有染色体;</li>
+<li>染色体名称必须与基因组序列ID<strong>完全一致</strong>。</li>
+<li>不同数据库的GTF/GFF文件格式或许有差异，例如Ensembl的文件与UCSC的文件存在差异。</li>
+<li>通常GTF/GFF的下载来源需要与基因组fasta文件一致，以保证对应。</li>
+</ol>
+<h5 id="GTF示例"><a href="#GTF示例" class="headerlink" title="GTF示例"></a>GTF示例</h5><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">1       araport11       gene    3631    5899    .       +       .       gene_id &quot;gene:AT1G01010&quot;;</span><br><span class="line">1       araport11       mRNA    3631    5899    .       +       .       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;;</span><br><span class="line">1       araport11       five_prime_UTR  3631    3759    .       +       .       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;;</span><br><span class="line">1       araport11       exon    3631    3913    .       +       .       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;; exon_number &quot;1&quot;;</span><br><span class="line">1       araport11       CDS     3760    3913    .       +       0       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;;</span><br><span class="line">1       araport11       exon    3996    4276    .       +       .       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;; exon_number &quot;2&quot;;</span><br><span class="line">1       araport11       CDS     3996    4276    .       +       2       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;;</span><br><span class="line">1       araport11       exon    4486    4605    .       +       .       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;; exon_number &quot;3&quot;;</span><br><span class="line">1       araport11       CDS     4486    4605    .       +       0       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;;</span><br><span class="line">1       araport11       exon    4706    5095    .       +       .       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;; exon_number &quot;4&quot;;</span><br><span class="line">1       araport11       CDS     4706    5095    .       +       0       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;;</span><br><span class="line">1       araport11       exon    5174    5326    .       +       .       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;; exon_number &quot;5&quot;;</span><br><span class="line">1       araport11       CDS     5174    5326    .       +       0       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;;</span><br><span class="line">1       araport11       CDS     5439    5630    .       +       0       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;;</span><br><span class="line">1       araport11       exon    5439    5899    .       +       .       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;; exon_number &quot;6&quot;;</span><br><span class="line">1       araport11       three_prime_UTR 5631    5899    .       +       .       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="GFF示例"><a href="#GFF示例" class="headerlink" title="GFF示例"></a>GFF示例</h5><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">1       araport11       gene    3631    5899    .       +       .       ID=AT1G01010;Name=NAC001</span><br><span class="line">1       araport11       mRNA    3631    5899    .       +       .       ID=AT1G01010.1;Parent=AT1G01010</span><br><span class="line">1       araport11       five_prime_UTR  3631    3759    .       +       .       Parent=AT1G01010.1</span><br><span class="line">1       araport11       exon    3631    3913    .       +       .       Parent=AT1G01010.1</span><br><span class="line">1       araport11       CDS     3760    3913    .       +       0       ID=CDS:AT1G01010.1;Parent=AT1G01010.1;protein_id=AT1G01010.1</span><br><span class="line">1       araport11       exon    3996    4276    .       +       .       Parent=transcript:AT1G01010.1</span><br><span class="line">1       araport11       CDS     3996    4276    .       +       2       ID=CDS:AT1G01010.1;Parent=transcript:AT1G01010.1</span><br><span class="line">1       araport11       exon    4486    4605    .       +       .       Parent=transcript:AT1G01010.1</span><br><span class="line">1       araport11       CDS     4486    4605    .       +       0       ID=CDS:AT1G01010.1;Parent=transcript:AT1G01010.1</span><br><span class="line">1       araport11       exon    4706    5095    .       +       .       Parent=transcript:AT1G01010.1</span><br><span class="line">1       araport11       CDS     4706    5095    .       +       0       ID=CDS:AT1G01010.1;Parent=transcript:AT1G01010.1</span><br><span class="line">1       araport11       exon    5174    5326    .       +       .       Parent=transcript:AT1G01010.1</span><br><span class="line">1       araport11       CDS     5174    5326    .       +       0       ID=CDS:AT1G01010.1;Parent=transcript:AT1G01010.1</span><br><span class="line">1       araport11       CDS     5439    5630    .       +       0       ID=CDS:AT1G01010.1;Parent=transcript:AT1G01010.1</span><br><span class="line">1       araport11       exon    5439    5899    .       +       .       Parent=transcript:AT1G01010.1;</span><br><span class="line">1       araport11       three_prime_UTR 5631    5899    .       +       .       Parent=transcript:AT1G01010.1</span><br></pre></td></tr></table></figure>
+
+<h5 id="每列含义"><a href="#每列含义" class="headerlink" title="每列含义"></a>每列含义</h5><table>
+<thead>
+<tr>
+<th>列序</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>染色体ID</td>
+<td>需要与序列文件完全对应，区分大小写。如：”Chr1”, “chr1”, “1”, “NC_000001.11”  是不同的。</td>
+</tr>
+<tr>
+<td>2</td>
+<td>注释信息来源</td>
+<td>一般为软件或数据库名称</td>
+</tr>
+<tr>
+<td>3</td>
+<td>特征的类型</td>
+<td>gene/mRNA/exon/CDS等等</td>
+</tr>
+<tr>
+<td>4</td>
+<td>起始位置</td>
+<td>起始位点在序列中的位置</td>
+</tr>
+<tr>
+<td>5</td>
+<td>终止位置</td>
+<td>终止位点在序列中的位置</td>
+</tr>
+<tr>
+<td>6</td>
+<td>打分值</td>
+<td>软件或者用户定义的打分值，非必须，一般以”.”表示省略</td>
+</tr>
+<tr>
+<td>7</td>
+<td>正负链信息</td>
+<td>+表示与序列文件一致的链，- 表示序列文件的互补链</td>
+</tr>
+<tr>
+<td>8</td>
+<td>阅读框</td>
+<td>0,1,2. <br>‘0’表示第一个碱基是密码子的第一个碱基；’1’ 表示第二个碱基是密码子的第一个碱基，以此类推。<br>非必须，一般以”.”表示省略。</td>
+</tr>
+<tr>
+<td>9</td>
+<td>属性(GTF)</td>
+<td>本特征所属的基因ID，转录本ID等等信息，以分号；为分隔符。</td>
+</tr>
+<tr>
+<td>9</td>
+<td>属性(GFF)</td>
+<td>本特征的ID（ID），上一级特征的ID（Parent）；为分隔符。<br>exon、CDS和UTR的Parent为mRNA，mRNA的Parent为gene。</td>
+</tr>
+</tbody></table>
+<h2 id="SAM-BAM文件"><a href="#SAM-BAM文件" class="headerlink" title="SAM/BAM文件"></a>SAM/BAM文件</h2><p>SAM（Sequence Alignment/Map format）文件是保存比对信息的文件格式</p>
+<p>通常用于记录测序数据（Read）比对到基因组的位置信息等，由比对软件（例如bowtie，hisat2，bwa，star等）直接生成。</p>
+<h5 id="文件后缀-1"><a href="#文件后缀-1" class="headerlink" title="文件后缀"></a>文件后缀</h5><ul>
+<li>sam</li>
+<li>bam</li>
+</ul>
+<h5 id="文件特点-3"><a href="#文件特点-3" class="headerlink" title="文件特点"></a>文件特点</h5><ul>
+<li>SAM文件包含比对质量，比对位置，序列等信息；</li>
+<li>SAM文件通常非常大，可以达到几百G；</li>
+<li>SAM文件是文本格式，但由于较大，一般无需用文本编辑器打开，相关软件可以直接读取；</li>
+<li>BAM文件是SAM文件的压缩格式，非文本格式，节省存储空间。</li>
+</ul>
+<h5 id="SAM文件示例"><a href="#SAM文件示例" class="headerlink" title="SAM文件示例"></a>SAM文件示例</h5><ul>
+<li>SAM文件包含head部分和正文部分</li>
+<li>head部分以@开头，记录了每条染色体的长度信息，比对命令等信息</li>
+<li>正文部分是以制表符（TAB）为分隔符的表格</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@HD     VN:1.4  SO:coordinate</span><br><span class="line">@SQ     SN:1    LN:43270923</span><br><span class="line">@SQ     SN:2    LN:35937250</span><br><span class="line">@SQ     SN:3    LN:36413819</span><br><span class="line">@PG     ID:STAR PN:STAR VN:2.7.3a       CL:STAR  ...</span><br><span class="line">A00838:278:H72G3DSXY:2:1474:22896:7701  163     1       2653    255     150M    =       2903    400     CTAGCCCTTCCCAAGCCAAATATGGAGGTTCTCTCTCCTCACTCCAT FFFFFF:FFFFFFF,FFFFFFFFFFF,FFF::FFF:FF,FFF:FFFF	NH:i:1  HI:i:1  AS:i:298        nM:i:0</span><br><span class="line">A00838:278:H72G3DSXY:2:1615:22498:25520 163     1       2794    255     150M    =       2934    290     TATAGGATGTTGGTATATGTAGGATGTAATATGAATGATCTGTTGGA  FFFFFF:FFFFFFFFFFFFFFFFFFFFFFFFFFF:FFFFFFFFFFF  NH:i:1  HI:i:1  AS:i:298        nM:i:0</span><br></pre></td></tr></table></figure>
+
+<h5 id="SAM正文每列含义"><a href="#SAM正文每列含义" class="headerlink" title="SAM正文每列含义"></a>SAM正文每列含义</h5><table>
+<thead>
+<tr>
+<th>列序</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>查询序列名称</td>
+<td>Read名称</td>
+</tr>
+<tr>
+<td>2</td>
+<td>比对flag编码</td>
+<td>记录比对概况，每个数字的解释见 <a target="_blank" rel="noopener" href="https://broadinstitute.github.io/picard/explain-flags.html">本链接</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>比对到的染色体编号</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>比对到的起始位置</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>比对质量</td>
+<td>由比对软件决定，不同软件可能不一样，一般为0~255</td>
+</tr>
+<tr>
+<td>6</td>
+<td>比对详情（CIGAR）</td>
+<td>150M为150bp全部比对，具体可参考<a target="_blank" rel="noopener" href="https://genome.sph.umich.edu/wiki/SAM">本链接</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>PairEnd的另一端序列比对的染色体</td>
+<td>“=”表示两端序列比对的染色体一致 ，如不一致则用具体染色体名表示</td>
+</tr>
+<tr>
+<td>8</td>
+<td>PairEnd的另一端序列比对的起始位置</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>插入片段大小</td>
+<td>read1和read2之间的模板（基因组序列）长度</td>
+</tr>
+<tr>
+<td>10</td>
+<td>序列</td>
+<td>本read的序列</td>
+</tr>
+<tr>
+<td>11</td>
+<td>碱基质量值</td>
+<td>本序列的碱基质量值</td>
+</tr>
+<tr>
+<td>12</td>
+<td>标签信息</td>
+<td>由比对软件决定，不同软件输出不一样。</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>SAM文件详细定义见 <a target="_blank" rel="noopener" href="http://samtools.github.io/hts-specs/SAMv1.pdf">链接</a>；</p>
+</blockquote>
+<h5 id="SAM与BAM的相互转换"><a href="#SAM与BAM的相互转换" class="headerlink" title="SAM与BAM的相互转换"></a>SAM与BAM的相互转换</h5><p>用samtools实现SAM和BAM的互相转换</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#SAM转BAM：</span></span><br><span class="line">samtools view -bS in.sam &gt;in.bam</span><br><span class="line"></span><br><span class="line"><span class="comment">#BAM转SAM：</span></span><br><span class="line">samtools view -h in.bam &gt;in.sam</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="BED文件"><a href="#BED文件" class="headerlink" title="BED文件"></a>BED文件</h2><ul>
+<li>BED文件是记录序列位置的一种表示方式</li>
+<li>通常以文本形式保存</li>
+<li>以制表符（TAB）分隔，包含至少三列（染色体ID，起始位置，终止位置），</li>
+</ul>
+<h5 id="典型示例"><a href="#典型示例" class="headerlink" title="典型示例"></a>典型示例</h5><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1       2982    10815   Os01g0100100    .       +</span><br><span class="line">1       11217   12435   Os01g0100200    .       +</span><br><span class="line">1       11371   12284   Os01g0100300    .       -</span><br><span class="line">1       12720   15685   Os01g0100400    .       +</span><br><span class="line">1       12807   13978   Os01g0100466    .       -</span><br><span class="line">1       16398   20144   Os01g0100500    .       +</span><br><span class="line">1       22840   26892   Os01g0100600    .       +</span><br><span class="line">1       25860   26424   Os01g0100650    .       -</span><br><span class="line">1       27142   28644   Os01g0100700    .       +</span><br><span class="line">1       29817   34453   Os01g0100800    .       +</span><br></pre></td></tr></table></figure>
+
+<h5 id="每列含义-1"><a href="#每列含义-1" class="headerlink" title="每列含义"></a>每列含义</h5><table>
+<thead>
+<tr>
+<th>列序</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>染色体/序列ID</td>
+<td>必须</td>
+</tr>
+<tr>
+<td>2</td>
+<td>起始位置</td>
+<td>必须</td>
+</tr>
+<tr>
+<td>3</td>
+<td>终止位置</td>
+<td>必须</td>
+</tr>
+<tr>
+<td>4</td>
+<td>本条记录的名称</td>
+<td>可选</td>
+</tr>
+<tr>
+<td>5</td>
+<td>打分值</td>
+<td>可选，0~1000，由用户定义，如无打分值，则用点(.)表示</td>
+</tr>
+<tr>
+<td>6</td>
+<td>链信息</td>
+<td>可选，+/-/ .   其中点表示无链信息</td>
+</tr>
+</tbody></table>
+<h2 id="VCF文件"><a href="#VCF文件" class="headerlink" title="VCF文件"></a>VCF文件</h2><blockquote>
+<p>待添加</p>
+</blockquote>
+
       
     </div>
 
@@ -770,10 +1000,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-05-11 16:53:00 / 修改时间：17:30:54" itemprop="dateCreated datePublished" datetime="2021-05-11T16:53:00+08:00">2021-05-11</time>
+              <time title="创建时间：2021-05-11 16:53:00" itemprop="dateCreated datePublished" datetime="2021-05-11T16:53:00+08:00">2021-05-11</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-06-06 13:06:29" itemprop="dateModified" datetime="2021-06-06T13:06:29+08:00">2021-06-06</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -795,26 +1031,48 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="安装方法基本步骤"><a href="#安装方法基本步骤" class="headerlink" title="安装方法基本步骤"></a>安装方法基本步骤</h2><h3 id="1-确认系统版本"><a href="#1-确认系统版本" class="headerlink" title="1. 确认系统版本"></a>1. 确认系统版本</h3><p>按 Windows 徽标键 + R，然后键入winver，选择 “确定”.</p>
+          <h2 id="1-WSL安装步骤"><a href="#1-WSL安装步骤" class="headerlink" title="1.WSL安装步骤"></a>1.WSL安装步骤</h2><h3 id="1-1-确认系统版本"><a href="#1-1-确认系统版本" class="headerlink" title="1.1 确认系统版本"></a>1.1 确认系统版本</h3><p>按 Windows 徽标键 + R，然后键入winver，选择 “确定”.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">对于windows 10 x64 系统：版本 1903 或更高版本，采用 内部版本 18362 或更高版本。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>低版本系统需要在”设置”菜单中<a href="ms-settings:windowsupdate">更新 Windows 版本</a>。</p>
-<h3 id="2-启用适用于-Linux-的-Windows-子系统"><a href="#2-启用适用于-Linux-的-Windows-子系统" class="headerlink" title="2.启用适用于 Linux 的 Windows 子系统"></a>2.启用适用于 Linux 的 Windows 子系统</h3><p>先启用用于 Linux 的 Windows 子系统可选功能，然后才能在 Windows 上安装 Linux 分发。</p>
-<h4 id="方法1"><a href="#方法1" class="headerlink" title="方法1."></a>方法1.</h4><p>开始-&gt;设置-&gt;应用-&gt;程序和功能（窗口右上角）-&gt;启用和关闭windows功能(窗口左侧)-&gt;下滑勾选”适用于Linux的Windows子系统”-&gt;确定</p>
-<h4 id="方法2"><a href="#方法2" class="headerlink" title="方法2."></a>方法2.</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">以管理员身份打开 PowerShell 并运行：</span><br><span class="line">dism.exe &#x2F;online &#x2F;enable-feature &#x2F;featurename:Microsoft-Windows-Subsystem-Linux &#x2F;all &#x2F;norestart</span><br></pre></td></tr></table></figure>
 
-<h3 id="3-重启计算机"><a href="#3-重启计算机" class="headerlink" title="3.重启计算机"></a>3.重启计算机</h3><h3 id="4-安装所选的-Linux"><a href="#4-安装所选的-Linux" class="headerlink" title="4.安装所选的 Linux"></a>4.安装所选的 Linux</h3><p>打开 <a target="_blank" rel="noopener" href="https://aka.ms/wslstore">Microsoft Store</a>，并选择你偏好的 Linux 分发版，一般选择Ubuntu即可。</p>
+<p>低版本系统需要在”设置”菜单中<a href="ms-settings:windowsupdate">更新 Windows 版本</a>。</p>
+<h3 id="1-2-启用适用于-Linux-的-Windows-子系统"><a href="#1-2-启用适用于-Linux-的-Windows-子系统" class="headerlink" title="1.2.启用适用于 Linux 的 Windows 子系统"></a>1.2.启用适用于 Linux 的 Windows 子系统</h3><p>先启用用于 Linux 的 Windows 子系统可选功能，然后才能在 Windows 上安装 Linux 分发。</p>
+<h4 id="方法1"><a href="#方法1" class="headerlink" title="方法1."></a>方法1.</h4><p>开始-&gt;设置-&gt;应用-&gt;程序和功能（窗口右上角）-&gt;启用和关闭windows功能(窗口左侧)-&gt;下滑勾选”适用于Linux的Windows子系统”-&gt;确定</p>
+<h4 id="方法2"><a href="#方法2" class="headerlink" title="方法2."></a>方法2.</h4><p>以<b>管理员身份</b>打开 PowerShell 并运行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dism.exe &#x2F;online &#x2F;enable-feature &#x2F;featurename:Microsoft-Windows-Subsystem-Linux &#x2F;all &#x2F;norestart</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3-重启计算机"><a href="#1-3-重启计算机" class="headerlink" title="1.3.重启计算机"></a>1.3.重启计算机</h3><h3 id="1-4-安装所选的-Linux"><a href="#1-4-安装所选的-Linux" class="headerlink" title="1.4.安装所选的 Linux"></a>1.4.安装所选的 Linux</h3><p>打开 <a target="_blank" rel="noopener" href="https://aka.ms/wslstore">Microsoft Store</a>，并选择你偏好的 Linux 分发版，一般选择Ubuntu即可。</p>
 <p>在分发版的页面中，选择“获取”。</p>
-<h3 id="5-首次启动设置Linux"><a href="#5-首次启动设置Linux" class="headerlink" title="5.首次启动设置Linux"></a>5.首次启动设置Linux</h3><p>首次启动新安装的 Linux 分发版时，将打å¼一个控制台窗口，系统会要求你等待一分钟或两分钟，</p>
+<h3 id="1-5-首次启动设置Linux"><a href="#1-5-首次启动设置Linux" class="headerlink" title="1.5.首次启动设置Linux"></a>1.5.首次启动设置Linux</h3><p>首次启动新安装的 Linux 分发版时，将打开一个控制台窗口，系统会要求你等待一分钟或两分钟，</p>
 <p>然后，需要为新的 Linux 分发版创建用户帐户和密码。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">此用户名和密码特定于安装的每个单独的 Linux 分发版，与 Windows 用户名无关。</span><br><span class="line">创建用户名和密码后，该帐户将是分发版的默认用户，并将在启动时自动登录。</span><br><span class="line">此帐户将被视为 Linux 管理员，能够运行 sudo (Super User Do) 管理命令。</span><br><span class="line">在适用于 Linux 的 Windows 子系统上运行的每个 Linux 分发版都有其自身的 Linux 用户帐户和密码。 每当添加分发版、重新安装或重置时，都必须配置一个 Linux 用户帐户。</span><br></pre></td></tr></table></figure>
 
-<h2 id="WSL用户密码重置"><a href="#WSL用户密码重置" class="headerlink" title="WSL用户密码重置"></a>WSL用户密码重置</h2><p>重置步骤如下:</p>
-<div class="pdfobject-container" data-target="https://biomarble.github.io/assets/pdf/WSLpassword.pdf" data-height="500px"></div>
+<h2 id="2-WSL用户密码重置"><a href="#2-WSL用户密码重置" class="headerlink" title="2.WSL用户密码重置"></a>2.WSL用户密码重置</h2><object data="https://biomarble.github.io/assets/pdf/WSLpassword.pdf" type="application/pdf" width="1220px" height="687px"> 
+    <embed src="https://biomarble.github.io/assets/pdf/WSLpassword.pdf"> 
+     <br>浏览器不支持内嵌PDF，请直接打开文件Blast.pdf
+    </embed> 
+</object> 
 
+
+<h2 id="3-WSL-bash访问U盘或网络共享文件夹"><a href="#3-WSL-bash访问U盘或网络共享文件夹" class="headerlink" title="3.WSL bash访问U盘或网络共享文件夹"></a>3.WSL bash访问U盘或网络共享文件夹</h2><p>U盘一般会自动挂载，如果没有自动挂载，可以用以下方法手动挂载（假设U盘盘符为G）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /mnt/g</span><br><span class="line">sudo mount -t drvfs f: /mnt/g</span><br></pre></td></tr></table></figure>
+
+<p>对于网络存储，如\server\share文件夹，可以用如下方式挂载</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir /mnt/share</span><br><span class="line">mount -t drvfs <span class="string">&#x27;\\server\share&#x27;</span> /mnt/share</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-好用的WSL外壳"><a href="#4-好用的WSL外壳" class="headerlink" title="4.好用的WSL外壳"></a>4.好用的WSL外壳</h2><p>wsltty，增加了许多可变设置，可以将WSL界面变的更好用，效果和Linux原生terminal一样。<br>链接：<a target="_blank" rel="noopener" href="https://github.com/mintty/wsltty">https://github.com/mintty/wsltty</a></p>
+<h3 id="安装方式"><a href="#安装方式" class="headerlink" title="安装方式"></a>安装方式</h3><ul>
+<li> 下载 <a target="_blank" rel="noopener" href="https://github.com/mintty/wsltty/releases">https://github.com/mintty/wsltty/releases</a>    最新版.exe安装文件</li>
+<li> 双击.exe安装文件，开始安装，用默认参数即可。</li>
+</ul>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><ol>
+<li>打开开始菜单，找到WSL Terminal 打开即可。</li>
+<li>在有需要的文件夹内，点击右键，在菜单中找到WSL  Terminal，即可在当前文件夹打开。</li>
+<li>如果右键菜单没有WSL Terminal选项，可以在开始菜单搜索”add to context menu”，运行即可。</li>
+</ol>
 <h2 id="Anaconda，Miniconda，conda，mamba的关系"><a href="#Anaconda，Miniconda，conda，mamba的关系" class="headerlink" title="Anaconda，Miniconda，conda，mamba的关系"></a>Anaconda，Miniconda，conda，mamba的关系</h2><ul>
 <li><p>Conda是一种软件包管理系统，可以方便的管理各种语言（C/C++/python/Perl/R等)的软件</p>
 </li>
-<li><p>Anaconda 可以理解为Conda以及常用软件包的完整安装包。它将Conda，与众多æµ行的科学计算、数据分析软件打包到一个安装文件中。</p>
+<li><p>Anaconda 可以理解为Conda以及常用软件包的完整安装包。它将Conda，与众多流行的科学计算、数据分析软件打包到一个安装文件中。</p>
 </li>
 <li><p>Miniconda 可以理解为Anaconda的简化版。默认只包含了 python 和 conda，但是可以在后期通过 pip 和 conda 来安装所需要的包。</p>
 </li>
