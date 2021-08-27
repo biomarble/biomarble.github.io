@@ -102,85 +102,85 @@
 
   <url>
     <loc>http://biomarble.github.io/</loc>
-    <lastmod>2021-08-20</lastmod>
+    <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
+    <loc>http://biomarble.github.io/tags/GeneticMap/</loc>
+    <lastmod>2021-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://biomarble.github.io/tags/ngrok/</loc>
-    <lastmod>2021-08-20</lastmod>
+    <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://biomarble.github.io/tags/linux/</loc>
-    <lastmod>2021-08-20</lastmod>
+    <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://biomarble.github.io/tags/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2021-08-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://biomarble.github.io/tags/GeneticMap/</loc>
-    <lastmod>2021-08-20</lastmod>
+    <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://biomarble.github.io/tags/WSL/</loc>
-    <lastmod>2021-08-20</lastmod>
+    <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://biomarble.github.io/tags/workshop/</loc>
-    <lastmod>2021-08-20</lastmod>
+    <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://biomarble.github.io/tags/bioinformatics/</loc>
-    <lastmod>2021-08-20</lastmod>
+    <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://biomarble.github.io/tags/database/</loc>
-    <lastmod>2021-08-20</lastmod>
+    <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://biomarble.github.io/tags/Plot/</loc>
-    <lastmod>2021-08-20</lastmod>
+    <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://biomarble.github.io/tags/Doublet/</loc>
-    <lastmod>2021-08-20</lastmod>
+    <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://biomarble.github.io/tags/scRNA-seq/</loc>
-    <lastmod>2021-08-20</lastmod>
+    <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -188,36 +188,36 @@
 
   
   <url>
-    <loc>http://biomarble.github.io/categories/IT%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2021-08-20</lastmod>
+    <loc>http://biomarble.github.io/categories/%E9%81%97%E4%BC%A0%E5%9B%BE%E8%B0%B1/</loc>
+    <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://biomarble.github.io/categories/%E9%81%97%E4%BC%A0%E5%9B%BE%E8%B0%B1/</loc>
-    <lastmod>2021-08-20</lastmod>
+    <loc>http://biomarble.github.io/categories/IT%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://biomarble.github.io/categories/FAQ/</loc>
-    <lastmod>2021-08-20</lastmod>
+    <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://biomarble.github.io/categories/%E7%BB%98%E5%9B%BE/</loc>
-    <lastmod>2021-08-20</lastmod>
+    <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://biomarble.github.io/categories/%E5%8D%95%E7%BB%86%E8%83%9E%E6%B5%8B%E5%BA%8F/</loc>
-    <lastmod>2021-08-20</lastmod>
+    <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
