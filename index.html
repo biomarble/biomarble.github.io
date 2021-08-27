@@ -119,14 +119,9 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        <li class="menu-item menu-item-archives">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">11</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>目录<span class="badge">10</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -134,14 +129,19 @@
     <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">5</span></a>
 
   </li>
-        <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-tags">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">10</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">11</span></a>
 
   </li>
         <li class="menu-item menu-item-software">
 
     <a href="/software/" rel="section"><i class="fa fa-box fa-fw"></i>软件</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
   </ul>
@@ -197,10 +197,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-06-15 17:15:05 / 修改时间：22:47:06" itemprop="dateCreated datePublished" datetime="2021-06-15T17:15:05+08:00">2021-06-15</time>
+              <time title="创建时间：2021-06-15 17:15:05" itemprop="dateCreated datePublished" datetime="2021-06-15T17:15:05+08:00">2021-06-15</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-08-27 22:06:09" itemprop="dateModified" datetime="2021-08-27T22:06:09+08:00">2021-08-27</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -245,13 +251,14 @@
       
           <h2 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h2><p>使用wget时，一直出现</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">错误: 无法验证 XXXXXXXX 的由 “XXXXXXXXXX” 颁发的证书:</span><br><span class="line">  无法本地校验颁发者的权限。</span><br><span class="line">要以不安全的方式连接至 XXXXXXXXXXXX，使用“--no-check-certificate”。</span><br></pre></td></tr></table></figure>
-
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>打开wgetrc文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install ca-certificates</span><br><span class="line">sudo vi /etc/wgetrc</span><br></pre></td></tr></table></figure>
-
-<p>添加如下内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ca_directory&#x3D;&#x2F;etc&#x2F;ssl&#x2F;certs</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/06/15/wget%E6%8F%90%E7%A4%BA%E6%97%A0%E6%B3%95%E6%A0%A1%E9%AA%8C%E9%A2%81%E5%8F%91%E8%80%85%E6%9D%83%E9%99%90%E7%9A%84%E9%94%99%E8%AF%AF/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -301,7 +308,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-06 17:42:29" itemprop="dateModified" datetime="2021-06-06T17:42:29+08:00">2021-06-06</time>
+                <time title="修改时间：2021-08-27 22:09:17" itemprop="dateModified" datetime="2021-08-27T22:09:17+08:00">2021-08-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -374,102 +381,14 @@
 <td>下载链接从基因组页面进入，如<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/assembly/GCF_000001735.4">拟南芥</a></td>
 </tr>
 </tbody></table>
-<h2 id="功能数据库"><a href="#功能数据库" class="headerlink" title="功能数据库"></a>功能数据库</h2><table>
-<thead>
-<tr>
-<th align="center">数据库</th>
-<th align="center">链接</th>
-<th align="center">备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">蛋白注释</td>
-<td align="center"><a target="_blank" rel="noopener" href="https://www.uniprot.org/">https://www.uniprot.org/</a></td>
-<td align="center">包含<code>经人工注释</code> <code>高可信</code>的<a target="_blank" rel="noopener" href="https://www.uniprot.org/uniprot/?query=reviewed:yes">Swiss-Prot</a> <br>与<br><code>自动注释</code> <code>内容全面但可信性较低</code>的<a target="_blank" rel="noopener" href="https://www.uniprot.org/uniprot/?query=reviewed:no">TrEMBL</a><br>两个数据库</td>
-</tr>
-<tr>
-<td align="center">GO数据库</td>
-<td align="center"><a target="_blank" rel="noopener" href="https://geneontology.org/">https://geneontology.org/</a></td>
-<td align="center">结构化功能注释的经典数据库，需用Blast2GO等软件进行注释</td>
-</tr>
-<tr>
-<td align="center">KEGG数据库</td>
-<td align="center"><a target="_blank" rel="noopener" href="https://www.genome.jp/kegg/">https://www.genome.jp/kegg/</a></td>
-<td align="center">常用KEGG Pathway数据库</td>
-</tr>
-</tbody></table>
-<h2 id="调控数据库"><a href="#调控数据库" class="headerlink" title="调控数据库"></a>调控数据库</h2><table>
-<thead>
-<tr>
-<th>类别</th>
-<th>数据库名</th>
-<th>链接</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>蛋白互作数据库</td>
-<td>STRING</td>
-<td><a target="_blank" rel="noopener" href="https://string-db.org/">https://string-db.org/</a></td>
-<td>可进行蛋白质互作在线分析</td>
-</tr>
-<tr>
-<td>转录因子数据库</td>
-<td>iTAK</td>
-<td><a target="_blank" rel="noopener" href="http://itak.feilab.net/">http://itak.feilab.net</a></td>
-<td>植物转录因子与蛋白激酶数据库，可上传序列注释</td>
-</tr>
-<tr>
-<td>miRNA数据库</td>
-<td>miRBase</td>
-<td><a target="_blank" rel="noopener" href="https://www.mirbase.org/">https://www.mirbase.org/</a></td>
-<td>miRNA序列及注释收录数据库</td>
-</tr>
-</tbody></table>
-<h2 id="表达数据库"><a href="#表达数据库" class="headerlink" title="表达数据库"></a>表达数据库</h2><table>
-<thead>
-<tr>
-<th>数据库</th>
-<th>链接</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>原始数据库SRA</td>
-<td><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/sra">https://www.ncbi.nlm.nih.gov/sra</a></td>
-<td>保存原始测序fastq文件</td>
-</tr>
-<tr>
-<td>定量数据库GEO</td>
-<td><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/geo/">https://www.ncbi.nlm.nih.gov/geo/</a></td>
-<td>主要保存了Microarray表达数据，部分测序数据</td>
-</tr>
-<tr>
-<td>表达可视化数据库</td>
-<td><a target="_blank" rel="noopener" href="http://bar.utoronto.ca/">http://bar.utoronto.ca/</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="物种数据库"><a href="#物种数据库" class="headerlink" title="物种数据库"></a>物种数据库</h2><table>
-<thead>
-<tr>
-<th>数据库</th>
-<th>链接</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>拟南芥</td>
-<td><a target="_blank" rel="noopener" href="https://www.arabidopsis.org/">https://www.arabidopsis.org</a></td>
-<td></td>
-</tr>
-<tr>
-<td>水稻</td>
-<td><a target="_blank" rel="noopener" href="https://rapdb.dna.affrc.go.jp/">https://rapdb.dna.affrc.go.jp</a></td>
-<td></td>
-</tr>
-</tbody></table>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/21/databse/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -519,7 +438,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-06 15:18:38" itemprop="dateModified" datetime="2021-06-06T15:18:38+08:00">2021-06-06</time>
+                <time title="修改时间：2021-08-27 22:09:01" itemprop="dateModified" datetime="2021-08-27T22:09:01+08:00">2021-08-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -577,256 +496,15 @@
 <li>序列部分：可以为一行或多行；</li>
 <li>序列部分：可以描述碱基（nucleotide）或者氨基酸（amino acid）。</li>
 </ol>
-<h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;YP_001864424.1  phycoerythrobilin:ferredoxin oxidoreductase</span><br><span class="line">MNSERSDVTLYQPFLDYAIAYMRSRLDLEPYPIPTGFESNSAVVGKGKNQEEVVTTSYAFQTAKLRQIRA</span><br><span class="line">AHVQGGNSLQVLNFVIFPHLNYDLPFFGADLVTLPGGHLIALDMQPLFRDDSAYQAKYTEPILPIFHAHQ</span><br><span class="line">QHLSWGGDFPEEAQPFFSPAFLWTRPQETAVVETQVFAAFKDYLKAYLDFVEQAEAVTDSQNLVAIKQAQ</span><br><span class="line">LRYLRYRAEKDPARGMFKRFYGAEWTEEYIHGFLFDLERKLTVVK</span><br></pre></td></tr></table></figure>
-
-<h2 id="fastq文件"><a href="#fastq文件" class="headerlink" title="fastq文件"></a>fastq文件</h2><p>fastq文件是NGS中存储测序样本序列的常用格式，其中除了包含序列信息，还有每个碱基的质量值信息，以此判断碱基是否可信。质量值相关问题，请见<a href="https://biomarble.github.io/2021/05/11/bioinfoFAQ/#%E6%B5%8B%E5%BA%8F%E8%B4%A8%E9%87%8F%E5%8F%8A%E5%85%B6%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95">相关博文</a>。</p>
-<h5 id="对应文件后缀-1"><a href="#对应文件后缀-1" class="headerlink" title="对应文件后缀"></a>对应文件后缀</h5><ul>
-<li>fq</li>
-<li>fastq</li>
-</ul>
-<blockquote>
-<p>通常以压缩文件形式存放，一般无需解压，多数相关软件可以直接读取压缩文件。</p>
-</blockquote>
-<h5 id="文件特点-1"><a href="#文件特点-1" class="headerlink" title="文件特点"></a>文件特点</h5><p><strong>每4行代表一条序列</strong></p>
-<ol>
-<li>第一行以@开头，为识别码，即read名称，是测序仪依据设定自动命名；</li>
-<li>第二行为序列；</li>
-<li>第三行以+开头，后跟注释，可为空</li>
-<li>第四行为质量值（ASCII码加Q值的值所对应的字符，具体计算方法请翻看<a href="https://biomarble.github.io/">生物信息分析中常见文件FAQ</a>）</li>
-</ol>
-<h5 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h5><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@A00869:272:H72GWDSXY:2:1101:30960:1000 1:N:0:GATTAGG+GATTAGGA</span><br><span class="line">CTATNGCACACACGTCTCAGGCTGCTCTGGTTTCAGCATTGGTATCATCGACTCTGGCTGCATGGATATGATGAGGGACGTTCACTAGCTAGTGAGTCCATGATTGTGACCCAACATGTTACTGTATGCCCCAACTTTCTAGGTGCTGAC</span><br><span class="line">+</span><br><span class="line">FFFF#FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:FFFFFFFFFFFFFFFF</span><br></pre></td></tr></table></figure>
-
-<h2 id="GTF-GFF-GFF3文件"><a href="#GTF-GFF-GFF3文件" class="headerlink" title="GTF/GFF/GFF3文件"></a>GTF/GFF/GFF3文件</h2><ul>
-<li><p>GTF/GFF文件是描述相关特征（包括基因、转录本、外显子、UTR等等）在基因组序列的位置等信息的文件。</p>
-</li>
-<li><p>GTF/GFF文件中定义了每个特征所在的染色体编号、起始位置、终止位置、所在的正负链信息、名称等等信息。</p>
-</li>
-<li><p>GTF与GFF文件可以相互转换。</p>
-</li>
-<li><p>GFF3是 GFF version 3的缩写，目前常用的GFF都是GFF3版本。</p>
-</li>
-</ul>
-<h5 id="文件后缀"><a href="#文件后缀" class="headerlink" title="文件后缀"></a>文件后缀</h5><ul>
-<li>gtf</li>
-<li>gff</li>
-<li>gff3</li>
-</ul>
-<h5 id="文件特点-2"><a href="#文件特点-2" class="headerlink" title="文件特点"></a>文件特点</h5><ol>
-<li>GTF/GFF文件是文本文件，可以用notepad++或UltraEdit，以及Excel等打开；</li>
-<li>一般只记录特征的位置信息，不包含序列信息；</li>
-<li>每个GTF/GFF文件都对应了一个版本的基因组序列；</li>
-<li>可以只包含一条染色体，也可以包含所有染色体;</li>
-<li>染色体名称必须与基因组序列ID<strong>完全一致</strong>。</li>
-<li>不同数据库的GTF/GFF文件格式或许有差异，例如Ensembl的文件与UCSC的文件存在差异。</li>
-<li>通常GTF/GFF的下载来源需要与基因组fasta文件一致，以保证对应。</li>
-</ol>
-<h5 id="GTF示例"><a href="#GTF示例" class="headerlink" title="GTF示例"></a>GTF示例</h5><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">1       araport11       gene    3631    5899    .       +       .       gene_id &quot;gene:AT1G01010&quot;;</span><br><span class="line">1       araport11       mRNA    3631    5899    .       +       .       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;;</span><br><span class="line">1       araport11       five_prime_UTR  3631    3759    .       +       .       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;;</span><br><span class="line">1       araport11       exon    3631    3913    .       +       .       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;; exon_number &quot;1&quot;;</span><br><span class="line">1       araport11       CDS     3760    3913    .       +       0       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;;</span><br><span class="line">1       araport11       exon    3996    4276    .       +       .       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;; exon_number &quot;2&quot;;</span><br><span class="line">1       araport11       CDS     3996    4276    .       +       2       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;;</span><br><span class="line">1       araport11       exon    4486    4605    .       +       .       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;; exon_number &quot;3&quot;;</span><br><span class="line">1       araport11       CDS     4486    4605    .       +       0       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;;</span><br><span class="line">1       araport11       exon    4706    5095    .       +       .       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;; exon_number &quot;4&quot;;</span><br><span class="line">1       araport11       CDS     4706    5095    .       +       0       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;;</span><br><span class="line">1       araport11       exon    5174    5326    .       +       .       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;; exon_number &quot;5&quot;;</span><br><span class="line">1       araport11       CDS     5174    5326    .       +       0       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;;</span><br><span class="line">1       araport11       CDS     5439    5630    .       +       0       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;;</span><br><span class="line">1       araport11       exon    5439    5899    .       +       .       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;; exon_number &quot;6&quot;;</span><br><span class="line">1       araport11       three_prime_UTR 5631    5899    .       +       .       transcript_id &quot;transcript:AT1G01010.1&quot;; gene_id &quot;gene:AT1G01010&quot;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h5 id="GFF示例"><a href="#GFF示例" class="headerlink" title="GFF示例"></a>GFF示例</h5><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">1       araport11       gene    3631    5899    .       +       .       ID=AT1G01010;Name=NAC001</span><br><span class="line">1       araport11       mRNA    3631    5899    .       +       .       ID=AT1G01010.1;Parent=AT1G01010</span><br><span class="line">1       araport11       five_prime_UTR  3631    3759    .       +       .       Parent=AT1G01010.1</span><br><span class="line">1       araport11       exon    3631    3913    .       +       .       Parent=AT1G01010.1</span><br><span class="line">1       araport11       CDS     3760    3913    .       +       0       ID=CDS:AT1G01010.1;Parent=AT1G01010.1;protein_id=AT1G01010.1</span><br><span class="line">1       araport11       exon    3996    4276    .       +       .       Parent=transcript:AT1G01010.1</span><br><span class="line">1       araport11       CDS     3996    4276    .       +       2       ID=CDS:AT1G01010.1;Parent=transcript:AT1G01010.1</span><br><span class="line">1       araport11       exon    4486    4605    .       +       .       Parent=transcript:AT1G01010.1</span><br><span class="line">1       araport11       CDS     4486    4605    .       +       0       ID=CDS:AT1G01010.1;Parent=transcript:AT1G01010.1</span><br><span class="line">1       araport11       exon    4706    5095    .       +       .       Parent=transcript:AT1G01010.1</span><br><span class="line">1       araport11       CDS     4706    5095    .       +       0       ID=CDS:AT1G01010.1;Parent=transcript:AT1G01010.1</span><br><span class="line">1       araport11       exon    5174    5326    .       +       .       Parent=transcript:AT1G01010.1</span><br><span class="line">1       araport11       CDS     5174    5326    .       +       0       ID=CDS:AT1G01010.1;Parent=transcript:AT1G01010.1</span><br><span class="line">1       araport11       CDS     5439    5630    .       +       0       ID=CDS:AT1G01010.1;Parent=transcript:AT1G01010.1</span><br><span class="line">1       araport11       exon    5439    5899    .       +       .       Parent=transcript:AT1G01010.1;</span><br><span class="line">1       araport11       three_prime_UTR 5631    5899    .       +       .       Parent=transcript:AT1G01010.1</span><br></pre></td></tr></table></figure>
-
-<h5 id="每列含义"><a href="#每列含义" class="headerlink" title="每列含义"></a>每列含义</h5><table>
-<thead>
-<tr>
-<th>列序</th>
-<th>含义</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td>染色体ID</td>
-<td>需要与序列文件完全对应，区分大小写。如：”Chr1”, “chr1”, “1”, “NC_000001.11”  是不同的。</td>
-</tr>
-<tr>
-<td>2</td>
-<td>注释信息来源</td>
-<td>一般为软件或数据库名称</td>
-</tr>
-<tr>
-<td>3</td>
-<td>特征的类型</td>
-<td>gene/mRNA/exon/CDS等等</td>
-</tr>
-<tr>
-<td>4</td>
-<td>起始位置</td>
-<td>起始位点在序列中的位置</td>
-</tr>
-<tr>
-<td>5</td>
-<td>终止位置</td>
-<td>终止位点在序列中的位置</td>
-</tr>
-<tr>
-<td>6</td>
-<td>打分值</td>
-<td>软件或者用户定义的打分值，非必须，一般以”.”表示省略</td>
-</tr>
-<tr>
-<td>7</td>
-<td>正负链信息</td>
-<td>+表示与序列文件一致的链，- 表示序列文件的互补链</td>
-</tr>
-<tr>
-<td>8</td>
-<td>阅读框</td>
-<td>0,1,2. <br>‘0’表示第一个碱基是密码子的第一个碱基；’1’ 表示第二个碱基是密码子的第一个碱基，以此类推。<br>非必须，一般以”.”表示省略。</td>
-</tr>
-<tr>
-<td>9</td>
-<td>属性(GTF)</td>
-<td>本特征所属的基因ID，转录本ID等等信息，以分号；为分隔符。</td>
-</tr>
-<tr>
-<td>9</td>
-<td>属性(GFF)</td>
-<td>本特征的ID（ID），上一级特征的ID（Parent）；为分隔符。<br>exon、CDS和UTR的Parent为mRNA，mRNA的Parent为gene。</td>
-</tr>
-</tbody></table>
-<h2 id="SAM-BAM文件"><a href="#SAM-BAM文件" class="headerlink" title="SAM/BAM文件"></a>SAM/BAM文件</h2><p>SAM（Sequence Alignment/Map format）文件是保存比对信息的文件格式</p>
-<p>通常用于记录测序数据（Read）比对到基因组的位置信息等，由比对软件（例如bowtie，hisat2，bwa，star等）直接生成。</p>
-<h5 id="文件后缀-1"><a href="#文件后缀-1" class="headerlink" title="文件后缀"></a>文件后缀</h5><ul>
-<li>sam</li>
-<li>bam</li>
-</ul>
-<h5 id="文件特点-3"><a href="#文件特点-3" class="headerlink" title="文件特点"></a>文件特点</h5><ul>
-<li>SAM文件包含比对质量，比对位置，序列等信息；</li>
-<li>SAM文件通常非常大，可以达到几百G；</li>
-<li>SAM文件是文本格式，但由于较大，一般无需用文本编辑器打开，相关软件可以直接读取；</li>
-<li>BAM文件是SAM文件的压缩格式，非文本格式，节省存储空间。</li>
-</ul>
-<h5 id="SAM文件示例"><a href="#SAM文件示例" class="headerlink" title="SAM文件示例"></a>SAM文件示例</h5><ul>
-<li>SAM文件包含head部分和正文部分</li>
-<li>head部分以@开头，记录了每条染色体的长度信息，比对命令等信息</li>
-<li>正文部分是以制表符（TAB）为分隔符的表格</li>
-</ul>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@HD     VN:1.4  SO:coordinate</span><br><span class="line">@SQ     SN:1    LN:43270923</span><br><span class="line">@SQ     SN:2    LN:35937250</span><br><span class="line">@SQ     SN:3    LN:36413819</span><br><span class="line">@PG     ID:STAR PN:STAR VN:2.7.3a       CL:STAR  ...</span><br><span class="line">A00838:278:H72G3DSXY:2:1474:22896:7701  163     1       2653    255     150M    =       2903    400     CTAGCCCTTCCCAAGCCAAATATGGAGGTTCTCTCTCCTCACTCCAT FFFFFF:FFFFFFF,FFFFFFFFFFF,FFF::FFF:FF,FFF:FFFF	NH:i:1  HI:i:1  AS:i:298        nM:i:0</span><br><span class="line">A00838:278:H72G3DSXY:2:1615:22498:25520 163     1       2794    255     150M    =       2934    290     TATAGGATGTTGGTATATGTAGGATGTAATATGAATGATCTGTTGGA  FFFFFF:FFFFFFFFFFFFFFFFFFFFFFFFFFF:FFFFFFFFFFF  NH:i:1  HI:i:1  AS:i:298        nM:i:0</span><br></pre></td></tr></table></figure>
-
-<h5 id="SAM正文每列含义"><a href="#SAM正文每列含义" class="headerlink" title="SAM正文每列含义"></a>SAM正文每列含义</h5><table>
-<thead>
-<tr>
-<th>列序</th>
-<th>含义</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td>查询序列名称</td>
-<td>Read名称</td>
-</tr>
-<tr>
-<td>2</td>
-<td>比对flag编码</td>
-<td>记录比对概况，每个数字的解释见 <a target="_blank" rel="noopener" href="https://broadinstitute.github.io/picard/explain-flags.html">本链接</a></td>
-</tr>
-<tr>
-<td>3</td>
-<td>比对到的染色体编号</td>
-<td></td>
-</tr>
-<tr>
-<td>4</td>
-<td>比对到的起始位置</td>
-<td></td>
-</tr>
-<tr>
-<td>5</td>
-<td>比对质量</td>
-<td>由比对软件决定，不同软件可能不一样，一般为0~255</td>
-</tr>
-<tr>
-<td>6</td>
-<td>比对详情（CIGAR）</td>
-<td>150M为150bp全部比对，具体可参考<a target="_blank" rel="noopener" href="https://genome.sph.umich.edu/wiki/SAM">本链接</a></td>
-</tr>
-<tr>
-<td>7</td>
-<td>PairEnd的另一端序列比对的染色体</td>
-<td>“=”表示两端序列比对的染色体一致 ，如不一致则用具体染色体名表示</td>
-</tr>
-<tr>
-<td>8</td>
-<td>PairEnd的另一端序列比对的起始位置</td>
-<td></td>
-</tr>
-<tr>
-<td>9</td>
-<td>插入片段大小</td>
-<td>read1和read2之间的模板（基因组序列）长度</td>
-</tr>
-<tr>
-<td>10</td>
-<td>序列</td>
-<td>本read的序列</td>
-</tr>
-<tr>
-<td>11</td>
-<td>碱基质量值</td>
-<td>本序列的碱基质量值</td>
-</tr>
-<tr>
-<td>12</td>
-<td>标签信息</td>
-<td>由比对软件决定，不同软件输出不一样。</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>SAM文件详细定义见 <a target="_blank" rel="noopener" href="http://samtools.github.io/hts-specs/SAMv1.pdf">链接</a>；</p>
-</blockquote>
-<h5 id="SAM与BAM的相互转换"><a href="#SAM与BAM的相互转换" class="headerlink" title="SAM与BAM的相互转换"></a>SAM与BAM的相互转换</h5><p>用samtools实现SAM和BAM的互相转换</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#SAM转BAM：</span></span><br><span class="line">samtools view -bS in.sam &gt;in.bam</span><br><span class="line"></span><br><span class="line"><span class="comment">#BAM转SAM：</span></span><br><span class="line">samtools view -h in.bam &gt;in.sam</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="BED文件"><a href="#BED文件" class="headerlink" title="BED文件"></a>BED文件</h2><ul>
-<li>BED文件是记录序列位置的一种表示方式</li>
-<li>通常以文本形式保存</li>
-<li>以制表符（TAB）分隔，包含至少三列（染色体ID，起始位置，终止位置），</li>
-</ul>
-<h5 id="典型示例"><a href="#典型示例" class="headerlink" title="典型示例"></a>典型示例</h5><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1       2982    10815   Os01g0100100    .       +</span><br><span class="line">1       11217   12435   Os01g0100200    .       +</span><br><span class="line">1       11371   12284   Os01g0100300    .       -</span><br><span class="line">1       12720   15685   Os01g0100400    .       +</span><br><span class="line">1       12807   13978   Os01g0100466    .       -</span><br><span class="line">1       16398   20144   Os01g0100500    .       +</span><br><span class="line">1       22840   26892   Os01g0100600    .       +</span><br><span class="line">1       25860   26424   Os01g0100650    .       -</span><br><span class="line">1       27142   28644   Os01g0100700    .       +</span><br><span class="line">1       29817   34453   Os01g0100800    .       +</span><br></pre></td></tr></table></figure>
-
-<h5 id="每列含义-1"><a href="#每列含义-1" class="headerlink" title="每列含义"></a>每列含义</h5><table>
-<thead>
-<tr>
-<th>列序</th>
-<th>含义</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td>染色体/序列ID</td>
-<td>必须</td>
-</tr>
-<tr>
-<td>2</td>
-<td>起始位置</td>
-<td>必须</td>
-</tr>
-<tr>
-<td>3</td>
-<td>终止位置</td>
-<td>必须</td>
-</tr>
-<tr>
-<td>4</td>
-<td>本条记录的名称</td>
-<td>可选</td>
-</tr>
-<tr>
-<td>5</td>
-<td>打分值</td>
-<td>可选，0~1000，由用户定义，如无打分值，则用点(.)表示</td>
-</tr>
-<tr>
-<td>6</td>
-<td>链信息</td>
-<td>可选，+/-/ .   其中点表示无链信息</td>
-</tr>
-</tbody></table>
-<h2 id="VCF文件"><a href="#VCF文件" class="headerlink" title="VCF文件"></a>VCF文件</h2><blockquote>
-<p>待添加</p>
-</blockquote>
-
+<h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/12/bioformat/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -868,10 +546,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-05-11 17:44:00 / 修改时间：17:57:51" itemprop="dateCreated datePublished" datetime="2021-05-11T17:44:00+08:00">2021-05-11</time>
+              <time title="创建时间：2021-05-11 17:44:00" itemprop="dateCreated datePublished" datetime="2021-05-11T17:44:00+08:00">2021-05-11</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-08-27 22:09:10" itemprop="dateModified" datetime="2021-08-27T22:09:10+08:00">2021-08-27</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -915,407 +599,14 @@
 
       
           <h2 id="Blast比对结果各列含义"><a href="#Blast比对结果各列含义" class="headerlink" title="Blast比对结果各列含义"></a>Blast比对结果各列含义</h2><p> 用blast软件的<code>--outfmt 6</code>参数，得到的表格化输出，每列含义如下：</p>
-<table>
-<thead>
-<tr>
-<th>列数</th>
-<th>名称</th>
-<th>释义1</th>
-<th>释义2</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1.</td>
-<td>qseqid</td>
-<td>query  (e.g., gene) sequence id</td>
-<td>查询序列</td>
-</tr>
-<tr>
-<td>2.</td>
-<td>sseqid</td>
-<td>subject (e.g., reference genome) sequence id</td>
-<td>目标序列</td>
-</tr>
-<tr>
-<td>3.</td>
-<td>pident</td>
-<td>percentage of identical matches</td>
-<td>一致性</td>
-</tr>
-<tr>
-<td>4.</td>
-<td>length</td>
-<td>alignment length</td>
-<td>比对长度</td>
-</tr>
-<tr>
-<td>5.</td>
-<td>mismatch</td>
-<td>number of mismatches</td>
-<td>错配数</td>
-</tr>
-<tr>
-<td>6.</td>
-<td>gapopen</td>
-<td>number of gap openings</td>
-<td>gap数</td>
-</tr>
-<tr>
-<td>7.</td>
-<td>qstart</td>
-<td>start of alignment in query</td>
-<td>查询序列起始位置</td>
-</tr>
-<tr>
-<td>8.</td>
-<td>qend</td>
-<td>end of alignment in query</td>
-<td>查询序列终止位置</td>
-</tr>
-<tr>
-<td>9.</td>
-<td>sstart</td>
-<td>start of alignment in subject</td>
-<td>目标序列起始位置</td>
-</tr>
-<tr>
-<td>10.</td>
-<td>send</td>
-<td>end of alignment in subject</td>
-<td>目标序列终止位置</td>
-</tr>
-<tr>
-<td>11.</td>
-<td>evalue</td>
-<td>expect value</td>
-<td>E值</td>
-</tr>
-<tr>
-<td>12.</td>
-<td>bitscore</td>
-<td>bit score</td>
-<td>打分值</td>
-</tr>
-</tbody></table>
-<h2 id="测序质量及其计算方法"><a href="#测序质量及其计算方法" class="headerlink" title="测序质量及其计算方法"></a>测序质量及其计算方法</h2><p>测序仪在测得碱基时，会评估每一个碱基的错误率，用于后续分析。<br>为了方便使用，通常错误率会转换为质量值，转换后的质量值称为Phred score，其转换公式为：</p>
-<p>$$<br>Q=-10\log_{10}P<br>$$</p>
-<p><em><strong><font size='2p'>注：Q:测序质量值（Phred score）；P:碱基的测序错误率。</font></strong></em></p>
-<blockquote>
-<p>测序碱基的错误率越小，质量值越高.</p>
-</blockquote>
-<p><strong>碱基准确率与测序质量值(phred score)的关系</strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">质量值Q</th>
-<th align="center">错误率P</th>
-<th align="center">准确率</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">10</td>
-<td align="center">10%</td>
-<td align="center">90%</td>
-</tr>
-<tr>
-<td align="center">20</td>
-<td align="center">1%</td>
-<td align="center">99%</td>
-</tr>
-<tr>
-<td align="center">30</td>
-<td align="center">0.1%</td>
-<td align="center">99.9%</td>
-</tr>
-<tr>
-<td align="center">40</td>
-<td align="center">0.01%</td>
-<td align="center">99.99%</td>
-</tr>
-</tbody></table>
-<p>在FASTQ文件中，为了更方便地存储phred score，会被编码为一个字符，这样每个质量值仅使用1个字节即可，可以大量节省存储空间。</p>
-<p>目前常见的转换方法有两种：</p>
-<ol>
-<li>Phred+33: Q+33对应的ASCII字符</li>
-<li>Phred+64: Q+64对应的ASCII字符</li>
-</ol>
-<p><strong>常见的测序平台对应的编码方式</strong></p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>最小Phred值</th>
-<th>最大Phred值</th>
-<th>ASCII计算方法</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Sanger</td>
-<td>0</td>
-<td>40</td>
-<td>Phred+33</td>
-</tr>
-<tr>
-<td>Solexa</td>
-<td>-5</td>
-<td>40</td>
-<td>Phred+64</td>
-</tr>
-<tr>
-<td>Illumina 1.3+</td>
-<td>0</td>
-<td>40</td>
-<td>Phred+64</td>
-</tr>
-<tr>
-<td>Illumina 1.5+</td>
-<td>3</td>
-<td>40</td>
-<td>Phred+64</td>
-</tr>
-<tr>
-<td>Illumina 1.8+</td>
-<td>0</td>
-<td>41</td>
-<td>Phred+33</td>
-</tr>
-</tbody></table>
-<p>转换完之后的Phred值以一个字符形式。</p>
-<p>以目前市面上最常见的Phred+33为例，fastq中质量值为I的碱基表示Phred Score为40，即万分之一的错误率(0.01%) 。</p>
-<p><strong>测序质量值与ASCII编码的关系（以Phred+33为例）</strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">Symbol</th>
-<th align="center">ASCII Code</th>
-<th align="center">Q-Score</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">!</td>
-<td align="center">33</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">“</td>
-<td align="center">34</td>
-<td align="center">1</td>
-</tr>
-<tr>
-<td align="center">#</td>
-<td align="center">35</td>
-<td align="center">2</td>
-</tr>
-<tr>
-<td align="center">$</td>
-<td align="center">36</td>
-<td align="center">3</td>
-</tr>
-<tr>
-<td align="center">%</td>
-<td align="center">37</td>
-<td align="center">4</td>
-</tr>
-<tr>
-<td align="center">&amp;</td>
-<td align="center">38</td>
-<td align="center">5</td>
-</tr>
-<tr>
-<td align="center">‘</td>
-<td align="center">39</td>
-<td align="center">6</td>
-</tr>
-<tr>
-<td align="center">(</td>
-<td align="center">40</td>
-<td align="center">7</td>
-</tr>
-<tr>
-<td align="center">)</td>
-<td align="center">41</td>
-<td align="center">8</td>
-</tr>
-<tr>
-<td align="center">*</td>
-<td align="center">42</td>
-<td align="center">9</td>
-</tr>
-<tr>
-<td align="center">+</td>
-<td align="center">43</td>
-<td align="center">10</td>
-</tr>
-<tr>
-<td align="center">,</td>
-<td align="center">44</td>
-<td align="center">11</td>
-</tr>
-<tr>
-<td align="center">-</td>
-<td align="center">45</td>
-<td align="center">12</td>
-</tr>
-<tr>
-<td align="center">.</td>
-<td align="center">46</td>
-<td align="center">13</td>
-</tr>
-<tr>
-<td align="center">/</td>
-<td align="center">47</td>
-<td align="center">14</td>
-</tr>
-<tr>
-<td align="center">0</td>
-<td align="center">48</td>
-<td align="center">15</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">49</td>
-<td align="center">16</td>
-</tr>
-<tr>
-<td align="center">2</td>
-<td align="center">50</td>
-<td align="center">17</td>
-</tr>
-<tr>
-<td align="center">3</td>
-<td align="center">51</td>
-<td align="center">18</td>
-</tr>
-<tr>
-<td align="center">4</td>
-<td align="center">52</td>
-<td align="center">19</td>
-</tr>
-<tr>
-<td align="center">5</td>
-<td align="center">53</td>
-<td align="center">20</td>
-</tr>
-<tr>
-<td align="center">6</td>
-<td align="center">54</td>
-<td align="center">21</td>
-</tr>
-<tr>
-<td align="center">7</td>
-<td align="center">55</td>
-<td align="center">22</td>
-</tr>
-<tr>
-<td align="center">8</td>
-<td align="center">56</td>
-<td align="center">23</td>
-</tr>
-<tr>
-<td align="center">9</td>
-<td align="center">57</td>
-<td align="center">24</td>
-</tr>
-<tr>
-<td align="center">:</td>
-<td align="center">58</td>
-<td align="center">25</td>
-</tr>
-<tr>
-<td align="center">;</td>
-<td align="center">59</td>
-<td align="center">26</td>
-</tr>
-<tr>
-<td align="center">&lt;</td>
-<td align="center">60</td>
-<td align="center">27</td>
-</tr>
-<tr>
-<td align="center">=</td>
-<td align="center">61</td>
-<td align="center">28</td>
-</tr>
-<tr>
-<td align="center">&gt;</td>
-<td align="center">62</td>
-<td align="center">29</td>
-</tr>
-<tr>
-<td align="center">?</td>
-<td align="center">63</td>
-<td align="center">30</td>
-</tr>
-<tr>
-<td align="center">@</td>
-<td align="center">64</td>
-<td align="center">31</td>
-</tr>
-<tr>
-<td align="center">A</td>
-<td align="center">65</td>
-<td align="center">32</td>
-</tr>
-<tr>
-<td align="center">B</td>
-<td align="center">66</td>
-<td align="center">33</td>
-</tr>
-<tr>
-<td align="center">C</td>
-<td align="center">67</td>
-<td align="center">34</td>
-</tr>
-<tr>
-<td align="center">D</td>
-<td align="center">68</td>
-<td align="center">35</td>
-</tr>
-<tr>
-<td align="center">E</td>
-<td align="center">69</td>
-<td align="center">36</td>
-</tr>
-<tr>
-<td align="center">F</td>
-<td align="center">70</td>
-<td align="center">37</td>
-</tr>
-<tr>
-<td align="center">G</td>
-<td align="center">71</td>
-<td align="center">38</td>
-</tr>
-<tr>
-<td align="center">H</td>
-<td align="center">72</td>
-<td align="center">39</td>
-</tr>
-<tr>
-<td align="center">I</td>
-<td align="center">73</td>
-<td align="center">40</td>
-</tr>
-<tr>
-<td align="center">J</td>
-<td align="center">74</td>
-<td align="center">41</td>
-</tr>
-</tbody></table>
-<h2 id="Rstudio安装后出现白屏"><a href="#Rstudio安装后出现白屏" class="headerlink" title="Rstudio安装后出现白屏"></a>Rstudio安装后出现白屏</h2><h3 id="故障截图"><a href="#故障截图" class="headerlink" title="故障截图"></a>故障截图</h3><p>如图，Rstudio界面可以打开，但是只有menu有内容，主体部分为白色。</p>
-<img src="https://community.rstudio.com/uploads/default/original/3X/c/2/c21b17d56695d059bb2743b6284249523384e04e.png" alt="Blank White Screen - RStudio IDE - RStudio Community" style="zoom: 50%;"  />
-
-
-<h3 id="故障原因"><a href="#故障原因" class="headerlink" title="故障原因"></a>故障原因</h3><p>Rstudio不支持中文用户名</p>
-<h3 id="解决方法-参考源博文"><a href="#解决方法-参考源博文" class="headerlink" title="解决方法  参考源博文"></a>解决方法  <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_16146103/article/details/105445198">参考源博文</a></h3><h4 id="解决方法1：创建一个新账户"><a href="#解决方法1：创建一个新账户" class="headerlink" title="解决方法1：创建一个新账户"></a>解决方法1：创建一个新账户</h4><p>创建一个新的英文账户，使用管理员账户重新开通一个账户，然后使用该用户打开Rstudio软件。windows系统支持多用户使用。</p>
-<h4 id="方法二：修改现有用户名-不推荐"><a href="#方法二：修改现有用户名-不推荐" class="headerlink" title="方法二：修改现有用户名(不推荐)"></a>方法二：修改现有用户名(不推荐)</h4><p>修改当前账户，该方法不太推荐普通用户尝试，因为即使修改了账户为英英文也不行，因为还没有修改该账户默认目录，这个需要修改注册表，操作起来比较麻烦。</p>
-<h5 id="打开环境变量对话框"><a href="#打开环境变量对话框" class="headerlink" title="打开环境变量对话框"></a>打开环境变量对话框</h5><img src="https://img-blog.csdnimg.cn/20200411001554926.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzE2MTQ2MTAz,size_16,color_FFFFFF,t_70#pic_center" alt="3" style="zoom:80%;" />
-
-<h5 id="修改环境变量"><a href="#修改环境变量" class="headerlink" title="修改环境变量"></a>修改环境变量</h5><img src="https://img-blog.csdnimg.cn/20200411001702735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzE2MTQ2MTAz,size_16,color_FFFFFF,t_70#pic_center" alt="4" style="zoom:80%;" />
-
-<h5 id="修改注册表"><a href="#修改注册表" class="headerlink" title="修改注册表"></a>修改注册表</h5><img src="https://img-blog.csdnimg.cn/20200411002306177.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzE2MTQ2MTAz,size_16,color_FFFFFF,t_70#pic_center" alt="5" style="zoom: 67%;" />
-
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/11/bioinfoFAQ/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1365,7 +656,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-06 15:22:55" itemprop="dateModified" datetime="2021-06-06T15:22:55+08:00">2021-06-06</time>
+                <time title="修改时间：2021-08-27 22:10:08" itemprop="dateModified" datetime="2021-08-27T22:10:08+08:00">2021-08-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1413,51 +704,15 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">对于windows 10 x64 系统：版本 1903 或更高版本，采用 内部版本 18362 或更高版本。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>低版本系统需要在”设置”菜单中<a href="ms-settings:windowsupdate">更新 Windows 版本</a>。</p>
-<h3 id="2-启用适用于-Linux-的-Windows-子系统"><a href="#2-启用适用于-Linux-的-Windows-子系统" class="headerlink" title="2.启用适用于 Linux 的 Windows 子系统"></a>2.启用适用于 Linux 的 Windows 子系统</h3><p>先启用用于 Linux 的 Windows 子系统可选功能，然后才能在 Windows 上安装 Linux 分发。</p>
-<h4 id="方法1"><a href="#方法1" class="headerlink" title="方法1."></a>方法1.</h4><p>开始-&gt;设置-&gt;应用-&gt;程序和功能（窗口右上角）-&gt;启用和关闭windows功能(窗口左侧)-&gt;下滑勾选”适用于Linux的Windows子系统”-&gt;确定</p>
-<h4 id="方法2"><a href="#方法2" class="headerlink" title="方法2."></a>方法2.</h4><p>以<b>管理员身份</b>打开 PowerShell 并运行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dism.exe &#x2F;online &#x2F;enable-feature &#x2F;featurename:Microsoft-Windows-Subsystem-Linux &#x2F;all &#x2F;norestart</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-重启计算机"><a href="#3-重启计算机" class="headerlink" title="3.重启计算机"></a>3.重启计算机</h3><h3 id="4-安装所选的-Linux"><a href="#4-安装所选的-Linux" class="headerlink" title="4.安装所选的 Linux"></a>4.安装所选的 Linux</h3><p>打开 <a target="_blank" rel="noopener" href="https://aka.ms/wslstore">Microsoft Store</a>，并选择你偏好的 Linux 分发版，一般选择Ubuntu即可。</p>
-<p>在分发版的页面中，选择“获取”。</p>
-<h3 id="5-首次启动设置Linux"><a href="#5-首次启动设置Linux" class="headerlink" title="5.首次启动设置Linux"></a>5.首次启动设置Linux</h3><p>首次启动新安装的 Linux 分发版时，将打开一个控制台窗口，系统会要求你等待一分钟或两分钟，</p>
-<p>然后，需要为新的 Linux 分发版创建用户帐户和密码。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">此用户名和密码特定于安装的每个单独的 Linux 分发版，与 Windows 用户名无关。</span><br><span class="line">创建用户名和密码后，该帐户将是分发版的默认用户，并将在启动时自动登录。</span><br><span class="line">此帐户将被视为 Linux 管理员，能够运行 sudo (Super User Do) 管理命令。</span><br><span class="line">在适用于 Linux 的 Windows 子系统上运行的每个 Linux 分发版都有其自身的 Linux 用户帐户和密码。 每当添加分发版、重新安装或重置时，都必须配置一个 Linux 用户帐户。</span><br></pre></td></tr></table></figure>
-
-<h2 id="WSL用户密码重置"><a href="#WSL用户密码重置" class="headerlink" title="WSL用户密码重置"></a>WSL用户密码重置</h2><object data="https://biomarble.github.io/assets/pdf/WSLpassword.pdf" type="application/pdf" width="1220px" height="687px"> 
-    <embed src="https://biomarble.github.io/assets/pdf/WSLpassword.pdf"> 
-     <br>浏览器不支持内嵌PDF，请直接打开文件Blast.pdf
-    </embed> 
-</object> 
-
-
-<h2 id="WSL-bash访问U盘或网络共享文件夹"><a href="#WSL-bash访问U盘或网络共享文件夹" class="headerlink" title="WSL bash访问U盘或网络共享文件夹"></a>WSL bash访问U盘或网络共享文件夹</h2><p>U盘一般会自动挂载，如果没有自动挂载，可以用以下方法手动挂载（假设U盘盘符为G）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /mnt/g</span><br><span class="line">sudo mount -t drvfs f: /mnt/g</span><br></pre></td></tr></table></figure>
-
-<p>对于网络存储，如\server\share文件夹，可以用如下方式挂载</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir /mnt/share</span><br><span class="line">mount -t drvfs <span class="string">&#x27;\\server\share&#x27;</span> /mnt/share</span><br></pre></td></tr></table></figure>
-
-<h2 id="好用的WSL外壳"><a href="#好用的WSL外壳" class="headerlink" title="好用的WSL外壳"></a>好用的WSL外壳</h2><p>wsltty，增加了许多可变设置，可以将WSL界面变的更好用，效果和Linux原生terminal一样。<br>链接：<a target="_blank" rel="noopener" href="https://github.com/mintty/wsltty">https://github.com/mintty/wsltty</a></p>
-<h3 id="安装方式"><a href="#安装方式" class="headerlink" title="安装方式"></a>安装方式</h3><ul>
-<li> 下载 <a target="_blank" rel="noopener" href="https://github.com/mintty/wsltty/releases">https://github.com/mintty/wsltty/releases</a>    最新版.exe安装文件</li>
-<li> 双击.exe安装文件，开始安装，用默认参数即可。</li>
-</ul>
-<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><ol>
-<li>打开开始菜单，找到WSL Terminal 打开即可。</li>
-<li>在有需要的文件夹内，点击右键，在菜单中找到WSL  Terminal，即可在当前文件夹打开。</li>
-<li>如果右键菜单没有WSL Terminal选项，可以在开始菜单搜索”add to context menu”，运行即可。</li>
-</ol>
-<h2 id="Anaconda，Miniconda，conda，mamba的关系"><a href="#Anaconda，Miniconda，conda，mamba的关系" class="headerlink" title="Anaconda，Miniconda，conda，mamba的关系"></a>Anaconda，Miniconda，conda，mamba的关系</h2><ul>
-<li><p>Conda是一种软件包管理系统，可以方便的管理各种语言（C/C++/python/Perl/R等)的软件</p>
-</li>
-<li><p>Anaconda 可以理解为Conda以及常用软件包的完整安装包。它将Conda，与众多流行的科学计算、数据分析软件打包到一个安装文件中。</p>
-</li>
-<li><p>Miniconda 可以理解为Anaconda的简化版。默认只包含了 python 和 conda，但是可以在后期通过 pip 和 conda 来安装所需要的包。</p>
-</li>
-<li><p>Mamba可以理解为conda命令的加速优化版，它将conda软件包管理器进行了重写，在安装软件时可以节省大量软件解析和下载时间。</p>
-</li>
-</ul>
-
+<h3 id="2-启用适用于-Linux-的-Windows-子系统"><a href="#2-启用适用于-Linux-的-Windows-子系统" class="headerlink" title="2.启用适用于 Linux 的 Windows 子系统"></a>2.启用适用于 Linux 的 Windows 子系统</h3>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/11/WSLfaq/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1507,7 +762,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-10 10:56:09" itemprop="dateModified" datetime="2021-05-10T10:56:09+08:00">2021-05-10</time>
+                <time title="修改时间：2021-08-27 22:09:38" itemprop="dateModified" datetime="2021-08-27T22:09:38+08:00">2021-08-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1553,9 +808,15 @@
       
           <h1 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h1><p>利用R进行中国地图与世界地图的绘制,并实现标注各种类型数据的功能.</p>
 <h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><p>尽量将地图按照国内发行地图样式美化</p>
-<h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><h2 id="中国地图"><a href="#中国地图" class="headerlink" title="中国地图"></a>中国地图</h2><p><img src="https://biomarble.github.io/assets/Rpackage/chinaMap1.png" alt="chinaDemo1"><br><img src="https://biomarble.github.io/assets/Rpackage/chinaMap2.png" alt="chinaDemo2"><br><img src="https://biomarble.github.io/assets/Rpackage/chinaMap3.png" alt="chinaDemo3"><br><img src="https://biomarble.github.io/assets/Rpackage/chinaMap4.png" alt="chinaDemo4"><br><img src="https://biomarble.github.io/assets/Rpackage/chinaMap5.png" alt="chinaDemo5"></p>
-<h2 id="世界地图"><a href="#世界地图" class="headerlink" title="世界地图"></a>世界地图</h2><p><img src="https://biomarble.github.io/assets/Rpackage/worldMap1.png" alt="worldDemo1"><br><img src="https://biomarble.github.io/assets/Rpackage/worldMap2.png" alt="worldDemo2"><br><img src="https://biomarble.github.io/assets/Rpackage/worldMap3.png" alt="worldDemo3"></p>
-
+<h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/30/map/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1605,7 +866,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-15 22:43:19" itemprop="dateModified" datetime="2021-04-15T22:43:19+08:00">2021-04-15</time>
+                <time title="修改时间：2021-08-27 22:09:57" itemprop="dateModified" datetime="2021-08-27T22:09:57+08:00">2021-08-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1651,37 +912,14 @@
       
           <h1 id="Doublet-Multiplet-的检测方法"><a href="#Doublet-Multiplet-的检测方法" class="headerlink" title="Doublet/Multiplet 的检测方法"></a>Doublet/Multiplet 的检测方法</h1><h2 id="Seurat"><a href="#Seurat" class="headerlink" title="Seurat"></a>Seurat</h2><p>Seurat软件包是SingleCell的基本分析软件工具包。<br>该软件包利用一种特殊的处理方式（oligo-tagged antibodies against ubuquitously expressed surface proteins to place a “sample barcode” on each single cell）得到的结果，对同一个液滴存在多个细胞的情况进行demultiplex，具体方法请单击： <a target="_blank" rel="noopener" href="https://satijalab.org/seurat/v3.1/hashing_vignette.html">vignette</a>.</p>
 <p>ps: 一般的scRNA-seq方式得到的结果无法使用该方法计算</p>
-<h2 id="DoubletFinder"><a href="#DoubletFinder" class="headerlink" title="DoubletFinder"></a><a target="_blank" rel="noopener" href="https://github.com/chris-mcginnis-ucsf/DoubletFinder">DoubletFinder</a></h2><p>DoubletFinder软件可以通过以下四个步骤推断Doublet：</p>
-<ol>
-<li>从现有的scRNA数据中产生人工的doublet，方法是随机挑选细胞对的基因表达求平均（pN）</li>
-<li>预处理合并后的真假混合数据</li>
-<li>对混合数据计算PCA，利用pc计算每个细胞中包含doublet成分的比例</li>
-<li>对细胞进行排序</li>
-</ol>
-<blockquote>
-<p>(1) Generate artificial doublets from existing scRNA-seq data</p>
-<p>(2) Pre-process merged real-artificial data</p>
-<p>(3) Perform PCA and use the PC distance matrix to find each cell’s proportion of artificial k nearest neighbors (pANN)</p>
-<p>(4) Rank order and threshold pANN values according to the expected number of doublets</p>
-</blockquote>
-<p><img src="https://github.com/chris-mcginnis-ucsf/DoubletFinder/raw/master/DF.screenshots/DoubletFinderOverview.png" alt="DoubletFinder"></p>
-<p>使用方法：</p>
-<p>经测试，该程序适用seurat2版本的object，因此需要先按照seurat2</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda create -n  doubletfinder   r-seurat=2 r-modes=0.7.0 r-matrix=1.2.14   r-fields=9.6  r-devtools</span><br><span class="line">...</span><br><span class="line"><span class="comment">#####未完，待测试</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="DoubletDetection"><a href="#DoubletDetection" class="headerlink" title="DoubletDetection"></a><a target="_blank" rel="noopener" href="https://github.com/JonathanShor/DoubletDetection">DoubletDetection</a></h2><p>DoubletDetection 是一个使用Python3语言的scRNA-seq  Doublet检测软件。</p>
-<p>使用方法：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#安装DoubletDetection，需事先准备好python3环境</span></span><br><span class="line"><span class="comment">#如果没有python3环境，可以使用conda  create  -n py3 python=3 创建</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/JonathanShor/DoubletDetection.git</span><br><span class="line"><span class="built_in">cd</span> DoubletDetection</span><br><span class="line">pip3 install .</span><br></pre></td></tr></table></figure>
-
-<p>DoubletDetection 运行代码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> doubletdetection</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> doubletdetection</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">matrix_path = <span class="string">&#x27;bmy1/matrix.mtx&#x27;</span>   <span class="comment"># 为cellranger结果文件夹中的matrix.mtx文件，需解压出来</span></span><br><span class="line">raw_counts = doubletdetection.load_mtx(matrix_path)</span><br><span class="line">zero_genes = (np.<span class="built_in">sum</span>(raw_counts, axis=<span class="number">0</span>) == <span class="number">0</span>).A.ravel() <span class="comment">#去除表达0的基因</span></span><br><span class="line">raw_counts = raw_counts[:, ~zero_genes]  </span><br><span class="line"></span><br><span class="line">clf = doubletdetection.BoostClassifier(n_iters=<span class="number">500</span>, use_phenograph=<span class="literal">False</span>, standard_scaling=<span class="literal">True</span>)   <span class="comment"># n_iters为迭代次数，当然越大越好，但是下一步计算时间会更长</span></span><br><span class="line">doublets = clf.fit(raw_counts).predict(p_thresh=<span class="number">1e-16</span>, voter_thresh=<span class="number">0.5</span>) </span><br><span class="line">np.savetxt(<span class="string">&#x27;out1.txt&#x27;</span>, doublets, fmt=<span class="string">&quot;%d&quot;</span>, delimiter=<span class="string">&#x27;,&#x27;</span>)  <span class="comment">#输出æ终预测结果到out1.txt文件中</span></span><br><span class="line"><span class="comment"># 结果文件中</span></span><br><span class="line"><span class="comment"># 1 :doublet</span></span><br><span class="line"><span class="comment"># 0 :singlet</span></span><br><span class="line"><span class="comment"># np.nan :ambiguous cell，无法判断</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#以下为绘图（非必须）</span></span><br><span class="line"><span class="comment">#注意，以下步骤可能需要X11环境（即纯terminal可能报错）</span></span><br><span class="line"><span class="comment">#convergence_test.pdf 为预测的doublet数随着迭代次数变化的收敛曲线</span></span><br><span class="line"><span class="comment">#umap_test.pdf   为注明了doublet的tsne图（？）</span></span><br><span class="line"><span class="comment">#threshold_test.pdf 为不同参数阈值组合下预测的doublet数目的热图</span></span><br><span class="line">f = doubletdetection.plot.convergence(clf, save=<span class="string">&#x27;convergence_test.pdf&#x27;</span>, show=<span class="literal">True</span>, p_thresh=<span class="number">1e-16</span>, voter_thresh=<span class="number">0.5</span>)</span><br><span class="line">f2, umap_coords = doubletdetection.plot.umap_plot(raw_counts, doublets, random_state=<span class="number">1</span>,</span><br><span class="line">                                                               save=<span class="string">&#x27;umap_test.pdf&#x27;</span>, show=<span class="literal">True</span>)</span><br><span class="line">f3 = doubletdetection.plot.threshold(clf, save=<span class="string">&#x27;threshold_test.pdf&#x27;</span>, show=<span class="literal">True</span>, p_step=<span class="number">6</span>)</span><br></pre></td></tr></table></figure>
-
-<p>以上代码可以再python3环境中一句句运行，也 可以写成一个py文件，python执行即可。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/03/20/scRNA-seq%E4%B8%AD%E7%9A%84Doublet-Multiplet%E7%9A%84%E6%A3%80%E6%B5%8B%E6%96%B9%E6%B3%95/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1731,7 +969,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-10 12:10:39" itemprop="dateModified" datetime="2021-05-10T12:10:39+08:00">2021-05-10</time>
+                <time title="修改时间：2021-08-27 22:08:19" itemprop="dateModified" datetime="2021-08-27T22:08:19+08:00">2021-08-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1777,69 +1015,15 @@
       
           <h1 id="JIRA-Confluence简介"><a href="#JIRA-Confluence简介" class="headerlink" title="JIRA/Confluence简介"></a>JIRA/Confluence简介</h1><p>JIRA是Atlassian公司开发的一套IT研发管理工具，许多IT大厂都在使用；另外，也是一套非常好用的项目管理工具，适用于多部门协作，可以记录项目状态，推进项目进度。</p>
 <p>Confluence是Atlassian公司开发的知识管理工具，与JIRA可以搭配使用，作用与wiki比较类似，适用于记录各种常见问题，记录会议纪要等等。</p>
-<h1 id="为什么要做反向代理"><a href="#为什么要做反向代理" class="headerlink" title="为什么要做反向代理"></a>为什么要做反向代理</h1><ol>
-<li>对个人或者小微企业而言，固定的IP资源还是非常宝贵的，每年为IP付出的成本较高。</li>
-<li>反向代理可以摆脱固定IP限制，直接将服务器与域名绑定，轻松实现域名访问。</li>
-<li>由于脱离了固定IP限制，可以一定程度上绕过备案（不备案或只备案一台有固IP的转发服务器即可） </li>
-</ol>
-<h1 id="为什么要做内网穿透"><a href="#为什么要做内网穿透" class="headerlink" title="为什么要做内网穿透"></a>为什么要做内网穿透</h1><ol>
-<li>个人或小微企业的服务器通常放在局域网环境下</li>
-<li> 如果要从<a target="_blank" rel="noopener" href="https://cd.hwxnet.com/view/jcgodmjldfojpmch.html">因特网(Internet)</a>访问到服务器，必须穿透连接局域网与因特网的连接：路由器</li>
-<li>个人入户路由器的IP通常是不固定的</li>
-</ol>
-<h1 id="解决方案1"><a href="#解决方案1" class="headerlink" title="解决方案1"></a>解决方案1</h1><p>在具有固定IP的服务器搭建ngrokd服务，作为转发服务器，所有访问内网服务器的流量均通过该转发服务器。</p>
-<ul>
-<li>需要购买阿里云/腾讯云服务器等有固定IP的服务器，作为转发服务器</li>
-<li>在转发服务器搭建ngrokd服务</li>
-<li>隧道数目理论无限制</li>
-</ul>
-<h3 id="转发服务器搭建"><a href="#转发服务器搭建" class="headerlink" title="转发服务器搭建"></a>转发服务器搭建</h3><p>见往期 <a href="https://biomarble.github.io/2018/03/19/Ngrok-%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/">博客</a>，不再赘述</p>
-<h3 id="现有资源"><a href="#现有资源" class="headerlink" title="现有资源"></a>现有资源</h3><ul>
-<li>H1：安装JIRA/confluence的服务器，需要通过反向代理暴露到因特网，没有固定外网IP</li>
-<li>H2：作为ngrokd的转发服务器，已备案域名,如  abcd.efg</li>
-</ul>
-<h3 id="期望访问JIRA-confluence效果"><a href="#期望访问JIRA-confluence效果" class="headerlink" title="期望访问JIRA/confluence效果"></a>期望访问JIRA/confluence效果</h3><ul>
-<li>通过 <a target="_blank" rel="noopener" href="http://jira.abcd.efg/">http://jira.abcd.efg</a> 访问jira</li>
-<li>通过 <a target="_blank" rel="noopener" href="http://confluence.abcd.efg/">http://confluence.abcd.efg</a> 访问confluence</li>
-</ul>
-<h3 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h3><p>设置多个ngrok隧道，在配置文件中添加subdomain标签即可实现</p>
-<h3 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h3><ol>
-<li>关闭H2服务器80端口，<em>注意如果用宝塔，则需要修改/www/server/panel/vhost/nginx/</em>.conf下所有文件*</li>
-<li>H2运行下列命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;usr&#x2F;sbin&#x2F;ngrokd -domain&#x3D;abcd.efg -log-level&#x3D;WARNING -httpAddr&#x3D;:80 -httpsAddr&#x3D;:443</span><br></pre></td></tr></table></figure></li>
-<li>H1运行<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ngrok-work  --config&#x3D;web.cfg start  jira confluence</span><br></pre></td></tr></table></figure>
-H1的ngrok客户端配置：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">server_addr: &quot;abcd.efg:443&quot;</span><br><span class="line">trust_host_root_certs: false</span><br><span class="line">tunnels:</span><br><span class="line">      jira:</span><br><span class="line">        subdomain: jira</span><br><span class="line">        proto:</span><br><span class="line">           http: 8080</span><br><span class="line">      confluence:</span><br><span class="line">        subdomain: confluence</span><br><span class="line">        proto:</span><br><span class="line">           http: 8090</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h1 id="解决方案2"><a href="#解决方案2" class="headerlink" title="解决方案2"></a>解决方案2</h1><p>利用国内Ngrok服务提供商（<a target="_blank" rel="noopener" href="https://natapp.cn/">natapp</a>，<a target="_blank" rel="noopener" href="https://www.ngrok.cc/">sunny-ngrok</a>，等）提供的ngrok服务</p>
-<ul>
-<li>无需购买搭建ngrokd转发服务器，使用方便</li>
-<li>一般按照需要隧道数目付费</li>
-</ul>
-<h3 id="搭建方式"><a href="#搭建方式" class="headerlink" title="搭建方式"></a>搭建方式</h3><p>服务商一般会提供：</p>
-<ol>
-<li>一个已编译好的可执行程序</li>
-<li>一个token，或者其他身份识别凭据</li>
-</ol>
-<p>按照服务商的教程，在网页端设定需要转发的端口号，在服务器运行ngrok命令即可实现转发<br>例如natapp的运行方式：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">natapp -authtoken=dsafaewqr23421fjkwqjfdf  -<span class="built_in">log</span>=stdout</span><br></pre></td></tr></table></figure>
-<p><em>注，如需作为长期服务，可以自己构建service命令，利用systemctl管理服务</em></p>
-<h3 id="现有资源-1"><a href="#现有资源-1" class="headerlink" title="现有资源"></a>现有资源</h3><ul>
-<li>H1：存放JIRA和confluence的服务器，没有固定外网IP</li>
-<li>H2：Ngrok服务商提供的域名及隧道token等，但只能绑定一个域名（如abcdefg.s1.natapp.cc)</li>
-</ul>
-<h3 id="期望访问JIRA-confluence效果-1"><a href="#期望访问JIRA-confluence效果-1" class="headerlink" title="期望访问JIRA/confluence效果"></a>期望访问JIRA/confluence效果</h3><ul>
-<li>通过 <a target="_blank" rel="noopener" href="http://abcdefg.s1.natapp.cc/jira">http://abcdefg.s1.natapp.cc/jira</a> 访问jira</li>
-<li>通过 <a target="_blank" rel="noopener" href="http://abcdefg.s1.natapp.cc/confluence">http://abcdefg.s1.natapp.cc/confluence</a> 访问confluence</li>
-</ul>
-<h3 id="解决思路-1"><a href="#解决思路-1" class="headerlink" title="解决思路"></a>解决思路</h3><p>利用apache的反向代理功能，将服务器的不同端口转发到不同的url空间</p>
-<h3 id="修改方法"><a href="#修改方法" class="headerlink" title="修改方法"></a>修改方法</h3><ol>
-<li>apache  http配置文件中添加/etc/httpd/conf.d/proxy.conf<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ProxyPass &#x2F;jira http:&#x2F;&#x2F;127.0.0.1:8080&#x2F;jira</span><br><span class="line">ProxyPassReverse &#x2F;jira http:&#x2F;&#x2F;127.0.0.1:8080&#x2F;jira</span><br><span class="line">ProxyPass &#x2F;confluence http:&#x2F;&#x2F;127.0.0.1:8090&#x2F;confluence</span><br><span class="line">ProxyPassReverse &#x2F;confluence http:&#x2F;&#x2F;127.0.0.1:8090&#x2F;confluence</span><br><span class="line">&lt;proxy *&gt;</span><br><span class="line">          AllowOverride None</span><br><span class="line">      Order Deny,Allow</span><br><span class="line">      Allow from all</span><br><span class="line">&lt;&#x2F;proxy&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-<li>在jira配置中修改：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;Service name&#x3D;&quot;Catalina&quot;&gt;</span><br><span class="line">    &lt;Connector port&#x3D;&quot;8080&quot;</span><br><span class="line">#添加如下三行代码：</span><br><span class="line">               proxyName&#x3D;&quot;abcdefg.s1.natapp.cc&quot;</span><br><span class="line">               proxyPort&#x3D;&quot;80&quot;</span><br><span class="line">               scheme&#x3D;&quot;http&quot;</span><br><span class="line"></span><br><span class="line">               bindOnInit&#x3D;&quot;false&quot;&#x2F;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#path中添加&#x2F;jira</span><br><span class="line">   &lt;Engine name&#x3D;&quot;Catalina&quot; defaultHost&#x3D;&quot;localhost&quot;&gt;</span><br><span class="line">       &lt;Host name&#x3D;&quot;localhost&quot; appBase&#x3D;&quot;webapps&quot; unpackWARs&#x3D;&quot;true&quot; autoDeploy&#x3D;&quot;true&quot;&gt;</span><br><span class="line">           &lt;Context path&#x3D;&quot;&#x2F;jira&quot; docBase&#x3D;&quot;$&#123;catalina.home&#125;&#x2F;atlassian-jira&quot; reloadable&#x3D;&quot;false&quot; useHttpOnly&#x3D;&quot;true&quot;&gt;</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ul>
-<li>修改完之后，要登录jira，修改 服务器主页URL</li>
-<li>如配置了LDAP服务，需要修改confluence中用户目录JIRA Server的地址（只有同步失败且放到第二选项才能编辑）</li>
-</ul>
-
+<h1 id="为什么要做反向代理"><a href="#为什么要做反向代理" class="headerlink" title="为什么要做反向代理"></a>为什么要做反向代理</h1>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/02/11/atlassian-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1889,7 +1073,7 @@ H1的ngrok客户端配置：<figure class="highlight plain"><table><tr><td class
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-15 22:49:57" itemprop="dateModified" datetime="2021-06-15T22:49:57+08:00">2021-06-15</time>
+                <time title="修改时间：2021-08-27 22:09:46" itemprop="dateModified" datetime="2021-08-27T22:09:46+08:00">2021-08-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1934,49 +1118,14 @@ H1的ngrok客户端配置：<figure class="highlight plain"><table><tr><td class
 
       
           <p>准备工作：域名，并做好解析（domain.org及***.**domain.org)<br>服务器端开放端口（如果有防火墙的话）</p>
-<ol>
-<li><p>安装go，下载编译好的包即可。设置<strong>GOROOT.GOPATH.PATH</strong>环境变量</p>
-</li>
-<li><p>下载ngrok源码</p>
-</li>
-</ol>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;inconshreveable&#x2F;ngrok.git</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li><p>生成私有证书，并拷贝近assets文件夹</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ngrok</span><br><span class="line"><span class="built_in">export</span> NGROK_DOMAIN=<span class="string">&quot;domain.org&quot;</span></span><br><span class="line">openssl genrsa -out rootCA.key 2048</span><br><span class="line">openssl req -x509 -new -nodes -key rootCA.key -subj <span class="string">&quot;/CN=<span class="variable">$NGROK_DOMAIN</span>&quot;</span> -days 5000 -out rootCA.pem</span><br><span class="line">openssl genrsa -out device.key 2048</span><br><span class="line">openssl req -new -key device.key -subj <span class="string">&quot;/CN=<span class="variable">$NGROK_DOMAIN</span>&quot;</span> -out device.csr</span><br><span class="line">openssl x509 -req -<span class="keyword">in</span> device.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out device.crt -days 5000</span><br><span class="line">cp rootCA.pem assets/client/tls/ngrokroot.crt</span><br><span class="line">cp device.crt assets/server/tls/snakeoil.crt</span><br><span class="line">cp device.key assets/server/tls/snakeoil.key</span><br></pre></td></tr></table></figure></li>
-<li><p>编译</p>
-</li>
-</ol>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GOOS=linux GOARCH=amd64</span><br><span class="line">make release-server release-client</span><br></pre></td></tr></table></figure>
-
-<ol start="5">
-<li>打开ngrokd服务器端命令</li>
-</ol>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/ngrokd -domain=<span class="string">&quot;domain.org&quot;</span>  -httpAddr=<span class="string">&quot;:80&quot;</span> -httpsAddr=<span class="string">&quot;:443&quot;</span> -tunnelAddr=<span class="string">&quot;:4443&quot;</span></span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li><p>拷贝bin/ngrok至客户机</p>
-</li>
-<li><p>填写配置文件模板：</p>
-</li>
-</ol>
-  <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">server_addr: &quot;domain.org:8082&quot;</span><br><span class="line">trust_host_root_certs: false</span><br><span class="line">tunnels:</span><br><span class="line">  http:</span><br><span class="line"> subdomain: &quot;www&quot;</span><br><span class="line"> proto:</span><br><span class="line">   http: &quot;80&quot;</span><br><span class="line">  https:</span><br><span class="line"> subdomain: &quot;www&quot;</span><br><span class="line"> proto:</span><br><span class="line">   https: &quot;80&quot;</span><br><span class="line">  ssh:</span><br><span class="line"> remote_port: 100     #映射为服务器端口，需开放</span><br><span class="line"> proto:</span><br><span class="line">   tcp: &quot;22&quot;          #待映射的客户机端口</span><br></pre></td></tr></table></figure>
-
-<ol start="8">
-<li>开机启动，设置service文件，/etc/systemd/system/ngrok.service<br> 开机自动启动   systemctl enable ngrok<br> 启动           systemctl start ngrok</li>
-</ol>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description&#x3D;Ngrok Service</span><br><span class="line">Wants&#x3D;network-online.target</span><br><span class="line">After&#x3D;network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type&#x3D;simple</span><br><span class="line">ExecStart&#x3D;&#x2F;usr&#x2F;sbin&#x2F;ngrok-work -config&#x3D;&#x2F;home&#x2F;shitw&#x2F;ngrok&#x2F;LAAS.cfg -log-level&#x3D;WARNING  -log&#x3D;&#x2F;var&#x2F;log&#x2F;ngrok.log start ssh</span><br><span class="line">StandardOutput&#x3D;syslog</span><br><span class="line">StandardError&#x3D;null</span><br><span class="line">Restart&#x3D;always</span><br><span class="line">RestartSec&#x3D;30</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy&#x3D;multi-user.target</span><br></pre></td></tr></table></figure>
-
-<ol start="9">
-<li>更换ngrok端口与nginx80端口共用</li>
-</ol>
-<p>既然「nginx」占用了80端口，那么就在「nginx」上做文章。只要绑定ngrok.zmkj6.top 并将所有请求转发到8002端口即可。在服务器中新建/etc/nginx/conf.d/ngrock.conf文件，添加以下内容：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">upstream ngrok &#123;</span><br><span class="line">server 127.0.0.1:8002; </span><br><span class="line"><span class="comment">#此处端口要跟 启动服务端ngrok时指定的端口一致</span></span><br><span class="line">keepalive 64;</span><br><span class="line">&#125;</span><br><span class="line">server &#123;</span><br><span class="line">listen       80;</span><br><span class="line">server_name  *.ngrok.zmkj6.top;</span><br><span class="line"><span class="comment">#charset koi8-r;</span></span><br><span class="line">access_log  logs/ngrok.log;</span><br><span class="line">location / &#123;</span><br><span class="line">        proxy_set_header X-Real-IP <span class="variable">$remote_addr</span>;</span><br><span class="line">        proxy_set_header X-Forwarded-For </span><br><span class="line">        <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">        proxy_set_header Host  <span class="variable">$http_host</span>:8002;</span><br><span class="line">       <span class="comment"># 此处端口要跟 启动服务端ngrok 时指定的端口一致</span></span><br><span class="line">        proxy_set_header X-Nginx-Proxy <span class="literal">true</span>;</span><br><span class="line">        proxy_set_header Connection <span class="string">&quot;&quot;</span>;</span><br><span class="line">        proxy_pass      http://ngrok;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>重新加载「nginx」</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure>
-<p>此外，「ngrok」+ 「nginx」+「Docker」也可以完美实现，由于对Docker」不了解没有去折腾</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2018/03/19/Ngrok-%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -2026,7 +1175,7 @@ H1的ngrok客户端配置：<figure class="highlight plain"><table><tr><td class
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-16 00:00:04" itemprop="dateModified" datetime="2021-04-16T00:00:04+08:00">2021-04-16</time>
+                <time title="修改时间：2021-08-27 22:09:24" itemprop="dateModified" datetime="2021-08-27T22:09:24+08:00">2021-08-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -2071,160 +1220,14 @@ H1的ngrok客户端配置：<figure class="highlight plain"><table><tr><td class
 
       
           <h1 id="Lepmap3-遗传图谱构建流程"><a href="#Lepmap3-遗传图谱构建流程" class="headerlink" title="Lepmap3 遗传图谱构建流程"></a>Lepmap3 遗传图谱构建流程</h1><h2 id="Lepmap3基本流程"><a href="#Lepmap3基本流程" class="headerlink" title="Lepmap3基本流程"></a>Lepmap3基本流程</h2><p><img src="https://sourceforge.net/p/lep-map3/wiki/LM3%20Home/attachment/pipeline.png" alt="Lepmap3流程"></p>
-<h2 id="运行前数据准备"><a href="#运行前数据准备" class="headerlink" title="运行前数据准备"></a>运行前数据准备</h2><h3 id="vcf文件"><a href="#vcf文件" class="headerlink" title="vcf文件"></a>vcf文件</h3><p>vcf文件必须有likelihood信息，lepmap会用likelihood信息进行分析</p>
-<h3 id="pedigree文件"><a href="#pedigree文件" class="headerlink" title="pedigree文件"></a>pedigree文件</h3><p>pedigree文件包含了样本名及家系等相关信息，pedigree文件为tab分隔的文本文件，示例如下：</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>CHR</td>
-<td>POS</td>
-<td>F</td>
-<td>F</td>
-<td>F</td>
-<td>F</td>
-<td>F</td>
-<td>F</td>
-</tr>
-<tr>
-<td>CHR</td>
-<td>POS</td>
-<td>female</td>
-<td>male</td>
-<td>progeny_1</td>
-<td>progeny_2</td>
-<td>progeny_3</td>
-<td>progeny_4</td>
-</tr>
-<tr>
-<td>CHR</td>
-<td>POS</td>
-<td>0</td>
-<td>0</td>
-<td>male</td>
-<td>male</td>
-<td>male</td>
-<td>male</td>
-</tr>
-<tr>
-<td>CHR</td>
-<td>POS</td>
-<td>0</td>
-<td>0</td>
-<td>female</td>
-<td>female</td>
-<td>female</td>
-<td>female</td>
-</tr>
-<tr>
-<td>CHR</td>
-<td>POS</td>
-<td>2</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>CHR</td>
-<td>POS</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-</tbody></table>
-<p>每行涵义如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">line 1：家系（Family）名称</span><br><span class="line">line 2：样本名称</span><br><span class="line">line 3：为father的名称，对应第二行第四列</span><br><span class="line">line 4：为mother的名称，对应第二行第三列</span><br><span class="line">line 5：性别，1 male, 2 female, 0 unknown</span><br><span class="line">line 6：表型，一般用不到。can be 0 for all individuals, this is not currently used</span><br></pre></td></tr></table></figure>
-
-<h3 id="其他软件输出格式转换为Lepmap3格式"><a href="#其他软件输出格式转换为Lepmap3格式" class="headerlink" title="其他软件输出格式转换为Lepmap3格式"></a>其他软件输出格式转换为Lepmap3格式</h3><p>JoinMap loc files:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk -f locsingle.awk file.loc|awk -f loc2genotypes.awk|awk -f genotypes2post.awk |java -cp Lep-MAP3/bin ... data=- ...</span><br></pre></td></tr></table></figure>
-
-<p>Genotype assay data (in tab separated affx_genotypes.txt):</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SNP   IND1 IND2 IND3 IND4   ...</span><br><span class="line">AX-01 AA   AB   BB   NoCall ...</span><br><span class="line">AX-02 AB   AA   AA   BB     ...</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk -f affx2post.awk affx_genotypes.txt|java -cp Lep-MAP3/bin ParentCall2 data=pedigree.txt posteriorFile=- ...</span><br></pre></td></tr></table></figure>
-
-
-
-
-<h2 id="运行方法"><a href="#运行方法" class="headerlink" title="运行方法"></a>运行方法</h2><h4 id="ParentCall2"><a href="#ParentCall2" class="headerlink" title="ParentCall2"></a>ParentCall2</h4><p>该步骤是为了call亲本的基因型（如果已经有，可以矫正亲本基因型，如果没有，可以补缺失亲本基因型），也就是猜测亲本的基因型，<del>并且可以查看性染色体的marker</del>。 支持Grandparents信息，以及半同胞家系。</p>
-<blockquote>
-<p>The module ParentCall2 is used to call (possible missing or erroneous) parental genotypes and markers on sex chromosomes (XY or ZW system, assumes known offspring sex). Grandparents and half-sib familes are also supported (especially the grandparents should be provided if there is data on them).</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java ParentCall2 data=pedigree.txt vcfFile=input.vcf removeNonInformative=1|gzip &gt;data.call.gz</span><br></pre></td></tr></table></figure>
-
-<p>Calling markers on autosomes and on X chromosome (X-)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java ParentCall2 data=... XLimit=2 ...</span><br></pre></td></tr></table></figure>
-
-<p>Calling markers on autosomes and on Z chromosome (Z-)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java ParentCall2 data=... ZLimit=2 ...</span><br></pre></td></tr></table></figure>
-
-<h4 id="Filtering2"><a href="#Filtering2" class="headerlink" title="Filtering2"></a>Filtering2</h4><p>该步骤可以根据偏分离（dataTolerance）和缺失率过滤标记（missingLimit）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java Filtering2 data=data1.call dataTolerance=0.001 &gt;data_f.call</span><br></pre></td></tr></table></figure>
-
-<h4 id="SeparateChromosomes2"><a href="#SeparateChromosomes2" class="headerlink" title="SeparateChromosomes2"></a>SeparateChromosomes2</h4><p>该步骤可以将标记进行分群</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java SeparateChromosomes2 data=data_f.call lodLimit=5 &gt;map5.txt</span><br><span class="line">java SeparateChromosomes2 data=data_f.call lodLimit=5 theta=0.05 &gt;map5.5.txt</span><br><span class="line">java SeparateChromosomes2 data=data.call lodLimit=5 distortionLod=1 &gt;map5.nofilt.txt</span><br></pre></td></tr></table></figure>
-
-<p>(parameter numThreads utilises multiple cores)</p>
-<p>The size distribution of linkage groups can be obtained like this:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sort map5.txt|uniq -c|sort -n</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="JoinSingles2All"><a href="#JoinSingles2All" class="headerlink" title="JoinSingles2All"></a>JoinSingles2All</h4><p>该步骤可以将上一步中未分到连锁群的标记重新插入到已有的连锁群中</p>
-<blockquote>
-<p>The JoinSingles2All module assigns singular markers to existing LGs by computing LOD scores between each single marker and markers from the existing LGs. It needs a map file as input parameter and then it outputs a new map file with possible more markers assigned to LGs.</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin/ JoinSingles2All map=map5.txt data=data_f.call lodLimit=4 &gt;map5_js.txt</span><br><span class="line">zcat data_f.call.gz|java -cp bin/ JoinSingles2All map=map5.txt data=- lodLimit=3 lodDifference=2 &gt;map5_js.txt</span><br></pre></td></tr></table></figure>
-
-<p>(parameter numThreads utilises muliple cores)</p>
-<p>(iterated joinSingles2All yields same result as iterating it until no markers can be added)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin/ JoinSingles2All map=map5.txt data=data_f.call lodLimit=4 iterate=1 &gt;map5_js_iterated.txt</span><br></pre></td></tr></table></figure>
-
-<p>The size distribution of linkage groups can be obtained like this:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cut -f 1 map5_js.txt|sort|uniq -c|sort -n</span><br></pre></td></tr></table></figure>
-
-<h4 id="OrderMarkers2"><a href="#OrderMarkers2" class="headerlink" title="OrderMarkers2"></a>OrderMarkers2</h4><p>对每个连锁群内的标记进行排序，以最大化likelihood</p>
-<blockquote>
-<p>OrderMarkers2 orders the markers within each LG by maximizing the likelihood of the data given the order. Either a map file (map=map_file) or output of previous run of OrderMarkers2 (evaluateOrder=order_file) have to be provided (only the first column (the marker name or lg name) is read from these files).</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin/ OrderMarkers2 map=map5_js.txt data=data_f.call chromosome=1 &gt;order1.txt</span><br><span class="line">java -cp bin/ OrderMarkers2 evaluateOrder=order1.txt data=data_f.call &gt;order1.2.txt</span><br></pre></td></tr></table></figure>
-
-<p>已知标记顺序，计算遗传距离</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin/ OrderMarkers2 evaluateOrder=order2.txt data=data_f.call improveOrder=0 &gt;order1.3.txt</span><br></pre></td></tr></table></figure>
-
-<p>已知标记顺序，计算中性图距离</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin/ OrderMarkers2 evaluateOrder=order1.txt data=data_f.call improveOrder=0 sexAveraged=1 &gt;order1.SA.txt</span><br></pre></td></tr></table></figure>
-
-<p>无交叉减数分裂achiasmatic meiosis (父本中无重组交换):</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin/ OrderMarkers2 map=map.txt data=data_f.call recombination1=0</span><br></pre></td></tr></table></figure>
-
-<p>无交叉减数分裂achiasmatic meiosis (母本中无重组交换):</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin/ OrderMarkers2 map=map.txt data=data_f.call recombination2=0</span><br></pre></td></tr></table></figure>
-
-<p>分染色体排序</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin/ OrderMarkers2 map=mapBig.txt data=dataBig.call chromosome=1 &gt;order1.1.txt</span><br><span class="line">...</span><br><span class="line">java -cp bin/ OrderMarkers2 map=mapBig.txt data=dataBig.call chromosome=N &gt;orderN.1.txt</span><br></pre></td></tr></table></figure>
-
-<h4 id="LMPlot"><a href="#LMPlot" class="headerlink" title="LMPlot"></a>LMPlot</h4><p>绘制点图<br>for every chromosome :</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin&#x2F; OrderMarkers2 map&#x3D;map.txt data&#x3D;data_f.call outputPhasedData&#x3D;1 chromosome&#x3D;1 &gt;order_wp_1.txt</span><br><span class="line">java -cp bin&#x2F; LMPlot order_wp_1.txt &gt;order_wp_1.dot</span><br><span class="line">xdot.py order_wp_1.dot</span><br></pre></td></tr></table></figure>
-
-<p>or:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin&#x2F; OrderMarkers2 evaluateOrder&#x3D;order1.txt data&#x3D;data_f.call outputPhasedData&#x3D;1 &gt;order_wp_1.txt</span><br><span class="line">java -cp bin&#x2F; LMPlot order_wp_1.txt &gt;order_wp_1.dot</span><br><span class="line">xdot.py order_wp_1.dot</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2017/10/01/LepMap3%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E8%AF%B4%E6%98%8E/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
