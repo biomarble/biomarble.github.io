@@ -19,13 +19,13 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"biomarble.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"blog.ugeneyun.cn","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="JIRA&#x2F;Confluence简介JIRA是Atlassian公司开发的一套IT研发管理工具，许多IT大厂都在使用；另外，也是一套非常好用的项目管理工具，适用于多部门协作，可以记录项目状态，推进项目进度。 Confluence是Atlassian公司开发的知识管理工具，与JIRA可以搭配使用，作用与wiki比较类似，适用于记录各种常见问题，记录会议纪要等等。 为什么要做反向代理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JIRA&#x2F;confluence 反向代理+内网穿透配置">
-<meta property="og:url" content="http://biomarble.github.io/2020/02/11/atlassian-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/index.html">
+<meta property="og:url" content="https://blog.ugeneyun.cn/2020/02/11/atlassian-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/index.html">
 <meta property="og:site_name" content="Bioinformatics dōjō">
 <meta property="og:description" content="JIRA&#x2F;Confluence简介JIRA是Atlassian公司开发的一套IT研发管理工具，许多IT大厂都在使用；另外，也是一套非常好用的项目管理工具，适用于多部门协作，可以记录项目状态，推进项目进度。 Confluence是Atlassian公司开发的知识管理工具，与JIRA可以搭配使用，作用与wiki比较类似，适用于记录各种常见问题，记录会议纪要等等。 为什么要做反向代理">
 <meta property="og:locale" content="zh_CN">
@@ -36,7 +36,7 @@
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://biomarble.github.io/2020/02/11/atlassian-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
+<link rel="canonical" href="https://blog.ugeneyun.cn/2020/02/11/atlassian-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
 
 
 <script id="page-configurations">
@@ -178,7 +178,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://biomarble.github.io/2020/02/11/atlassian-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
+    <link itemprop="mainEntityOfPage" href="https://blog.ugeneyun.cn/2020/02/11/atlassian-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://img.discogs.com/w9vJTN3wwe3nTq7628A9o9QFb6k=/fit-in/600x597/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1752295-1430835599-7152.jpeg.jpg">
@@ -272,7 +272,7 @@
 <li>在转发服务器搭建ngrokd服务</li>
 <li>隧道数目理论无限制</li>
 </ul>
-<h3 id="转发服务器搭建"><a href="#转发服务器搭建" class="headerlink" title="转发服务器搭建"></a>转发服务器搭建</h3><p>见往期 <a href="https://biomarble.github.io/2018/03/19/Ngrok-%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/">博客</a>，不再赘述</p>
+<h3 id="转发服务器搭建"><a href="#转发服务器搭建" class="headerlink" title="转发服务器搭建"></a>转发服务器搭建</h3><p>见往期 <a target="_blank" rel="noopener" href="https://biomarble.github.io/2018/03/19/Ngrok-%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/">博客</a>，不再赘述</p>
 <h3 id="现有资源"><a href="#现有资源" class="headerlink" title="现有资源"></a>现有资源</h3><ul>
 <li>H1：安装JIRA/confluence的服务器，需要通过反向代理暴露到因特网，没有固定外网IP</li>
 <li>H2：作为ngrokd的转发服务器，已备案域名,如  abcd.efg</li>
