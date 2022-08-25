@@ -415,7 +415,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-27 22:27:19" itemprop="dateModified" datetime="2021-08-27T22:27:19+08:00">2021-08-27</time>
+                <time title="修改时间：2022-08-25 23:10:38" itemprop="dateModified" datetime="2022-08-25T23:10:38+08:00">2022-08-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -473,9 +473,9 @@
 <td><a target="_blank" rel="noopener" href="https://plants.ensembl.org/info/data/ftp/index.html">所有已收录物种下载页面</a></td>
 </tr>
 <tr>
-<td>JGI Phytozome V12</td>
-<td><a target="_blank" rel="noopener" href="https://phytozome.jgi.doe.gov/">https://phytozome.jgi.doe.gov</a></td>
-<td>需注册,<a target="_blank" rel="noopener" href="https://genome.jgi.doe.gov/portal/pages/dynamicOrganismDownload.jsf?organism=Phytozome">下载链接</a></td>
+<td><del>JGI Phytozome V12</del></td>
+<td><del><a target="_blank" rel="noopener" href="https://phytozome.jgi.doe.gov/">https://phytozome.jgi.doe.gov</a></del></td>
+<td><del>需注册,<a target="_blank" rel="noopener" href="https://genome.jgi.doe.gov/portal/pages/dynamicOrganismDownload.jsf?organism=Phytozome">下载链接</a></del></td>
 </tr>
 <tr>
 <td>JGI Phytozome V13</td>
@@ -545,7 +545,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-17 21:41:20" itemprop="dateModified" datetime="2022-04-17T21:41:20+08:00">2022-04-17</time>
+                <time title="修改时间：2022-08-25 23:13:30" itemprop="dateModified" datetime="2022-08-25T23:13:30+08:00">2022-08-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -763,7 +763,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-27 22:10:08" itemprop="dateModified" datetime="2021-08-27T22:10:08+08:00">2021-08-27</time>
+                <time title="修改时间：2022-08-25 23:08:40" itemprop="dateModified" datetime="2022-08-25T23:08:40+08:00">2022-08-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -807,8 +807,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="WSL安装步骤"><a href="#WSL安装步骤" class="headerlink" title="WSL安装步骤"></a>WSL安装步骤</h2><h3 id="1-确认系统版本"><a href="#1-确认系统版本" class="headerlink" title="1 确认系统版本"></a>1 确认系统版本</h3><p>按 Windows 徽标键 + R，然后键入winver，选择 “确定”.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">对于windows 10 x64 系统：版本 1903 或更高版本，采用 内部版本 18362 或更高版本。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <h2 id="官方疑难解答页面"><a href="#官方疑难解答页面" class="headerlink" title="官方疑难解答页面"></a>官方疑难解答页面</h2><p>遇到问题，可先检索官方疑难解答：</p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/troubleshooting">https://docs.microsoft.com/zh-cn/windows/wsl/troubleshooting</a></p>
+<h2 id="新版的WSL安装步骤"><a href="#新版的WSL安装步骤" class="headerlink" title="新版的WSL安装步骤"></a>新版的WSL安装步骤</h2><h3 id="1-确认系统版本"><a href="#1-确认系统版本" class="headerlink" title="1 确认系统版本"></a>1 确认系统版本</h3><p>按 Windows 徽标键 + R，然后键入winver，选择 “确定”.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">要求 Windows 10 版本 2004 及更高版本（内部版本 20262 及更高版本）或 Windows 11。</span><br></pre></td></tr></table></figure>
+<p>低版本系统需要在”设置”菜单中<a href="ms-settings:windowsupdate">更新 Windows 版本</a>。</p>
+<h3 id="2-安装WSL"><a href="#2-安装WSL" class="headerlink" title="2 安装WSL"></a>2 安装WSL</h3><p>按Windows 徽标键 + R，然后键入<code>powershell start-process powershell -verb runas</code>，点击确定，输入如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wsl --set-default-version 1  # 设置默认发行版为 WSL1</span><br><span class="line">wsl --list --online          # 查看可用的WSL分发版</span><br><span class="line">wsl --install -d  Ubuntu     #安装Ubuntu，下载过程可能较慢</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-重启计算机"><a href="#3-重启计算机" class="headerlink" title="3. 重启计算机"></a>3. 重启计算机</h3><h3 id="4-设置-Linux-用户名和密码"><a href="#4-设置-Linux-用户名和密码" class="headerlink" title="4. 设置 Linux 用户名和密码"></a>4. 设置 Linux 用户名和密码</h3><p>使用“开始”菜单打开Ubuntu, 系统将要求你为 Linux 发行版创建“用户名”和“密码”。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">此用户名和密码与 Windows 用户名无关。</span><br><span class="line"></span><br><span class="line">请注意，输入 密码时，屏幕上不会显示任何内容。 这称为盲目键入。 不会看到正在键入的内容，这完全正常。</span><br><span class="line"></span><br><span class="line">创建用户名和密码后，该帐户将是分发版的默认用户，并将在启动时自动登录。</span><br><span class="line"></span><br><span class="line">此帐户将被视为 Linux 管理员，能够运行 sudo (Super User Do) 管理命令。</span><br></pre></td></tr></table></figure>
+
+<h2 id="旧版的-WSL-的手动安装步骤"><a href="#旧版的-WSL-的手动安装步骤" class="headerlink" title="旧版的 WSL 的手动安装步骤"></a>旧版的 WSL 的手动安装步骤</h2><h3 id="1-确认系统版本-1"><a href="#1-确认系统版本-1" class="headerlink" title="1 确认系统版本"></a>1 确认系统版本</h3><p>按 Windows 徽标键 + R，然后键入winver，选择 “确定”.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">对于windows 10 x64 系统：版本 1903 或更高版本，采用 内部版本 18362 或更高版本。</span><br></pre></td></tr></table></figure>
 
 <p>低版本系统需要在”设置”菜单中<a href="ms-settings:windowsupdate">更新 Windows 版本</a>。</p>
 <h3 id="2-启用适用于-Linux-的-Windows-子系统"><a href="#2-启用适用于-Linux-的-Windows-子系统" class="headerlink" title="2.启用适用于 Linux 的 Windows 子系统"></a>2.启用适用于 Linux 的 Windows 子系统</h3>
