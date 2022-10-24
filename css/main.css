@@ -1266,7 +1266,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffeb83;
+  background: #d2ff53;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2576,4 +2576,42 @@ mjx-container + br {
 }
 .links-of-blogroll-item {
   padding: 0;
+}
+body {
+  counter-reset: h2counter;
+}
+h2 {
+  counter-reset: h3counter;
+}
+h3 {
+  counter-reset: h4counter;
+}
+h4 {
+  counter-reset: h5counter;
+}
+h5 {
+  counter-reset: h6counter;
+}
+.post-body h2:before {
+  counter-increment: h2counter;
+  content: counter(h2counter) ".\0000a0\0000a0";
+}
+.post-body h3:before {
+  counter-increment: h3counter;
+  content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+}
+.post-body h4:before {
+  counter-increment: h4counter;
+  content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) ".\0000a0\0000a0";
+}
+.post-body h5:before {
+  counter-increment: h5counter;
+  content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) ".\0000a0\0000a0";
+}
+.post-body h6:before {
+  counter-increment: h6counter;
+  content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) "." counter(h6counter) ".\0000a0\0000a0";
+}
+.mermaid {
+  background: transparent;
 }
