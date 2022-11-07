@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.ugeneyun.cn/2022/10/22/condaMirrors/</loc>
+    
+    <lastmod>2022-11-07</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.ugeneyun.cn/2021/05/11/WSLFAQ/</loc>
     
     <lastmod>2022-11-07</lastmod>
@@ -73,13 +80,6 @@
   
   <url>
     <loc>https://blog.ugeneyun.cn/2022/10/24/condaUsage/</loc>
-    
-    <lastmod>2022-10-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.ugeneyun.cn/2022/10/22/condaMirrors/</loc>
     
     <lastmod>2022-10-24</lastmod>
     
