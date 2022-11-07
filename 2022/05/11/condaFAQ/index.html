@@ -22,18 +22,21 @@
     var CONFIG = {"hostname":"blog.ugeneyun.cn","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":300,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Quaerendo Invenietis觅之，自有所获">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bioinformatics dōjō">
-<meta property="og:url" content="https://blog.ugeneyun.cn/tags/workshop/page/2/index.html">
+  <meta name="description" content="Conda的常见问题汇总(最后更新2022&#x2F;08&#x2F;10)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Conda中的常见问题FAQ">
+<meta property="og:url" content="https://blog.ugeneyun.cn/2022/05/11/condaFAQ/index.html">
 <meta property="og:site_name" content="Bioinformatics dōjō">
-<meta property="og:description" content="Quaerendo Invenietis觅之，自有所获">
+<meta property="og:description" content="Conda的常见问题汇总(最后更新2022&#x2F;08&#x2F;10)">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-05-11T08:53:00.000Z">
+<meta property="article:modified_time" content="2022-11-07T06:12:29.611Z">
 <meta property="article:author" content="Marble">
-<meta property="article:tag" content="Bioinformatics">
+<meta property="article:tag" content="workshop">
+<meta property="article:tag" content="conda">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://blog.ugeneyun.cn/tags/workshop/page/2/">
+<link rel="canonical" href="https://blog.ugeneyun.cn/2022/05/11/condaFAQ/">
 
 
 <script id="page-configurations">
@@ -41,12 +44,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签: workshop | Bioinformatics dōjō</title>
+  <title>Conda中的常见问题FAQ | Bioinformatics dōjō</title>
   
 
 
@@ -121,12 +124,12 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>目录<span class="badge">14</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>目录<span class="badge">16</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -173,100 +176,168 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.ugeneyun.cn/2022/05/11/condaFAQ/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/assets/png/avatar.png">
+      <meta itemprop="name" content="Marble">
+      <meta itemprop="description" content="Quaerendo Invenietis<br>觅之，自有所获">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bioinformatics dōjō">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Conda中的常见问题FAQ
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-05-11 16:53:00" itemprop="dateCreated datePublished" datetime="2022-05-11T16:53:00+08:00">2022-05-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-11-07 14:12:29" itemprop="dateModified" datetime="2022-11-07T14:12:29+08:00">2022-11-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/FAQ/" itemprop="url" rel="index"><span itemprop="name">FAQ</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/conda/" itemprop="url" rel="index"><span itemprop="name">conda</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2022/05/11/condaFAQ/" class="post-meta-item leancloud_visitors" data-flag-title="Conda中的常见问题FAQ" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">workshop
-          <small>标签</small>
-        </h2>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/05/11/condaFAQ/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/05/11/condaFAQ/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+        <p>Conda的常见问题汇总(最后更新2022/08/10)</p>
+<span id="more"></span>
+
+
+<h2 id="Anaconda，Miniconda，conda，mamba的关系"><a href="#Anaconda，Miniconda，conda，mamba的关系" class="headerlink" title="Anaconda，Miniconda，conda，mamba的关系"></a>Anaconda，Miniconda，conda，mamba的关系</h2><ul>
+<li><p>Conda是一种软件包管理系统，可以方便的管理各种语言（C/C++/python/Perl/R等)的软件</p>
+</li>
+<li><p>Anaconda 可以理解为Conda以及常用软件包的完整安装包。它将Conda，与众多流行的科学计算、数据分析软件打包到一个安装文件中。</p>
+</li>
+<li><p>Miniconda 可以理解为Anaconda的简化版。默认只包含了 python 和 conda，但是可以在后期通过 pip 和 conda 来安装所需要的包。</p>
+</li>
+<li><p>Mamba可以理解为conda命令的加速优化版，它将conda软件包管理器进行了重写，在安装软件时可以节省大量软件解析和下载时间。</p>
+</li>
+</ul>
+<h2 id="安装CONDA后首次使用无法连接"><a href="#安装CONDA后首次使用无法连接" class="headerlink" title="安装CONDA后首次使用无法连接"></a>安装CONDA后首次使用无法连接</h2><h3 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h3><p>conda安装之后的首次软件安装(conda install/create)，如报出如下错误，且<strong>尝试多次后仍有问题</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Collecting package metadata (current_repodata.json): failed</span><br><span class="line"></span><br><span class="line">CondaHTTPError: HTTP 000 CONNECTION FAILED for url &lt;https:&#x2F;&#x2F;repo.anaconda.com&#x2F;pkgs&#x2F;main&#x2F;linux-64&#x2F;current_repodata.json&gt;</span><br><span class="line">Elapsed: -</span><br><span class="line"></span><br><span class="line">An HTTP error occurred when trying to retrieve this URL.</span><br><span class="line">HTTP errors are often intermittent, and a simple retry will get you on your way.</span><br><span class="line"></span><br><span class="line">If your current network has https:&#x2F;&#x2F;www.anaconda.com blocked, please file</span><br><span class="line">a support request with your network engineering team.</span><br><span class="line"></span><br><span class="line">&#39;https:&#x2F;&#x2F;repo.anaconda.com&#x2F;pkgs&#x2F;main&#x2F;linux-64&#39;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="解决方式"><a href="#解决方式" class="headerlink" title="解决方式"></a>解决方式</h3><p>单击“开始”，键入 PowerShell，然后单击“Windows PowerShell”，输入如下命令关闭虚拟机，然后重新打开即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --shutdown</span><br></pre></td></tr></table></figure>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-05-12T17:44:00+08:00"
-              content="2021-05-12">
-          05-12
-        </time>
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.jpg" alt="Marble 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="Marble 支付宝">
+        <p>支付宝</p>
       </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/05/12/bioformat/" itemprop="url">
-            <span itemprop="name">生物信息中的常见文件格式汇总</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-05-11T17:44:00+08:00"
-              content="2021-05-11">
-          05-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/05/11/bioinfoFAQ/" itemprop="url">
-            <span itemprop="name">生物信息分析中常见问题</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-05-11T16:53:00+08:00"
-              content="2021-05-11">
-          05-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/05/11/WSLfaq/" itemprop="url">
-            <span itemprop="name">WSL(Windows Subsystem for Linux)系统常见问题FAQ</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-    </div>
   </div>
-  
-  
-  
+</div>
 
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/workshop/" rel="tag"># workshop</a>
+              <a href="/tags/conda/" rel="tag"># conda</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/08/31/online_tools/" rel="prev" title="生物信息常用在线分析软件推荐">
+      <i class="fa fa-chevron-left"></i> 生物信息常用在线分析软件推荐
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/10/22/condaMirrors/" rel="next" title="conda国内镜像站点配置方法">
+      conda国内镜像站点配置方法 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
   
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/tags/workshop/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/tags/workshop/">1</a><span class="page-number current">2</span>
-  </nav>
+  
+  
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -313,6 +384,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Anaconda%EF%BC%8CMiniconda%EF%BC%8Cconda%EF%BC%8Cmamba%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">1.</span> <span class="nav-text">Anaconda，Miniconda，conda，mamba的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85CONDA%E5%90%8E%E9%A6%96%E6%AC%A1%E4%BD%BF%E7%94%A8%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5"><span class="nav-number">2.</span> <span class="nav-text">安装CONDA后首次使用无法连接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%B0%E8%B1%A1"><span class="nav-number">2.1.</span> <span class="nav-text">现象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F"><span class="nav-number">2.2.</span> <span class="nav-text">解决方式</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -328,14 +400,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">

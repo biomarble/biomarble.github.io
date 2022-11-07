@@ -22,20 +22,21 @@
     var CONFIG = {"hostname":"blog.ugeneyun.cn","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":300,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="现象使用wget时，一直出现 123错误: 无法验证 XXXXXXXX 的由 “XXXXXXXXXX” 颁发的证书:  无法本地校验颁发者的权限。要以不安全的方式连接至 XXXXXXXXXXXX，使用“--no-check-certificate”。">
+  <meta name="description" content="最新更新日期：2022&#x2F;10&#x2F;24 本文适用于Linux系统，或WSL系统。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="wget提示无法校验颁发者权限的错误">
-<meta property="og:url" content="https://blog.ugeneyun.cn/2021/06/15/wget%E6%8F%90%E7%A4%BA%E6%97%A0%E6%B3%95%E6%A0%A1%E9%AA%8C%E9%A2%81%E5%8F%91%E8%80%85%E6%9D%83%E9%99%90%E7%9A%84%E9%94%99%E8%AF%AF/index.html">
+<meta property="og:title" content="conda安装与配置">
+<meta property="og:url" content="https://blog.ugeneyun.cn/2022/10/22/condaInstall/index.html">
 <meta property="og:site_name" content="Bioinformatics dōjō">
-<meta property="og:description" content="现象使用wget时，一直出现 123错误: 无法验证 XXXXXXXX 的由 “XXXXXXXXXX” 颁发的证书:  无法本地校验颁发者的权限。要以不安全的方式连接至 XXXXXXXXXXXX，使用“--no-check-certificate”。">
+<meta property="og:description" content="最新更新日期：2022&#x2F;10&#x2F;24 本文适用于Linux系统，或WSL系统。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-06-15T09:15:05.000Z">
-<meta property="article:modified_time" content="2022-10-24T04:45:06.769Z">
+<meta property="article:published_time" content="2022-10-22T09:01:00.000Z">
+<meta property="article:modified_time" content="2022-11-07T05:17:49.506Z">
 <meta property="article:author" content="Marble">
-<meta property="article:tag" content="linux">
+<meta property="article:tag" content="workshop">
+<meta property="article:tag" content="conda">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://blog.ugeneyun.cn/2021/06/15/wget%E6%8F%90%E7%A4%BA%E6%97%A0%E6%B3%95%E6%A0%A1%E9%AA%8C%E9%A2%81%E5%8F%91%E8%80%85%E6%9D%83%E9%99%90%E7%9A%84%E9%94%99%E8%AF%AF/">
+<link rel="canonical" href="https://blog.ugeneyun.cn/2022/10/22/condaInstall/">
 
 
 <script id="page-configurations">
@@ -48,7 +49,7 @@
   };
 </script>
 
-  <title>wget提示无法校验颁发者权限的错误 | Bioinformatics dōjō</title>
+  <title>conda安装与配置 | Bioinformatics dōjō</title>
   
 
 
@@ -123,12 +124,12 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>目录<span class="badge">14</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>目录<span class="badge">16</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">9</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -182,7 +183,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.ugeneyun.cn/2021/06/15/wget%E6%8F%90%E7%A4%BA%E6%97%A0%E6%B3%95%E6%A0%A1%E9%AA%8C%E9%A2%81%E5%8F%91%E8%80%85%E6%9D%83%E9%99%90%E7%9A%84%E9%94%99%E8%AF%AF/">
+    <link itemprop="mainEntityOfPage" href="https://blog.ugeneyun.cn/2022/10/22/condaInstall/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/assets/png/avatar.png">
@@ -195,7 +196,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          wget提示无法校验颁发者权限的错误
+          conda安装与配置
         </h1>
 
         <div class="post-meta">
@@ -205,14 +206,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-06-15 17:15:05" itemprop="dateCreated datePublished" datetime="2021-06-15T17:15:05+08:00">2021-06-15</time>
+              <time title="创建时间：2022-10-22 17:01:00" itemprop="dateCreated datePublished" datetime="2022-10-22T17:01:00+08:00">2022-10-22</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-24 12:45:06" itemprop="dateModified" datetime="2022-10-24T12:45:06+08:00">2022-10-24</time>
+                <time title="修改时间：2022-11-07 13:17:49" itemprop="dateModified" datetime="2022-11-07T13:17:49+08:00">2022-11-07</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -220,12 +221,12 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/IT%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">IT技术随笔</span></a>
+                  <a href="/categories/conda/" itemprop="url" rel="index"><span itemprop="name">conda</span></a>
                 </span>
             </span>
 
           
-            <span id="/2021/06/15/wget%E6%8F%90%E7%A4%BA%E6%97%A0%E6%B3%95%E6%A0%A1%E9%AA%8C%E9%A2%81%E5%8F%91%E8%80%85%E6%9D%83%E9%99%90%E7%9A%84%E9%94%99%E8%AF%AF/" class="post-meta-item leancloud_visitors" data-flag-title="wget提示无法校验颁发者权限的错误" title="阅读次数">
+            <span id="/2022/10/22/condaInstall/" class="post-meta-item leancloud_visitors" data-flag-title="conda安装与配置" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -240,8 +241,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/06/15/wget%E6%8F%90%E7%A4%BA%E6%97%A0%E6%B3%95%E6%A0%A1%E9%AA%8C%E9%A2%81%E5%8F%91%E8%80%85%E6%9D%83%E9%99%90%E7%9A%84%E9%94%99%E8%AF%AF/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/06/15/wget%E6%8F%90%E7%A4%BA%E6%97%A0%E6%B3%95%E6%A0%A1%E9%AA%8C%E9%A2%81%E5%8F%91%E8%80%85%E6%9D%83%E9%99%90%E7%9A%84%E9%94%99%E8%AF%AF/" itemprop="commentCount"></span>
+    <a title="valine" href="/2022/10/22/condaInstall/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/10/22/condaInstall/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -256,17 +257,54 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h2><p>使用wget时，一直出现</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">错误: 无法验证 XXXXXXXX 的由 “XXXXXXXXXX” 颁发的证书:</span><br><span class="line">  无法本地校验颁发者的权限。</span><br><span class="line">要以不安全的方式连接至 XXXXXXXXXXXX，使用“--no-check-certificate”。</span><br></pre></td></tr></table></figure>
-
+        <p><strong>最新更新日期：2022/10/24</strong></p>
+<p>本文适用于Linux系统，或WSL系统。</p>
 <span id="more"></span>
 
 
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>打开wgetrc文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install ca-certificates</span><br><span class="line">sudo vi /etc/wgetrc</span><br></pre></td></tr></table></figure>
+<h2 id="下载软件包与安装"><a href="#下载软件包与安装" class="headerlink" title="下载软件包与安装"></a>下载软件包与安装</h2><p><strong>Miniconda安装包</strong> </p>
+<ul>
+<li>官方地址：<a target="_blank" rel="noopener" href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></li>
+<li>国内镜像站：<a target="_blank" rel="noopener" href="https://mirrors.sustech.edu.cn/anaconda/miniconda">https://mirrors.sustech.edu.cn/anaconda/miniconda</a></li>
+</ul>
+<p>运行以下命令，下载Miniconda的安装包：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://mirrors.sustech.edu.cn/anaconda/miniconda/Miniconda3-py38_4.10.3-Linux-x86_64.sh</span><br></pre></td></tr></table></figure>
 
-<p>添加如下内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ca_directory&#x3D;&#x2F;etc&#x2F;ssl&#x2F;certs</span><br></pre></td></tr></table></figure>
+<p>运行以下命令，安装Miniconda：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash Miniconda3-py38_4.10.3-Linux-x86_64.sh  -b -f </span><br></pre></td></tr></table></figure>
+<p>其中：</p>
+<ul>
+<li><code>-b</code>参数表示使用无人值守安装方式安装，安装过程无交互式问询。</li>
+<li><code>-f</code>表示，当安装路径已存在相同名称的文件夹时，强制安装。</li>
+</ul>
+<blockquote>
+<p>安装路径默认为<code>~/miniconda3</code>，如需修改，可以在前述命令基础上添加参数<code>-p /target/path</code></p>
+</blockquote>
+<h2 id="初始化与配置"><a href="#初始化与配置" class="headerlink" title="初始化与配置"></a>初始化与配置</h2><ol>
+<li>安装完后执行下面语句，对conda进行初始化，并取消conda自动启动功能，设置等待网络连接时间</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">~/miniconda3/bin/conda init</span><br><span class="line">~/miniconda3/bin/conda config --<span class="built_in">set</span> auto_activate_base <span class="literal">false</span></span><br><span class="line">~/miniconda3/bin/conda config --<span class="built_in">set</span> remote_read_timeout_secs 300</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>关闭所有终端界面，并重新打开，以使配置生效，如有必要可以重启计算机。</li>
+</ol>
+<h2 id="添加软件频道"><a href="#添加软件频道" class="headerlink" title="添加软件频道"></a>添加软件频道</h2><p><strong> 常用的conda 频道 </strong></p>
+<ul>
+<li><code>main</code>: conda默认添加的主频道，一般不需要手动添加</li>
+<li><code>conda-forge</code>: 社区维护的软件conda频道</li>
+<li><code>bioconda</code>: 生物信息学软件频道</li>
+<li><code>r</code>: R软件包频道</li>
+<li><code>free</code>: conda中旧软件包(2017.9.26前)的频道，可能存在兼容性问题，一般用不到</li>
+</ul>
+<h3 id="官方源各频道添加方式"><a href="#官方源各频道添加方式" class="headerlink" title="官方源各频道添加方式"></a>官方源各频道添加方式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda config --add channels r</span><br><span class="line">conda config --add channels bioconda</span><br><span class="line">conda config --add channels conda-forge</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装Mamba软件（可选）"><a href="#安装Mamba软件（可选）" class="headerlink" title="安装Mamba软件（可选）"></a>安装Mamba软件（可选）</h2><p>本步骤非必需，但推荐安装, 可大幅提高使用体验<i class="fa fa-star"></i>。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/mamba-org/mamba">Mamba软件</a>是conda命令的替代品，使用并行下载的方式下载源代码，大幅提高软件安装与环境创立的速度。</p>
+<p>安装方法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -y mamba</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果安装时遇到报错，可以多尝试几次安装命令<br>如果仍然不行，则试下先运行conda clean –all -y，清理缓存，再重试<br>也可尝试:<a href="https://blog.ugeneyun.cn/2021/05/11/WSLfaq/#%E5%AE%89%E8%A3%85CONDA%E5%90%8E%E9%A6%96%E6%AC%A1%E4%BD%BF%E7%94%A8%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5">WSL下首次安装软件无法连接问题解决</a></p>
+</blockquote>
 
     </div>
 
@@ -296,7 +334,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/workshop/" rel="tag"># workshop</a>
+              <a href="/tags/conda/" rel="tag"># conda</a>
           </div>
 
         
@@ -305,12 +344,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/05/21/databse/" rel="prev" title="常用数据库收录">
-      <i class="fa fa-chevron-left"></i> 常用数据库收录
+    <a href="/2022/10/22/condaMirrors/" rel="prev" title="conda国内镜像站点配置方法">
+      <i class="fa fa-chevron-left"></i> conda国内镜像站点配置方法
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/08/31/online_tools/" rel="next" title="生物信息常用在线分析软件推荐">
-      生物信息常用在线分析软件推荐 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/10/24/condaUsage/" rel="next" title="基于conda的软件管理">
+      基于conda的软件管理 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -371,7 +410,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%B0%E8%B1%A1"><span class="nav-number">1.</span> <span class="nav-text">现象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">2.</span> <span class="nav-text">解决方案</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E8%BD%AF%E4%BB%B6%E5%8C%85%E4%B8%8E%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">下载软件包与安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">初始化与配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E8%BD%AF%E4%BB%B6%E9%A2%91%E9%81%93"><span class="nav-number">3.</span> <span class="nav-text">添加软件频道</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%98%E6%96%B9%E6%BA%90%E5%90%84%E9%A2%91%E9%81%93%E6%B7%BB%E5%8A%A0%E6%96%B9%E5%BC%8F"><span class="nav-number">3.1.</span> <span class="nav-text">官方源各频道添加方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Mamba%E8%BD%AF%E4%BB%B6%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">安装Mamba软件（可选）</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -387,14 +426,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">

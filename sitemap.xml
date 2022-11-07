@@ -2,6 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.ugeneyun.cn/2021/05/11/WSLFAQ/</loc>
+    
+    <lastmod>2022-11-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.ugeneyun.cn/2021/04/30/map/</loc>
+    
+    <lastmod>2022-11-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.ugeneyun.cn/2021/08/31/online_tools/</loc>
+    
+    <lastmod>2022-11-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.ugeneyun.cn/2021/05/21/databse/</loc>
+    
+    <lastmod>2022-11-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.ugeneyun.cn/2021/05/11/bioinfoFAQ/</loc>
+    
+    <lastmod>2022-11-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.ugeneyun.cn/2022/05/11/condaFAQ/</loc>
+    
+    <lastmod>2022-11-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.ugeneyun.cn/2021/05/12/WSLInstall/</loc>
+    
+    <lastmod>2022-11-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.ugeneyun.cn/2021/06/15/wgetError/</loc>
+    
+    <lastmod>2022-11-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.ugeneyun.cn/2022/10/22/condaInstall/</loc>
+    
+    <lastmod>2022-11-07</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.ugeneyun.cn/learn/index.html</loc>
     
     <lastmod>2022-10-24</lastmod>
@@ -9,42 +72,21 @@
   </url>
   
   <url>
-    <loc>https://blog.ugeneyun.cn/2022/10/24/%E5%9F%BA%E4%BA%8Econda%E7%9A%84%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86/</loc>
+    <loc>https://blog.ugeneyun.cn/2022/10/24/condaUsage/</loc>
     
     <lastmod>2022-10-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.ugeneyun.cn/2022/10/22/conda%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</loc>
+    <loc>https://blog.ugeneyun.cn/2022/10/22/condaMirrors/</loc>
     
     <lastmod>2022-10-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.ugeneyun.cn/2022/10/22/conda%E9%95%9C%E5%83%8F%E9%85%8D%E7%BD%AE/</loc>
-    
-    <lastmod>2022-10-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.ugeneyun.cn/2017/10/01/LepMap3%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E8%AF%B4%E6%98%8E/</loc>
-    
-    <lastmod>2022-10-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.ugeneyun.cn/2021/05/11/WSLfaq/</loc>
-    
-    <lastmod>2022-10-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.ugeneyun.cn/2021/06/15/wget%E6%8F%90%E7%A4%BA%E6%97%A0%E6%B3%95%E6%A0%A1%E9%AA%8C%E9%A2%81%E5%8F%91%E8%80%85%E6%9D%83%E9%99%90%E7%9A%84%E9%94%99%E8%AF%AF/</loc>
+    <loc>https://blog.ugeneyun.cn/2017/10/01/LepMap3Tutorial/</loc>
     
     <lastmod>2022-10-24</lastmod>
     
@@ -58,21 +100,7 @@
   </url>
   
   <url>
-    <loc>https://blog.ugeneyun.cn/2021/08/31/online_tools/</loc>
-    
-    <lastmod>2022-10-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.ugeneyun.cn/2021/05/11/bioinfoFAQ/</loc>
-    
-    <lastmod>2022-10-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.ugeneyun.cn/2018/03/19/Ngrok-%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/</loc>
+    <loc>https://blog.ugeneyun.cn/2018/03/19/NgrokSetting/</loc>
     
     <lastmod>2022-10-24</lastmod>
     
@@ -80,13 +108,6 @@
   
   <url>
     <loc>https://blog.ugeneyun.cn/2020/02/11/atlassian-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</loc>
-    
-    <lastmod>2022-10-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.ugeneyun.cn/2021/05/21/databse/</loc>
     
     <lastmod>2022-10-24</lastmod>
     
@@ -103,13 +124,6 @@
     <loc>https://blog.ugeneyun.cn/software/index.html</loc>
     
     <lastmod>2022-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.ugeneyun.cn/2021/04/30/map/</loc>
-    
-    <lastmod>2021-08-27</lastmod>
     
   </url>
   
@@ -137,7 +151,7 @@
 
   <url>
     <loc>https://blog.ugeneyun.cn/</loc>
-    <lastmod>2022-10-30</lastmod>
+    <lastmod>2022-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -145,91 +159,91 @@
   
   <url>
     <loc>https://blog.ugeneyun.cn/tags/GeneticMap/</loc>
-    <lastmod>2022-10-30</lastmod>
+    <lastmod>2022-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.ugeneyun.cn/tags/ngrok/</loc>
-    <lastmod>2022-10-30</lastmod>
+    <lastmod>2022-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.ugeneyun.cn/tags/linux/</loc>
-    <lastmod>2022-10-30</lastmod>
+    <lastmod>2022-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.ugeneyun.cn/tags/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2022-10-30</lastmod>
+    <lastmod>2022-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.ugeneyun.cn/tags/WSL/</loc>
-    <lastmod>2022-10-30</lastmod>
+    <lastmod>2022-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.ugeneyun.cn/tags/workshop/</loc>
-    <lastmod>2022-10-30</lastmod>
+    <lastmod>2022-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.ugeneyun.cn/tags/bioinformatics/</loc>
-    <lastmod>2022-10-30</lastmod>
+    <lastmod>2022-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.ugeneyun.cn/tags/conda/</loc>
-    <lastmod>2022-10-30</lastmod>
+    <lastmod>2022-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.ugeneyun.cn/tags/database/</loc>
-    <lastmod>2022-10-30</lastmod>
+    <lastmod>2022-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.ugeneyun.cn/tags/Plot/</loc>
-    <lastmod>2022-10-30</lastmod>
+    <lastmod>2022-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.ugeneyun.cn/tags/tools/</loc>
-    <lastmod>2022-10-30</lastmod>
+    <lastmod>2022-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.ugeneyun.cn/tags/Doublet/</loc>
-    <lastmod>2022-10-30</lastmod>
+    <lastmod>2022-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.ugeneyun.cn/tags/scRNA-seq/</loc>
-    <lastmod>2022-10-30</lastmod>
+    <lastmod>2022-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -238,42 +252,63 @@
   
   <url>
     <loc>https://blog.ugeneyun.cn/categories/%E9%81%97%E4%BC%A0%E5%9B%BE%E8%B0%B1/</loc>
-    <lastmod>2022-10-30</lastmod>
+    <lastmod>2022-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.ugeneyun.cn/categories/IT%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2022-10-30</lastmod>
+    <lastmod>2022-11-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.ugeneyun.cn/categories/WSL/</loc>
+    <lastmod>2022-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.ugeneyun.cn/categories/FAQ/</loc>
-    <lastmod>2022-10-30</lastmod>
+    <lastmod>2022-11-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.ugeneyun.cn/categories/Bioinformatics/</loc>
+    <lastmod>2022-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.ugeneyun.cn/categories/conda/</loc>
-    <lastmod>2022-10-30</lastmod>
+    <lastmod>2022-11-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.ugeneyun.cn/categories/tools/</loc>
+    <lastmod>2022-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.ugeneyun.cn/categories/%E7%BB%98%E5%9B%BE/</loc>
-    <lastmod>2022-10-30</lastmod>
+    <lastmod>2022-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.ugeneyun.cn/categories/%E5%8D%95%E7%BB%86%E8%83%9E%E6%B5%8B%E5%BA%8F/</loc>
-    <lastmod>2022-10-30</lastmod>
+    <lastmod>2022-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
