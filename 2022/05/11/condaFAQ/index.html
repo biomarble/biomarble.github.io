@@ -24,17 +24,19 @@
 
   <meta name="description" content="Conda的常见问题汇总(最后更新2022&#x2F;08&#x2F;10)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Conda中的常见问题FAQ">
+<meta property="og:title" content="conda中的常见问题FAQ">
 <meta property="og:url" content="https://blog.ugeneyun.cn/2022/05/11/condaFAQ/index.html">
 <meta property="og:site_name" content="Bioinformatics dōjō">
 <meta property="og:description" content="Conda的常见问题汇总(最后更新2022&#x2F;08&#x2F;10)">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2022/11/17/GEAa4ydCsrDecqt.png">
 <meta property="article:published_time" content="2022-05-11T08:53:00.000Z">
-<meta property="article:modified_time" content="2022-11-07T06:12:29.611Z">
+<meta property="article:modified_time" content="2022-11-22T05:41:51.776Z">
 <meta property="article:author" content="Marble">
 <meta property="article:tag" content="workshop">
 <meta property="article:tag" content="conda">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/11/17/GEAa4ydCsrDecqt.png">
 
 <link rel="canonical" href="https://blog.ugeneyun.cn/2022/05/11/condaFAQ/">
 
@@ -49,7 +51,7 @@
   };
 </script>
 
-  <title>Conda中的常见问题FAQ | Bioinformatics dōjō</title>
+  <title>conda中的常见问题FAQ | Bioinformatics dōjō</title>
   
 
 
@@ -196,7 +198,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Conda中的常见问题FAQ
+          conda中的常见问题FAQ
         </h1>
 
         <div class="post-meta">
@@ -213,7 +215,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-07 14:12:29" itemprop="dateModified" datetime="2022-11-07T14:12:29+08:00">2022-11-07</time>
+                <time title="修改时间：2022-11-22 13:41:51" itemprop="dateModified" datetime="2022-11-22T13:41:51+08:00">2022-11-22</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -230,7 +232,7 @@
             </span>
 
           
-            <span id="/2022/05/11/condaFAQ/" class="post-meta-item leancloud_visitors" data-flag-title="Conda中的常见问题FAQ" title="阅读次数">
+            <span id="/2022/05/11/condaFAQ/" class="post-meta-item leancloud_visitors" data-flag-title="conda中的常见问题FAQ" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -275,11 +277,14 @@
 <li><p>Mamba可以理解为conda命令的加速优化版，它将conda软件包管理器进行了重写，在安装软件时可以节省大量软件解析和下载时间。</p>
 </li>
 </ul>
+<img src="https://s2.loli.net/2022/11/17/GEAa4ydCsrDecqt.png" alt="Conda vs. Anaconda vs. Miniconda" width="500"/>
+
 <h2 id="安装CONDA后首次使用无法连接"><a href="#安装CONDA后首次使用无法连接" class="headerlink" title="安装CONDA后首次使用无法连接"></a>安装CONDA后首次使用无法连接</h2><h3 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h3><p>conda安装之后的首次软件安装(conda install/create)，如报出如下错误，且<strong>尝试多次后仍有问题</strong>：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Collecting package metadata (current_repodata.json): failed</span><br><span class="line"></span><br><span class="line">CondaHTTPError: HTTP 000 CONNECTION FAILED for url &lt;https:&#x2F;&#x2F;repo.anaconda.com&#x2F;pkgs&#x2F;main&#x2F;linux-64&#x2F;current_repodata.json&gt;</span><br><span class="line">Elapsed: -</span><br><span class="line"></span><br><span class="line">An HTTP error occurred when trying to retrieve this URL.</span><br><span class="line">HTTP errors are often intermittent, and a simple retry will get you on your way.</span><br><span class="line"></span><br><span class="line">If your current network has https:&#x2F;&#x2F;www.anaconda.com blocked, please file</span><br><span class="line">a support request with your network engineering team.</span><br><span class="line"></span><br><span class="line">&#39;https:&#x2F;&#x2F;repo.anaconda.com&#x2F;pkgs&#x2F;main&#x2F;linux-64&#39;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h3 id="解决方式"><a href="#解决方式" class="headerlink" title="解决方式"></a>解决方式</h3><p>单击“开始”，键入 PowerShell，然后单击“Windows PowerShell”，输入如下命令关闭虚拟机，然后重新打开即可。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --shutdown</span><br></pre></td></tr></table></figure>
+
     </div>
 
     
