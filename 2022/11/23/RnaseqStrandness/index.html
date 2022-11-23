@@ -22,21 +22,25 @@
     var CONFIG = {"hostname":"blog.ugeneyun.cn","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":300,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="最新更新日期：2022&#x2F;10&#x2F;24 国内各个conda镜像站点，不断更新中…">
+  <meta name="description" content="在RNA-Seq数据分析中，文库的链特异类型决定着表达定量软件的重要参数设定，除了询问构建文库的实验人员，还可以通过数据分析，得知文库类型。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="conda国内镜像站点配置方法">
-<meta property="og:url" content="https://blog.ugeneyun.cn/2022/10/22/condaMirrors/index.html">
+<meta property="og:title" content="判断RNA-Seq的链特异性">
+<meta property="og:url" content="https://blog.ugeneyun.cn/2022/11/23/RnaseqStrandness/index.html">
 <meta property="og:site_name" content="Bioinformatics dōjō">
-<meta property="og:description" content="最新更新日期：2022&#x2F;10&#x2F;24 国内各个conda镜像站点，不断更新中…">
+<meta property="og:description" content="在RNA-Seq数据分析中，文库的链特异类型决定着表达定量软件的重要参数设定，除了询问构建文库的实验人员，还可以通过数据分析，得知文库类型。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-10-22T09:01:00.000Z">
-<meta property="article:modified_time" content="2022-11-07T06:18:43.106Z">
+<meta property="og:image" content="https://s2.loli.net/2022/11/23/BXP6kG4zZAQYtOy.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/23/brtQFKmLADf3JXY.png">
+<meta property="article:published_time" content="2022-11-23T02:53:00.000Z">
+<meta property="article:modified_time" content="2022-11-23T10:22:24.133Z">
 <meta property="article:author" content="Marble">
+<meta property="article:tag" content="RNAseq">
 <meta property="article:tag" content="workshop">
-<meta property="article:tag" content="conda">
+<meta property="article:tag" content="strandness">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/11/23/BXP6kG4zZAQYtOy.png">
 
-<link rel="canonical" href="https://blog.ugeneyun.cn/2022/10/22/condaMirrors/">
+<link rel="canonical" href="https://blog.ugeneyun.cn/2022/11/23/RnaseqStrandness/">
 
 
 <script id="page-configurations">
@@ -49,7 +53,7 @@
   };
 </script>
 
-  <title>conda国内镜像站点配置方法 | Bioinformatics dōjō</title>
+  <title>判断RNA-Seq的链特异性 | Bioinformatics dōjō</title>
   
 
 
@@ -183,7 +187,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.ugeneyun.cn/2022/10/22/condaMirrors/">
+    <link itemprop="mainEntityOfPage" href="https://blog.ugeneyun.cn/2022/11/23/RnaseqStrandness/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/assets/png/avatar.png">
@@ -196,7 +200,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          conda国内镜像站点配置方法
+          判断RNA-Seq的链特异性
         </h1>
 
         <div class="post-meta">
@@ -205,28 +209,22 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2022-10-22 17:01:00" itemprop="dateCreated datePublished" datetime="2022-10-22T17:01:00+08:00">2022-10-22</time>
+              <time title="创建时间：2022-11-23 10:53:00 / 修改时间：18:22:24" itemprop="dateCreated datePublished" datetime="2022-11-23T10:53:00+08:00">2022-11-23</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-07 14:18:43" itemprop="dateModified" datetime="2022-11-07T14:18:43+08:00">2022-11-07</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/conda/" itemprop="url" rel="index"><span itemprop="name">conda</span></a>
+                  <a href="/categories/Bioinformatics/" itemprop="url" rel="index"><span itemprop="name">Bioinformatics</span></a>
                 </span>
             </span>
 
           
-            <span id="/2022/10/22/condaMirrors/" class="post-meta-item leancloud_visitors" data-flag-title="conda国内镜像站点配置方法" title="阅读次数">
+            <span id="/2022/11/23/RnaseqStrandness/" class="post-meta-item leancloud_visitors" data-flag-title="判断RNA-Seq的链特异性" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -241,8 +239,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2022/10/22/condaMirrors/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/10/22/condaMirrors/" itemprop="commentCount"></span>
+    <a title="valine" href="/2022/11/23/RnaseqStrandness/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/11/23/RnaseqStrandness/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -257,64 +255,168 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><strong>最新更新日期：2022/10/24</strong></p>
-<p>国内各个conda镜像站点，不断更新中…</p>
+        <p>在RNA-Seq数据分析中，文库的链特异类型决定着表达定量软件的重要参数设定，除了询问构建文库的实验人员，还可以通过数据分析，得知文库类型。</p>
 <span id="more"></span>
 
-<h2 id="常见软件源站点"><a href="#常见软件源站点" class="headerlink" title="常见软件源站点"></a>常见软件源站点</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://repo.anaconda.com/">官方网站</a>：稳定，但因为服务器在国外，在国内少部分地区连接速度较慢。<font color="red"><i class="fa fa-star"></i>推荐使用</font></li>
-<li><a target="_blank" rel="noopener" href="https://mirrors.sustech.edu.cn/anaconda/">南方科技大学镜像</a>：相比官方源，国内连接速度快，在国内用户相对较少。<font color="red"><i class="fa fa-star"></i>官网连接不上的时候推荐使用</font></li>
-<li> <a target="_blank" rel="noopener" href="https://mirror.sjtu.edu.cn/anaconda/">上海交通大学镜像</a>：连接速度快，在国内用户相对较少。<font color="red"><i class="fa fa-star"></i>官网连接不上的时候推荐使用</font></li>
-<li><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda">清华大学TUNA镜像</a>：相比官方源，国内连接速度快。在国内用户相对较多。<font color="red">不支持Mamba</font></li>
-<li><a target="_blank" rel="noopener" href="https://mirrors.bfsu.edu.cn/anaconda">北京外国语大学镜像</a>：清华大学TUNA源的分流网站，与TUNA保持一致。<font color="red">不支持Mamba</font></li>
-<li><a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/anaconda">阿里云镜像</a>： 连接稳定，但速度慢，经不严格测试，网站限速5Mbps(500kb/s)以内。</li>
-<li><a target="_blank" rel="noopener" href="https://nju-mirror-help.njuer.org/anaconda.html"><del>南京大学镜像</del></a>：由于合规性，目前已无限期停止服务。</li>
-<li><a target="_blank" rel="noopener" href="https://mirrors.ustc.edu.cn/help/anaconda.html"><del>中国科技大学镜像</del></a>：由于合规性，目前已无限期停止服务。</li>
-</ul>
-<h2 id="多线程下载问题"><a href="#多线程下载问题" class="headerlink" title="多线程下载问题"></a>多线程下载问题</h2><p>mamba软件作为conda命令的替代品，优化了软件解析速度，大幅提高了环境创建和软件安装时的速度。<br>但由于mamba使用的是多线程下载方法，对服务器的并发请求要求较高，因此从2021年9月开始，国内部分站点对此做了限制。</p>
-<p>到目前为止（2022/10/22日）</p>
-<p><em>未限制多线程下载的站点</em>:</p>
+<h2 id="不同的链特异性类型"><a href="#不同的链特异性类型" class="headerlink" title="不同的链特异性类型"></a>不同的链特异性类型</h2><p><img src="https://s2.loli.net/2022/11/23/BXP6kG4zZAQYtOy.png" alt="不同的链特异类型"></p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>fr-firststrand</td>
+<td>read1的方向与基因方向相反，而read2的方向与基因一致</td>
+</tr>
+<tr>
+<td>fr-secondstrand</td>
+<td>read1的方向与基因方向一致，而read2的方向与基因相反</td>
+</tr>
+<tr>
+<td>fr-unstrand</td>
+<td>非链特异性，两种情况的read都有</td>
+</tr>
+</tbody></table>
+<h2 id="不同软件对链特异性的参数设置"><a href="#不同软件对链特异性的参数设置" class="headerlink" title="不同软件对链特异性的参数设置"></a>不同软件对链特异性的参数设置</h2><table>
+<thead>
+<tr>
+<th align="center">工具</th>
+<th align="center">fr-firststrand链特异</th>
+<th align="center">fr-secondstrand链特异</th>
+<th align="center">非链特异</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://ccb.jhu.edu/software/tophat/index.shtml">TopHat2</a> <br><code>--library-type</code></td>
+<td align="center"><code>fr-firststrand</code></td>
+<td align="center"><code>fr-secondstrand</code></td>
+<td align="center"><code>fr-unstranded</code></td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="http://daehwankimlab.github.io/hisat2/">HISAT2</a> <br><code>--rna-strandness</code></td>
+<td align="center"><code>R</code>/<code>RF</code></td>
+<td align="center"><code>F</code>/<code>FR</code></td>
+<td align="center">NONE</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://htseq.readthedocs.io/">HTSeq</a> <br><code>--stranded</code>/<code>-s</code></td>
+<td align="center"><code>reverse</code></td>
+<td align="center"><code>yes</code></td>
+<td align="center"><code>no</code></td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://gatk.broadinstitute.org/hc/en-us/articles/360037057492-CollectRnaSeqMetrics-Picard-">Picard<br>CollectRnaSeqMetrics</a> <br><code>STRAND_SPECIFICITY</code></td>
+<td align="center"><code>SECOND_READ_TRANSCRIPTION_STRAND</code></td>
+<td align="center"><code>FIRST_READ_TRANSCRIPTION_STRAND</code></td>
+<td align="center">NONE</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://pachterlab.github.io/kallisto/">Kallisto quant</a></td>
+<td align="center"><code>--rf-stranded</code></td>
+<td align="center"><code>--fr-stranded</code></td>
+<td align="center">NONE</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://ccb.jhu.edu/software/stringtie">StringTie</a></td>
+<td align="center"><code>--rf</code></td>
+<td align="center"><code>--fr</code></td>
+<td align="center">NONE</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://subread.sourceforge.net/featureCounts.html">FeatureCounts</a><br><code>-s</code></td>
+<td align="center"><code>2</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"><code>0</code></td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://deweylab.biostat.wisc.edu/rsem/rsem-calculate-expression.html">rsem-calculate-expression</a><br><code>--strandedness</code></td>
+<td align="center"><code>reverse</code></td>
+<td align="center"><code> forward</code></td>
+<td align="center"><code>none</code></td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://combine-lab.github.io/salmon/">Salmon</a><br><code>--libType</code>/<code>-l</code></td>
+<td align="center"><code>ISR</code></td>
+<td align="center"><code>ISF</code></td>
+<td align="center"><code>IU</code></td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://github.com/trinityrnaseq/trinityrnaseq/wiki">Trinity</a> <br><code>--SS_lib_type</code></td>
+<td align="center"><code>RF</code></td>
+<td align="center"><code>FR</code></td>
+<td align="center">NONE</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://github.com/signalbash/how_are_we_stranded_here">check_strandedness</a></td>
+<td align="center"><code>RF</code>/<code>fr-firststrand</code></td>
+<td align="center"><code>FR</code>/<code>fr-secondstrand</code></td>
+<td align="center"><code>unstranded</code></td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://rseqc.sourceforge.net/#infer-experiment-py">RSeQC<br>infer_experiment.py</a></td>
+<td align="center"><code>1+-,1-+,2++,2--</code>占大多数</td>
+<td align="center"><code>1++,1--,2+-,2-+</code>占大多数</td>
+<td align="center">两者无显著差异</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://github.com/alexdobin/STAR">STAR</a><br><strong>不需要设置链特异性信息</strong></td>
+<td align="center">NONE</td>
+<td align="center">NONE</td>
+<td align="center">NONE</td>
+</tr>
+</tbody></table>
+<h2 id="判断链特异性的方法"><a href="#判断链特异性的方法" class="headerlink" title="判断链特异性的方法"></a>判断链特异性的方法</h2><p>根据read1和read2在基因组上的比对方向，可以判断样本的文库链特异类型。</p>
+<h3 id="利用比对文件-bam-判断"><a href="#利用比对文件-bam-判断" class="headerlink" title="利用比对文件(bam)判断"></a>利用比对文件(bam)判断</h3><p>如果已经采用<a target="_blank" rel="noopener" href="https://github.com/alexdobin/STAR">STAR</a>等不需要链特异性信息的软件完成了比对，可以直接提取比对结果进行判断。</p>
 <ul>
-<li><strong>南方科技大学TUNA镜像源</strong></li>
-<li><strong>上海交通大学镜像源</strong></li>
-<li><strong>阿里云镜像</strong></li>
+<li><a target="_blank" rel="noopener" href="https://rseqc.sourceforge.net/#infer-experiment-py">RSeQC软件</a>中的infer_experiment工具可以直接读取bam进行判断</li>
+<li>需要提供基因位置与链的信息（gtf/bed格式）</li>
 </ul>
-<p><em>对多线程下载有限制的站点</em>:</p>
+<h4 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h4><p>安装RSeQC，并安装gtf转bed的BEDOPS软件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mamba create -n BAMinfer -c bioconda  bedops rseqc  <span class="comment">#利用conda安装两款软件</span></span><br><span class="line">conda activate BAMinfer                             <span class="comment">#激活conda环境</span></span><br></pre></td></tr></table></figure>
+<p>将gtf转换为bed，并通过bam文件判断链特异性reads数目：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gtf2bed  &lt;genes.gtf  &gt;genes.bed              <span class="comment">#gtf转换为bed格式</span></span><br><span class="line">infer_experiment.py -r genes.bed -i S1.bam   <span class="comment">#判断链特异性</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<pre>
+This is PairEnd Data
+Fraction of reads failed to determine: 0.0087              #无法判断的reads比例
+Fraction of reads explained by "1++,1--,2+-,2-+": 0.4893   #read1与基因方向一致，read2与基因方向相反的比例
+Fraction of reads explained by "1+-,1-+,2++,2--": 0.5020   #read1与基因方向相反，read2与基因方向一致的比例
+</pre>
+
 <ul>
-<li><strong>清华大学TUNA镜像源</strong></li>
-<li><strong>北京外国语大学镜像源</strong></li>
+<li>48.9%和50.2%没有显著差异，表示这是一个非链特异性文库。</li>
+<li>如果<code>1++,1--,2+-,2-+</code>远大于<code>1+-,1-+,2++,2--</code>，则为fr-secondstrand链特异</li>
+<li>如果<code>1++,1--,2+-,2-+</code>远小于<code>1+-,1-+,2++,2--</code>，则为fr-firststrand链特异</li>
 </ul>
-<h2 id="各站点常用频道的添加方式"><a href="#各站点常用频道的添加方式" class="headerlink" title="各站点常用频道的添加方式"></a>各站点常用频道的添加方式</h2><p><code>bioconda</code>/<code>conda-forge</code>/<code>r</code>  三个常用频道的添加。</p>
-<h3 id="南方科技大学镜像"><a href="#南方科技大学镜像" class="headerlink" title="南方科技大学镜像"></a>南方科技大学镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda config --add channels https://mirrors.sustech.edu.cn/anaconda/pkgs/r/</span><br><span class="line">conda config --add channels https://mirrors.sustech.edu.cn/anaconda/cloud/bioconda/</span><br><span class="line">conda config --add channels https://mirrors.sustech.edu.cn/anaconda/cloud/conda-forge/</span><br><span class="line">conda config --add channels https://mirrors.sustech.edu.cn/anaconda/pkgs/main/</span><br></pre></td></tr></table></figure>
+<h3 id="利用FASTQ文件判断"><a href="#利用FASTQ文件判断" class="headerlink" title="利用FASTQ文件判断"></a>利用FASTQ文件判断</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/signalbash/how_are_we_stranded_here">how_are_we_stranded_here</a> 软件可以利用fastq判断链特异性</li>
+<li>软件使用kallisto将一部分reads比对到转录本，然后根据比对情况利用infer_experiment.py进行进行判读。</li>
+<li>需要准备基因位置注释的gtf文件，与转录本序列文件(cDNA)</li>
+</ul>
+<h4 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h4><p>安装软件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mamba create -n FQinfer -c bioconda how_are_we_stranded_here</span><br><span class="line">conda activate FQinfer</span><br></pre></td></tr></table></figure>
 
-<h3 id="上海交通大学镜像"><a href="#上海交通大学镜像" class="headerlink" title="上海交通大学镜像"></a>上海交通大学镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda config --add channels https://mirror.sjtu.edu.cn/anaconda/pkgs/r/</span><br><span class="line">conda config --add channels https://mirror.sjtu.edu.cn/anaconda/cloud/bioconda/</span><br><span class="line">conda config --add channels https://mirror.sjtu.edu.cn/anaconda/cloud/conda-forge/</span><br><span class="line">conda config --add channels https://mirror.sjtu.edu.cn/anaconda/pkgs/main/</span><br></pre></td></tr></table></figure>
+<p>判断方向</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">check_strandedness --gtf genes.gtf --transcripts cdna.fa --reads_1 S1.R1.fq.gz --reads_2 S1.R2.fq.gz</span><br></pre></td></tr></table></figure>
 
-<h3 id="清华大学TUNA镜像"><a href="#清华大学TUNA镜像" class="headerlink" title="清华大学TUNA镜像"></a>清华大学TUNA镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="北京外国语大学镜像"><a href="#北京外国语大学镜像" class="headerlink" title="北京外国语大学镜像"></a>北京外国语大学镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda config --add channels https://mirrors.bfsu.edu.cn/anaconda/pkgs/r/</span><br><span class="line">conda config --add channels https://mirrors.bfsu.edu.cn/anaconda/cloud/bioconda/</span><br><span class="line">conda config --add channels https://mirrors.bfsu.edu.cn/anaconda/cloud/conda-forge/</span><br><span class="line">conda config --add channels https://mirrors.bfsu.edu.cn/anaconda/pkgs/main/</span><br></pre></td></tr></table></figure>
+<p>输出</p>
+<pre>
+checking strandedness
+Reading reference gene model... Done
+Loading SAM/BAM file ...  Total 20000 usable reads were sampled
+This is PairEnd Data
+Fraction of reads failed to determine: 0.0595
+Fraction of reads explained by "1++,1--,2+-,2-+": 0.0073 (0.8% of explainable reads)
+Fraction of reads explained by "1+-,1-+,2++,2--": 0.9332 (99.2% of explainable reads)
+Over 90% of reads explained by "1+-,1-+,2++,2--"
+Data is likely RF/fr-firststrand
+</pre>
 
-<h3 id="阿里云镜像"><a href="#阿里云镜像" class="headerlink" title="阿里云镜像"></a>阿里云镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda config --add channels https://mirrors.aliyun.com/anaconda/pkgs/r/</span><br><span class="line">conda config --add channels https://mirrors.aliyun.com/anaconda/cloud/bioconda/</span><br><span class="line">conda config --add channels https://mirrors.aliyun.com/anaconda/cloud/conda-forge/</span><br><span class="line">conda config --add channels https://mirrors.aliyun.com/anaconda/pkgs/main/</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="更换软件源的步骤"><a href="#更换软件源的步骤" class="headerlink" title="更换软件源的步骤"></a>更换软件源的步骤</h2><ol>
-<li>查看当前已添加的频道<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda config --show channels</span><br></pre></td></tr></table></figure></li>
-<li>删除当前频道</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda config --remove-key channels</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>清理原站点和频道的缓存</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda clean --all -y</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>添加软件源（以南科大镜像站点为例）</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda config --add channels https://mirrors.sustech.edu.cn/anaconda/pkgs/r/</span><br><span class="line">conda config --add channels https://mirrors.sustech.edu.cn/anaconda/cloud/bioconda/</span><br><span class="line">conda config --add channels https://mirrors.sustech.edu.cn/anaconda/cloud/conda-forge/</span><br><span class="line">conda config --add channels https://mirrors.sustech.edu.cn/anaconda/pkgs/main/</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>（可选）删除默认官方频道（一般为<a target="_blank" rel="noopener" href="https://repo.anaconda.com/pkgs/main/">官方的main频道</a>），以全部使用国内镜像站的频道，进一步提升速度。</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda config --remove channels  defaults</span><br></pre></td></tr></table></figure>
-
+<h2 id="其他链特异类型"><a href="#其他链特异类型" class="headerlink" title="其他链特异类型"></a>其他链特异类型</h2><p>除了以上三种常规的fr链特异类型，根据不同的P5和P7接头方向，还有ff和rf类型，不过非常罕见。</p>
+<p><img src="https://s2.loli.net/2022/11/23/brtQFKmLADf3JXY.png" alt="所有链特异类型"></p>
 
     </div>
 
@@ -344,8 +446,9 @@
 
       <footer class="post-footer">
           <div class="post-tags">
+              <a href="/tags/RNAseq/" rel="tag"># RNAseq</a>
               <a href="/tags/workshop/" rel="tag"># workshop</a>
-              <a href="/tags/conda/" rel="tag"># conda</a>
+              <a href="/tags/strandness/" rel="tag"># strandness</a>
           </div>
 
         
@@ -354,13 +457,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/11/condaFAQ/" rel="prev" title="conda中的常见问题FAQ">
-      <i class="fa fa-chevron-left"></i> conda中的常见问题FAQ
+    <a href="/2022/10/24/condaUsage/" rel="prev" title="基于conda的软件管理">
+      <i class="fa fa-chevron-left"></i> 基于conda的软件管理
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/10/22/condaInstall/" rel="next" title="conda安装与配置">
-      conda安装与配置 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -420,7 +520,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E8%BD%AF%E4%BB%B6%E6%BA%90%E7%AB%99%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">常见软件源站点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">多线程下载问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%84%E7%AB%99%E7%82%B9%E5%B8%B8%E7%94%A8%E9%A2%91%E9%81%93%E7%9A%84%E6%B7%BB%E5%8A%A0%E6%96%B9%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">各站点常用频道的添加方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%97%E6%96%B9%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E9%95%9C%E5%83%8F"><span class="nav-number">3.1.</span> <span class="nav-text">南方科技大学镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E9%95%9C%E5%83%8F"><span class="nav-number">3.2.</span> <span class="nav-text">上海交通大学镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6TUNA%E9%95%9C%E5%83%8F"><span class="nav-number">3.3.</span> <span class="nav-text">清华大学TUNA镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%97%E4%BA%AC%E5%A4%96%E5%9B%BD%E8%AF%AD%E5%A4%A7%E5%AD%A6%E9%95%9C%E5%83%8F"><span class="nav-number">3.4.</span> <span class="nav-text">北京外国语大学镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F"><span class="nav-number">3.5.</span> <span class="nav-text">阿里云镜像</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E8%BD%AF%E4%BB%B6%E6%BA%90%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="nav-number">4.</span> <span class="nav-text">更换软件源的步骤</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E7%9A%84%E9%93%BE%E7%89%B9%E5%BC%82%E6%80%A7%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">不同的链特异性类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E8%BD%AF%E4%BB%B6%E5%AF%B9%E9%93%BE%E7%89%B9%E5%BC%82%E6%80%A7%E7%9A%84%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">不同软件对链特异性的参数设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E9%93%BE%E7%89%B9%E5%BC%82%E6%80%A7%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">判断链特异性的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E6%AF%94%E5%AF%B9%E6%96%87%E4%BB%B6-bam-%E5%88%A4%E6%96%AD"><span class="nav-number">3.1.</span> <span class="nav-text">利用比对文件(bam)判断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8FASTQ%E6%96%87%E4%BB%B6%E5%88%A4%E6%96%AD"><span class="nav-number">3.2.</span> <span class="nav-text">利用FASTQ文件判断</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E9%93%BE%E7%89%B9%E5%BC%82%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.</span> <span class="nav-text">其他链特异类型</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
