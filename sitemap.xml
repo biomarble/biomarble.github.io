@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.ugeneyun.cn/learn/index.html</loc>
+    
+    <lastmod>2022-11-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.ugeneyun.cn/2022/11/23/RnaseqStrandness/</loc>
     
     <lastmod>2022-11-23</lastmod>
@@ -75,13 +82,6 @@
     <loc>https://blog.ugeneyun.cn/2022/10/22/condaInstall/</loc>
     
     <lastmod>2022-11-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.ugeneyun.cn/learn/index.html</loc>
-    
-    <lastmod>2022-10-24</lastmod>
     
   </url>
   
