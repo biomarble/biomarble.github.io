@@ -1,0 +1,34 @@
+---
+title: 关于作者
+type: "about"
+date: 2021-04-15 22:55:19
+comments: false
+---
+# About Me
+
+Bioinformatics Researcher
+
+## Research Interest
+- Single-Cell Transcriptome Sequencing
+- RNA-seq/WGS data mining
+- Population genetics including genetic map construction, QTL mapping and GWAS
+- [Bulked Segregant Analysis](https://en.wikipedia.org/wiki/Bulked_segregant_analysis) using NGS
+- Microarray data mining
+- Early diagnosis of tumor using bioinformatics methods
+- Development of prognostic or predictive biomarkers in cancer(Chemo or Hormonal-therapy)
+- Cancer related multi-dimensional data analysis (RNA-level,DNA-level,epigenetics-level)
+- Human whole-genome sequencing analysis
+- Database construction
+
+## Publications
+
+Visit my [Google Scholar Page](https://scholar.google.com/citations?user=ydDMf7QAAAAJ)
+
+1. Ming Hao, Aili Li, **Tongwei Shi**, Jiangtao Luo, Lianquan Zhang, Xuechuan Zhang, Shunzong Ning, Zhongwei Yuan, Deying Zeng, Xingchen Kong, Xiaolong Li, Hongkun Zheng, Xiujin Lan, Huaigang Zhang, Youliang Zheng, Long Mao, Dengcai Liu. “The Abundance of Homoeologue Transcripts Is Disrupted by Hybridization and Is Partially Restored by Genome Doubling in Synthetic Hexaploid Wheat.” ***BMC Genomics***, 18: 149, Feb 2017. [PDF](https://biomarble.github.io/assets/pdf/bmc_genomics_2017.pdf)
+2. Xinxin Zhao, Linkai Huang, Xinquan Zhang, Jianping Wang, Defei Yan, Ji Li, Lu Tang, Xiaolong Li, and **Tongwei Shi**, “Construction of high-density genetic linkage map and identification of flowering-time QTLs in orchardgrass using SSRs and SLAF-seq,” ***Scientific Reports***, vol. 6, p. 29345, Jul. 2016.[PDF](https://biomarble.github.io/assets/pdf/Sci_rep_2016.pdf)
+3. Hongdong Li, Tingting Zheng, Beibei Chen, Guini Hong, Wenjing Zhang, **Tongwei Shi**, Shan Li, Lu Ao, Chenguang Wang, and Zheng Guo, “Similar blood-borne DNA methylation alterations in cancer and inflammatory diseases determined by subpopulation shifts in peripheral leukocytes.,” ***British Journal of Cancer***, vol. 111, no. 3, pp. 525–31, Jul. 2014.[PDF](https://biomarble.github.io/assets/pdf/bjc2014.pdf)
+4. Guini Hong, Beibei Chen, Hongdong Li, Wwenjing Zhang, Tingting Zheng, Shan Li, **Tongwei Shi**, Lu Ao, and Zheng Guo, “Similar source of differential blood mRNAs in lung cancer and pulmonary inflammatory diseases: calls for improved strategy for identifying cancer-specific biomarkers.,” ***PLoS One***, vol. 9, no. 9, p. e108104, Jan. 2014.[PDF](https://biomarble.github.io/assets/pdf/plos_one_2014.pdf)
+5. Xianxiao Zhou, Bailiang Li, Yuannv Zhang, Yunyan Gu, Beibei Chen, **Tongwei Shi**, Lu Ao, Pengfei Li, Shan Li, Chunyang Liu, and Zheng Guo, “A relative ordering-based predictor for tamoxifen-treated estrogen receptor-positive breast cancer patients: multi-laboratory cohort validation.,” ***Breast Cancer Research and Treatment***, vol. 142, no. 3, pp. 505–14, Dec. 2013.[PDF](https://biomarble.github.io/assets/pdf/breast_cancer_res_treat_2013.pdf)
+6. Xianxiao Zhou,**Tongwei Shi**,Bailiang Li,Yuannv Zhang, Xiaopei Shen,Hongdong Li,Guini Hong,Chunyang Liu, and Zheng Guo, “Genes dysregulated to different extent or oppositely in estrogen receptor-positive and estrogen receptor-negative breast cancers.,” ***PLoS One***, vol. 8, no. 7, p. e70017, Jul. 2013. [PDF](https://biomarble.github.io/assets/pdf/plos_one_2013_2.pdf)
+7. Xiaopei Shen, Shan Li, Lin Zhang, Hongdong Li, Guini Hong, XianXiao Zhou, Tingting Zheng, Wenjing Zhang, Chunxiang Hao, **Tongwei Shi**, Chunyang Liu,Zheng Guo, “An integrated approach to uncover driver genes in breast cancer methylation genomes.,” ***PLoS One***, vol. 8, no. 4, p. e61214, Apr. 2013. [PDF](https://biomarble.github.io/assets/pdf/plos_one_2013_1.pdf)
+
